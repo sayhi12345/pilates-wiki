@@ -12,6 +12,7 @@ const state = {
   lightbox: null,
   plan: null,
   draggedItemId: "",
+  previewExpandedItemId: "",
   plannerStatus: "",
 };
 
@@ -539,6 +540,9 @@ function renderPlanItem(item, index) {
 }
 
 function renderPlanPreview() {
+  if (!state.plan.items.some((item) => item.id === state.previewExpandedItemId)) {
+    state.previewExpandedItemId = "";
+  }
   return `
     <div class="plan-preview">
       <div class="print-title">
@@ -559,17 +563,61 @@ function renderPreviewItem(item, index) {
   const exercise = byId.get(item.exerciseId);
   const title = exercise?.title || item.exerciseTitleSnapshot || "動作庫中找不到";
   const image = exercise?.images?.[0] || "";
+  const expanded = state.previewExpandedItemId === item.id;
+  const minutes = item.minutes ? ` · ${escapeHtml(item.minutes)} 分鐘` : "";
   return `
-    <article class="preview-item">
-      ${image ? `<img src="${escapeAttr(image)}" alt="${escapeAttr(title)}">` : ""}
-      <div>
-        <strong>${index + 1}. ${escapeHtml(title)} ${item.minutes ? `· ${escapeHtml(item.minutes)} 分鐘` : ""}</strong>
+    <article class="preview-item ${expanded ? "is-expanded" : ""}">
+      <button class="preview-item-summary" type="button" data-planner-action="toggle-preview-item" data-item-id="${escapeAttr(item.id)}" aria-expanded="${expanded}">
+        ${image ? `<img src="${escapeAttr(image)}" alt="${escapeAttr(title)}">` : `<span class="preview-image-empty"></span>`}
+        <span class="preview-copy">
+          <strong>${index + 1}. ${escapeHtml(title)}${minutes}</strong>
+          ${exercise ? `<span>${escapeHtml(exercise.english || exercise.equipment)} · ${escapeHtml(exercise.pageLabel)}</span>` : ""}
+        </span>
+        <span class="preview-toggle">${expanded ? "收合" : "展開"}</span>
+      </button>
+      <div class="preview-item-notes">
         ${item.note ? `<p>${escapeHtml(item.note)}</p>` : ""}
         ${item.apparatusSetup ? `<p><b>器材設定：</b>${escapeHtml(item.apparatusSetup)}</p>` : ""}
         ${item.cues ? `<p><b>教學提示：</b>${escapeHtml(item.cues)}</p>` : ""}
         ${item.alternatives ? `<p><b>替代動作：</b>${escapeHtml(item.alternatives)}</p>` : ""}
       </div>
+      <div class="preview-item-actions">
+        ${exercise ? `<button class="preview-open-exercise" type="button" data-planner-action="open-exercise" data-exercise-id="${escapeAttr(exercise.id)}">查看動作</button>` : ""}
+      </div>
+      ${expanded && exercise ? renderPreviewExerciseDetail(item, exercise) : ""}
     </article>
+  `;
+}
+
+function renderPreviewExerciseDetail(item, exercise) {
+  const tags = exercise.tags.map((tag) => `
+    <button type="button" class="tag-button" data-planner-action="open-tag" data-tag="${escapeAttr(tag)}">${escapeHtml(tag)}</button>
+  `).join("");
+  const images = exercise.images.map((src, index) => `
+    <figure>
+      <img src="${escapeAttr(src)}" alt="${escapeAttr(`${exercise.title} 動作圖 ${index + 1}`)}" loading="lazy">
+      <figcaption>${escapeHtml(exercise.pageLabel)} · 圖 ${index + 1}</figcaption>
+    </figure>
+  `).join("");
+  return `
+    <div class="preview-exercise-detail">
+      <div class="preview-detail-tags">${tags}</div>
+      <div class="preview-detail-grid">
+        <section>
+          <h4>器材設置</h4>
+          <p>${escapeHtml(item.apparatusSetup || exercise.setup || "")}</p>
+        </section>
+        <section>
+          <h4>起始姿勢</h4>
+          <p>${escapeHtml(exercise.startPosition || "")}</p>
+        </section>
+        <section>
+          <h4>動作流程</h4>
+          <p>${escapeHtml(exercise.flow || "")}</p>
+        </section>
+      </div>
+      ${images ? `<div class="preview-detail-images">${images}</div>` : ""}
+    </div>
   `;
 }
 
@@ -623,6 +671,7 @@ function endPointerDrag(targetId = "") {
 
 function removePlanItem(itemId) {
   state.plan.items = state.plan.items.filter((item) => item.id !== itemId);
+  if (state.previewExpandedItemId === itemId) state.previewExpandedItemId = "";
   schedulePlanSave("已移除動作。");
   render();
 }
@@ -689,6 +738,34 @@ function sharePlan() {
 function handlePlannerAction(action, target) {
   if (action === "tab") {
     state.plannerTab = target.dataset.tab || "edit";
+    render();
+    return;
+  }
+  if (action === "toggle-preview-item") {
+    const itemId = target.dataset.itemId || "";
+    state.previewExpandedItemId = state.previewExpandedItemId === itemId ? "" : itemId;
+    render();
+    return;
+  }
+  if (action === "open-exercise") {
+    const exerciseId = target.dataset.exerciseId || "";
+    if (!byId.has(exerciseId)) {
+      setPlannerStatus("動作庫中找不到這個動作。");
+      render();
+      return;
+    }
+    state.mode = "index";
+    state.selectedId = exerciseId;
+    state.detailOpen = true;
+    closeLightbox();
+    render();
+    return;
+  }
+  if (action === "open-tag") {
+    state.mode = "index";
+    state.tag = target.dataset.tag || "";
+    state.detailOpen = false;
+    closeLightbox();
     render();
     return;
   }
