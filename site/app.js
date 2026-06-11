@@ -6,6 +6,7 @@ const state = {
   query: "",
   source: "all",
   selectedId: "",
+  detailOpen: false,
 };
 
 const els = {
@@ -82,6 +83,7 @@ function renderMuscles() {
   groups.forEach((group) => {
     const el = button("", `muscle-button ${state.muscle === group.key ? "is-active" : ""}`, () => {
       state.muscle = group.key;
+      state.detailOpen = false;
       render();
     }, { pressed: state.muscle === group.key });
     el.innerHTML = `
@@ -103,6 +105,7 @@ function renderTags() {
       containers.forEach((container) => {
         const el = button(`${tag} ${count}`, `tag-button ${state.tag === tag ? "is-active" : ""}`, () => {
           state.tag = state.tag === tag ? "" : tag;
+          state.detailOpen = false;
           render();
         }, { pressed: state.tag === tag });
         container.appendChild(el);
@@ -115,6 +118,7 @@ function renderActiveTags() {
   if (!state.tag) return;
   const clear = button(`Tag: ${state.tag} ×`, "clear-button", () => {
     state.tag = "";
+    state.detailOpen = false;
     render();
   });
   els.activeTags.appendChild(clear);
@@ -134,6 +138,7 @@ function renderList(exercises) {
   exercises.forEach((exercise) => {
     const row = button("", `exercise-row ${state.selectedId === exercise.id ? "is-active" : ""}`, () => {
       state.selectedId = exercise.id;
+      state.detailOpen = true;
       render();
     }, { pressed: state.selectedId === exercise.id, title: exercise.title });
     const tags = exercise.tags.slice(0, 4).map((tag) => `<span class="mini-tag">${escapeHtml(tag)}</span>`).join("");
@@ -173,6 +178,7 @@ function renderDetail() {
 
   els.exerciseDetail.innerHTML = `
     <div class="detail-head">
+      <button type="button" class="detail-close" aria-label="關閉詳情">×</button>
       <div class="detail-kicker">
         <span class="meta-chip">${escapeHtml(exercise.sourceLabel)}</span>
         <span class="meta-chip">${escapeHtml(exercise.difficulty)}</span>
@@ -207,8 +213,14 @@ function renderDetail() {
     tagButton.addEventListener("click", () => {
       const tag = tagButton.getAttribute("data-tag") || "";
       state.tag = state.tag === tag ? "" : tag;
+      state.detailOpen = false;
       render();
     });
+  });
+
+  els.exerciseDetail.querySelector(".detail-close")?.addEventListener("click", () => {
+    state.detailOpen = false;
+    render();
   });
 }
 
@@ -222,6 +234,7 @@ function renderStats(exercises) {
 
 function render() {
   const exercises = filteredExercises();
+  document.body.classList.toggle("detail-open", state.detailOpen);
   renderMuscles();
   renderTags();
   renderActiveTags();
@@ -245,11 +258,19 @@ function escapeAttr(value) {
 
 els.searchInput.addEventListener("input", (event) => {
   state.query = event.target.value;
+  state.detailOpen = false;
   render();
 });
 
 els.sourceFilter.addEventListener("change", (event) => {
   state.source = event.target.value;
+  state.detailOpen = false;
+  render();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape" || !state.detailOpen) return;
+  state.detailOpen = false;
   render();
 });
 
