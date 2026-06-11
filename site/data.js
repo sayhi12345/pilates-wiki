@@ -1,0 +1,5294 @@
+window.PILATES_DATA = {
+  "muscleGroups": [
+    {
+      "key": "core",
+      "label": "核心與腰骨盆穩定"
+    },
+    {
+      "key": "spine",
+      "label": "脊椎活動"
+    },
+    {
+      "key": "scapula",
+      "label": "肩胛與上背穩定"
+    },
+    {
+      "key": "lat",
+      "label": "背闊肌與拉力鏈"
+    },
+    {
+      "key": "arms",
+      "label": "手臂與胸肩"
+    },
+    {
+      "key": "hips_legs",
+      "label": "髖與腿"
+    },
+    {
+      "key": "mobility",
+      "label": "柔韌與伸展"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "beginner-breathing-pelvic-rib-cage-scapula-head-cervical-placement",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "五大基本原則",
+      "english": "Breathing / Pelvic / Rib Cage / Scapula / Head-Cervical Placement",
+      "pageStart": 8,
+      "pageEnd": 17,
+      "pageLabel": "p.8-17",
+      "difficulty": "初級",
+      "equipment": "未標明",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "柔韌與伸展"
+      ],
+      "summary": "呼吸、骨盆、肋骨架、肩胛、頭頸體位；後續練習的穩定性語言。",
+      "setup": "",
+      "startPosition": "仰臥，骨盆和脊椎保持中立位。雙膝關節彎曲，雙腳著墊，\n分開與髖同寬。雙臂沿體側伸展，掌心向下。\n1. 擺動骨盆\n通過前傾和後傾動作擺動骨盆，以體會其活動範圍。中立體位介\n2. 中立位至腰椎下沉\n腹機肌在練習過程中始終參與運動，腹斜肌隨骨盆和肋骨移向貼\n墊位置而縮短，並隨骨盆和肋骨移向中立位而拉伸。\n3. 腿部滑動",
+      "flow": "",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p008_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p009_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p010_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p012_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p012_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p014_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p014_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p015_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p016_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p016_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p017_action_01.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "柔韌與伸展",
+        "伸展",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "beginner-roll-down",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "後卷",
+      "english": "Roll-Down",
+      "pageStart": 24,
+      "pageEnd": 25,
+      "pageLabel": "p.24-25",
+      "difficulty": "初級",
+      "equipment": "下卷木桿",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "腹直肌/腹斜肌帶動脊柱屈曲，臀大肌和胭繩肌協助骨盆後部靠向股骨後部。",
+      "setup": "將下卷彈簧連線到立柱頂部支桿上的眼鉤上。\n下卷木桿連附到彈簧上",
+      "startPosition": "呈坐姿，面向下卷木桿。骨盆和脊椎呈中立位。雙腿伸直，平行，\n踝背屈，雙足蹬住立柱（如果雙腿伸直時無法保持骨盆呈中立位，\n開始時可稍稍彎曲膝關節，隨著骨盆卷離股骨再伸展膝關節）",
+      "flow": "準備，吸氣⋯\n呼氣 保持肩胛骨穩定，開始時將前上棘卷離股骨前部，從而\n通過屈曲將腰椎向下卷至墊上。\n吸氣 繼續通過屈曲將上脊椎逐節下卷至墊上，椎骨逐節動作，\n直到身體呈平躺姿勢，骨盆和脊椎呈中立位。\n呼氣 穩定軀幹和肩胛骨，雙肘彎曲朝向兩側，將木桿向胸部\n內拉。\n吸氣 穩定肩胛骨，隨肘關節伸展而控制彈簧",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p024_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p025_action_01.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "下卷木桿",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉"
+      ]
+    },
+    {
+      "id": "beginner-roll-down-with-back-extension-prep",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "後卷加背部伸展準備動作",
+      "english": "Roll-Down with Back Extension Prep",
+      "pageStart": 26,
+      "pageEnd": 27,
+      "pageLabel": "p.26-27",
+      "difficulty": "初級",
+      "equipment": "下卷木桿",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "柔韌與伸展"
+      ],
+      "summary": "在後卷基礎上加入豎脊肌伸展與腹斜肌防止腰椎過伸。",
+      "setup": "",
+      "startPosition": "呈坐姿，面向下卷木桿。骨盆和脊椎呈中立位。雙腿伸直，平行，\n始，通過屈曲將脊椎卷離墊，通過腰椎下沉，捲動至骨盆\n踝背屈，雙足蹬住立柱（如果雙腿伸直時無法保持骨盆呈中立位，\n開始時可稍稍彎曲膝關節，隨著骨盆卷離股骨再伸展膝關節）。手\n臂朝前伸直，握住下卷木桿，與肩齊寬，掌心向下。肩胛骨保持",
+      "flow": "",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p026_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p027_action_01.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "柔韌與伸展",
+        "下卷木桿",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "beginner-airplane-prep",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "飛翔動作準備動作",
+      "english": "Airplane Prep",
+      "pageStart": 28,
+      "pageEnd": 29,
+      "pageLabel": "p.28-29",
+      "difficulty": "初級",
+      "equipment": "下卷木桿",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "強調逐節捲動、骨盆回落與腿部控制。",
+      "setup": "",
+      "startPosition": "仰臥，頭部朝向下卷木桿。雙臂伸直，越過頭頂，雙手項住立柱，\n展髖部，腳趾伸向墊上。\n位置略高於肩部。肩胛骨保持穩定。脊椎和骨盆保持中立位。雙",
+      "flow": "準備，吸氣⋯\n呼氣 保持骨盆呈中立位，伸展髖部，腳趾伸向墊上。\n吸氣\n保持骨盆中立位，屈髖，雙腿向軀幹擺動。\n呼氣\n保持膝關節和髖部呈彎曲姿勢，然後從尾椎骨開始通過屈\n曲逐節活動脊椎至離墊。上卷的幅度為胸椎上部支撐體工；\n切勿卷至以頸椎支撐體 。\n吸氣 通過屈曲逐節活動脊椎直至著墊，返回中立位，膝關節和\n碗部呈彎曲姿勢。\n重複練習5-10次",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p028_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p028_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p029_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p029_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "髖與腿",
+        "柔韌與伸展",
+        "下卷木桿",
+        "伸展",
+        "屈曲",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "beginner-lat-press",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "背闊肌下壓",
+      "english": "Lat Press",
+      "pageStart": 30,
+      "pageEnd": 31,
+      "pageLabel": "p.30-31",
+      "difficulty": "初級",
+      "equipment": "下卷木桿",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "lat",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "背闊肌和大圓肌伸展肩部；腹斜肌/豎脊肌穩定軀幹，臀大肌/胭繩肌穩定站姿骨盆。",
+      "setup": "將下卷彈簧連線到立柱頂部短支桿上的眼鉤上",
+      "startPosition": "呈站姿，面向下卷木桿。骨盆和脊椎是中立位。以大腿骨支撐，\n骨盆是中立位，雙腿伸直，雙腳分開至與髖同寬。體重落在腳中\n心位置。雙臂朝前伸直，達到可以維持肩胛骨穩定的高度。雙手\n與肩齊寬，握住下卷木桿，掌心向下。肩胛骨保持穩定",
+      "flow": "準備，吸氣⋯\n呼氣 保持軀幹和肩胛骨穩定，下壓下卷木桿，保持手臂伸直。\n吸氣 下卷木桿返回起始位置。\n面復練習8-10次",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p030_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p030_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p030_action_03.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p031_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p031_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展",
+        "下卷木桿",
+        "伸展",
+        "推",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "beginner-press-down",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "下壓練習",
+      "english": "Press Down",
+      "pageStart": 33,
+      "pageEnd": 33,
+      "pageLabel": "p.33",
+      "difficulty": "初級",
+      "equipment": "下卷木桿",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "lat",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "站姿下壓，重點在肩胛與肋骨架穩定。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "準備，吸氣⋯\n肩胛骨穩定，同時積極抬高肘關節\n• 保持腕關節有所支撐\n呼氣 保持軀幹、骨盆和肩胛骨穩定，保持肘關節位置高於腕關\n節，將木桿下壓，猶如將它從體前突然擲下",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p033_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p033_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p033_action_03.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展",
+        "下卷木桿",
+        "伸展",
+        "推",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "beginner-press-down-with-triceps",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "用肱三頭肌下壓",
+      "english": "Press Down with Triceps",
+      "pageStart": 34,
+      "pageEnd": 35,
+      "pageLabel": "p.34-35",
+      "difficulty": "初級",
+      "equipment": "下卷木桿",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "arms",
+        "hips_legs"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿"
+      ],
+      "summary": "肱三頭肌伸展肘關節；軀幹和站姿骨盆保持中立。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "吸氣 保持軀幹、肩胛骨和骨盆穩定，彎曲肘關節，將其拉向身\n體兩側",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p034_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p034_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p034_action_03.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p035_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p035_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p035_action_03.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "下卷木桿",
+        "伸展",
+        "推",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "beginner-breathing",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "呼吸",
+      "english": "Breathing",
+      "pageStart": 36,
+      "pageEnd": 37,
+      "pageLabel": "p.36-37",
+      "difficulty": "初級",
+      "equipment": "下卷木桿",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "lat",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "捲起時腹肌和臀腿後側參與，杆下拉時背闊肌/大圓肌參與。",
+      "setup": "將鞦韆彈簧連附到水平滑槓的眼鉤上，使鞦韆和鞦韆\n帶呈懸掛狀態",
+      "startPosition": "仰臥，頭部朝向下卷木桿。骨盆和脊椎呈中立位。雙腿伸直，略\n微外旋，雙腳牢固地勾住鞦韆帶。雙臂伸直，抓住下卷木桿，位\n置稍高於肩部。安置鞦韆，從而在雙腳置於鞦韆中時，鞦韆彈簧\n能夠徑直向下懸垂。肩胛骨保持穩定",
+      "flow": "準備，吸氣⋯\n呼氣（綏緩默數五個數），從尾椎骨開始，通過屈曲逐節活動脊\n椎至離熱，直至以胸椎上部支撐身體，腰椎呈中立位，髖\n關節儘可能伸展。同時，保持肩胛骨穩定，雙臂伸直，將\n杆朝髖部方向下拉。\n吸氣\n緩緩默數五個數，從胸椎開始通過屈曲將脊椎逐節滾至墊\n上，真到呈中立位。同時，控制桿返回起始位置。\n重複練習5次",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p036_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p037_action_01.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展",
+        "下卷木桿",
+        "伸展",
+        "屈曲",
+        "拉",
+        "懸掛",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "beginner-ballet-stretches-kneeling",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "芭蕾伸展跪姿",
+      "english": "Ballet Stretches Kneeling",
+      "pageStart": 38,
+      "pageEnd": 39,
+      "pageLabel": "p.38-39",
+      "difficulty": "初級",
+      "equipment": "未標明",
+      "muscleKeys": [
+        "core",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "拉伸胭繩肌、髂腰肌和內收肌，同時用腹斜肌/豎脊肌穩定軀幹。",
+      "setup": "",
+      "startPosition": "單膝跪下，面向鞦韆。動作腿伸直，腳踝落在鞦韆帶上（如果勝\n繩肌長度允許，也可直接落在鞦韆上）。上側腿中立。位於下方\n重新調整姿勢，軀幹面向一側，動作腿伸向側方，必要時前伸髖部，\n以保持骨盆儘可能水平正對前方。雙腿外旋。\n的腿略微外旋。可以握住水平槓或絨毛掛帶以維持平衡。骨盆和\n脊椎星中立位。骨盆保持水平正對前方",
+      "flow": "吸氣保持姿勢。\n吸氣 保持姿勢。\n接下來⋯\n接下來⋯\n呼氣 保持動作腿伸直，下壓至鞦韆蒂上。\n呼氣 保持動作腿伸直，下壓至鞦韆帶上。\n吸氣 放鬆腿，回到起始姿勢。\n吸氣 放鬆腿，回到起始姿勢。\n呼氣\n身體重心儘可能向鞦韆前移，以保持骨盆水平正對前方\n為宜。\n呼氣 身體重心儘可能前移，以保持骨盆水平正對前方為宜。\n吸氣 向後轉移身體雨量，體重落在支撐腿的膝關節上。\n吸氣 向後轉移身體重量，體重落在支撐腿的膝關節上。\n孟復練習2次。\n重複練習2次。\n整套動作練習1次。\n換另一條髓重複上述動作。\n芭弼伸展跪姿",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p038_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p038_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p039_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p039_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "伸展",
+        "屈曲",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "beginner-lat-pull",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "背闊肌下拉",
+      "english": "Lat Pull",
+      "pageStart": 40,
+      "pageEnd": 41,
+      "pageLabel": "p.40-41",
+      "difficulty": "初級",
+      "equipment": "下卷木桿",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "lat",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "背闊肌和大圓肌下拉肱骨；肩胛穩定是主要限制條件。",
+      "setup": "將推拉彈簧連線到沿立柱頂部的槓上的眼鉤上。向整",
+      "startPosition": "呈坐姿，面向下卷木桿方向，位於推拉框內。以便能向身體前側",
+      "flow": "準備，吸氣⋯\n注意率項：經過訓練的專業人員必須在整個練習期間監督和提供\n呼氣 保持肩胛骨穩定，將框下拉，肘關節朝向地面。\n幫助，且手扶推拉框。教練不能把身體靠向框體。\n吸氣 保持肩胛骨穩定，在不拾高肩部的情況下將框體返回至盡\n可能高的位置。\n2根彈簧\n起始姿勢\n董復練習5-10次。\n呈坐姿，面向下卷木桿方向，位於推拉框內。以便能向身體前側",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p040_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p041_action_01.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展",
+        "下卷木桿",
+        "推拉框上面彈簧動作",
+        "伸展",
+        "推",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "beginner-scapula-isolation",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "肩胛骨孤立練習",
+      "english": "Scapula Isolation",
+      "pageStart": 42,
+      "pageEnd": 43,
+      "pageLabel": "p.42-43",
+      "difficulty": "初級",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "scapula"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定"
+      ],
+      "summary": "肩胛前引/後縮，強調肩胛貼肋骨架與頸椎穩定。",
+      "setup": "",
+      "startPosition": "仰臥，頭部朝向推拉框。擺正位置，以便於雙臂伸直，框體與肩\n齊高。骨盆和脊椎呈中立位。雙腿內收，膝關節彎曲（腿可伸直，\n但骨盆必須呈中立位）。雙臂伸直，雙手握住推拉框，與肩同寬。\n掌心背對臉，肩胛骨保持穩定",
+      "flow": "",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p042_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p043_action_01.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "推拉框上面彈簧動作",
+        "伸展",
+        "推",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "beginner-pull-down",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "下拉",
+      "english": "Pull Down",
+      "pageStart": 44,
+      "pageEnd": 45,
+      "pageLabel": "p.44-45",
+      "difficulty": "初級",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "arms"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩"
+      ],
+      "summary": "二頭肌和後三角肌拉框，肩胛骨需避免上提或外翻。",
+      "setup": "",
+      "startPosition": "仰臣^，頭部朝向推拉枉。擺正位置，以便於雙臂伸直，框體與肩\n齊離。骨盆和脊椎呈中立位。雙腿內收，膝關節彎曲（腿可伸直，\n但骨盆必須呈中立位）。雙臂伸直，雙手握住推拉框，與宿同寬",
+      "flow": "準備，照氣⋯\n1根或2根彈簧\n呼氣 保持肩胛骨穩定，向兩側屈曲雙肘，將框向胸部內拉。\n起始姿勢\n吸氣 保持肩朋骨穩定，伸展肘關節，將框返回。\n仰臣^，頭部朝向推拉枉。擺正位置，以便於雙臂伸直，框體與肩\n齊離。骨盆和脊椎呈中立位。雙腿內收，膝關節彎曲（腿可伸直，\n西復練習5-10次。\n但骨盆必須呈中立位）。雙臂伸直，雙手握住推拉框，與宿同寬",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p044_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p044_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p045_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p045_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "推拉框上面彈簧動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉"
+      ]
+    },
+    {
+      "id": "beginner-push-thru-on-back",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "仰臥推拉練習",
+      "english": "Push-Thru on Back",
+      "pageStart": 46,
+      "pageEnd": 47,
+      "pageLabel": "p.46-47",
+      "difficulty": "初級",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "arms"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩"
+      ],
+      "summary": "二頭肌/後三角肌下拉，三角肌/肱三頭肌推過頭。",
+      "setup": "",
+      "startPosition": "仰臥，頭部朝向推拉框。擺正位置，以便於雙臂伸直，框體與肩\n齊高。骨盆和脊椎呈中立位。雙腿內收，膝關節彎曲（腿可伸查，\n但骨盆必須呈中立位）。雙臂伸直，雙手握住推拉框，與肩同寬。\n學心背對臉，肩胛骨保持穩定",
+      "flow": "吸氣\n保持肩胛骨穩定，向兩側屈曲雙肘，將框向胸部內拉。\n2根彈簧\n呼氣 穩定軀幹和肩胛骨，將柱從頭上推過面部，並經過立柱。\n起始姿勢\n吸氣 穩定肩胛骨，彎曲肘關節，讓框回到額頭前方。\n仰臥，頭部朝向推拉框。擺正位置，以便於雙臂伸直，框體與肩\n呼氣 保持肩胛骨穩定，伸展肘關節，將框體朝正上方返回。\n齊高。骨盆和脊椎呈中立位。雙腿內收，膝關節彎曲（腿可伸查，\n但骨盆必須呈中立位）。雙臂伸直，雙手握住推拉框，與肩同寬。\n董復練習3-5次。\n學心背對臉，肩胛骨保持穩定",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p046_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p046_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p047_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p047_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "推拉框上面彈簧動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "beginner-push-thru-on-back-with-roll-up",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "仰臥推拉加捲曲上提練習",
+      "english": "Push-Thru on Back with Roll Up",
+      "pageStart": 48,
+      "pageEnd": 49,
+      "pageLabel": "p.48-49",
+      "difficulty": "初級",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "arms",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "柔韌與伸展"
+      ],
+      "summary": "上肢推拉與腹直肌/腹斜肌捲起結合。",
+      "setup": "",
+      "startPosition": "離墊，直至脊椎呈中立位，軀於呈對角線後傾。同時，伸\n仰臥，頭部朝向推拉框。擺正位置，以便於雙臂體直，框體與肩\n展雙臂，同軀於呈一條線。\n齊高。骨盆和脊椎呈中立位。雙腿內收，膝關節彎曲《腿可伸直，\n但骨盆必須呈中立位）。雙臂伸直，雙手握住推拉框，與肩同寬，\n框體前推經過立柱。學心面向天花板，肩胛骨保持穩定。\n同時彎曲肘關節。然後穩定軀幹和肩胛骨，伸展雙臂將框\n仰臥推拉加捲曲上提練習",
+      "flow": "吸氣\n保持肩胛骨穩定，彎曲肘關節，將框拉至額頭前。\n1根彈簧\n呯氣\n將框置於額頭前，從頭部開始，通過屈曲將脊椎逐節捲動\n起始姿勢\n離墊，直至脊椎呈中立位，軀於呈對角線後傾。同時，伸\n仰臥，頭部朝向推拉框。擺正位置，以便於雙臂體直，框體與肩\n展雙臂，同軀於呈一條線。\n齊高。骨盆和脊椎呈中立位。雙腿內收，膝關節彎曲《腿可伸直，\n吸氣 開始時將髂前上棘卷離股骨前部，從而通過屈曲，將腰椎\n但骨盆必須呈中立位）。雙臂伸直，雙手握住推拉框，與肩同寬，\n逐節向下捲動著墊。\n框體前推經過立柱。學心面向天花板，肩胛骨保持穩定。\n呼氣 繼續逐節捲動脊椎上部，直到呈平躺仰臥姿勢和中立位，\n同時彎曲肘關節。然後穩定軀幹和肩胛骨，伸展雙臂將框\n推至經過立柱。\n重複練習3-5次",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p048_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p048_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p049_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p049_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "柔韌與伸展",
+        "推拉框上面彈簧動作",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "beginner-teaser-prep",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "平行伸展準備動作",
+      "english": "Teaser Prep",
+      "pageStart": 50,
+      "pageEnd": 51,
+      "pageLabel": "p.50-51",
+      "difficulty": "初級",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "arms",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "柔韌與伸展"
+      ],
+      "summary": "以彈簧輔助脊椎屈曲，腹肌控制骨盆後傾和腿部抬放。",
+      "setup": "",
+      "startPosition": "仰臣，頭部朝向推拉框。擺正位置，以便於雙臂伸直，框體與肩\n離墊。通過腰椎下沉捲起脊椎，膝關節朝胸部內拉。然後\n齊高。骨盆和脊椎呈中立位。雙腿內收和伸直，雙踝蹠屈，腳尖\n拉伸雙臂和上身，完全偉直腿部，呈V形姿勢，體重落在\n輕輕繃直。雙臂伸直，雙手握住推拉框，與肩同寬，框體前推經\n過立柱。學心面向天花板，肩胛骨保持穩定。\n動著墊，同時，膝關節朝胸部內曲，肘關節彎曲。\n伸展雙腿，伸展雙臀將框推至經過立柱",
+      "flow": "吸氣\n保持肩胛骨穩定，彎曲肘關節，將框拉至額頭前。同時，\n1根彈簧\n將雙腳置於墊上，彎曲膝關節，將雙腳拉向骨盆方向。\n起始姿勢\n呼氣\n將框置於額頭前，從頭部開始，通過屈曲將脊椎逐節捲動\n仰臣，頭部朝向推拉框。擺正位置，以便於雙臂伸直，框體與肩\n離墊。通過腰椎下沉捲起脊椎，膝關節朝胸部內拉。然後\n齊高。骨盆和脊椎呈中立位。雙腿內收和伸直，雙踝蹠屈，腳尖\n拉伸雙臂和上身，完全偉直腿部，呈V形姿勢，體重落在\n輕輕繃直。雙臂伸直，雙手握住推拉框，與肩同寬，框體前推經\n坐骨後方，腰椎略微屈曲，胸椎拉伸。\n過立柱。學心面向天花板，肩胛骨保持穩定。\n吸氣\n開始時將髂前上棘滾離股骨前部，從而將腰椎逐節向下卷\n動著墊，同時，膝關節朝胸部內曲，肘關節彎曲。\n呯氣\n腳趾觸墊，脊椎繼續逐節向下捲動。然後穩定軀幹，沿墊\n伸展雙腿，伸展雙臀將框推至經過立柱。\n重複練習5-10次",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p050_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p050_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p051_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p051_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "柔韌與伸展",
+        "推拉框上面彈簧動作",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉"
+      ]
+    },
+    {
+      "id": "beginner-cat-prep",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "貓背準備動作",
+      "english": "Cat Prep",
+      "pageStart": 52,
+      "pageEnd": 53,
+      "pageLabel": "p.52-53",
+      "difficulty": "初級",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "lat",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "脊椎屈曲/伸展、背闊肌維持框壓力，臀大肌/胭繩肌協助骨盆控制。",
+      "setup": "",
+      "startPosition": "坐在踵上，面向推拉框，距框一手臂的長度：推拉框位於最高位置；\n雙腿內收。脊椎和骨盆保持中立位。雙臂伸直，握住推拉框，與",
+      "flow": "吸氣 穩定軀幹，將骨盆後傾至股骨，從頭部到尾椎骨保持呈一\n縮臀大肌和腥繩肌，使骨盆後部向大腿骨後部靠攏；肩胛骨穩\n呼氣 從頭部開始，將脊椎逐節屈曲，將框朝立柱下拉。\n吸氣\n保持坐在踵上，肩膀高於框的高度，從尾椎骨開始逐節伸\n展脊椎。\n呼氣\n從尾椎骨開始，通過屈曲逐節活動脊椎，返回中立位（上\n胸椎參與運動，避免頸椎過度伸展）。雙臂伸直，經過擺動",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p052_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p053_action_01.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展",
+        "推拉框上面彈簧動作",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉"
+      ]
+    },
+    {
+      "id": "beginner-swan-dive",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "天鵝潛水",
+      "english": "Swan Dive",
+      "pageStart": 54,
+      "pageEnd": 55,
+      "pageLabel": "p.54-55",
+      "difficulty": "初級",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "豎脊肌背伸展，腹斜肌限制腰椎過伸，臀大肌/胭繩肌維持骨盆。",
+      "setup": "",
+      "startPosition": "呈俯臥姿勢面向推拉框，距離框體一臂的長度，框體同立柱呈一\n肌和膽繩肌，以使骨盆後部向大腿骨後部靠找：脊椎向上伸展時，\n條線。脊椎和骨盆保持中立位。雙腿與肩同寬並外旋，雙踝蹠屈，\n腳尖輕輕繃直。雙臂伸直，越過頭頂，雙手握框，與肩同寬，掌\n心向下。頭部懸於墊上方，同肩部呈一條線，保持肩胛骨穩定",
+      "flow": "吸氣 保持肩胛骨穩定，開始伸展脊椎，通過頭頂拉伸：同時下\n壓框體，從而使肩部開始伸展。\n呼氣 繼續儘量向上伸展脊椎，但恥骨部位仍緊貼墊上。繼續穩\n定肩胛脅，保持雙臂伸直，肩部繼續伸展，以框作溈槓桿。\n吸氣 脊柱開始逐節返回至墊上，雙肩開始屈曲。\n呼氣 全程向後拉伸，下至墊，保持雙臂過頭和肩胛骨穩定。\n重複練習3-5次",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p054_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p054_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p055_action_01.jpg"
+      ],
+      "tags": [
+        "初級",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "推拉框上面彈簧動作",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "俯臥"
+      ]
+    },
+    {
+      "id": "beginner-push-thru-on-stomach-with-back-extension-prep",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "俯臥推拉加後背伸展",
+      "english": "Push-Thru on Stomach with Back Extension Prep",
+      "pageStart": 56,
+      "pageEnd": 57,
+      "pageLabel": "p.56-57",
+      "difficulty": "初級",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "spine",
+        "scapula",
+        "lat",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "中上部豎脊肌伸展，背闊肌/大圓肌/二頭肌帶框至腦後。",
+      "setup": "",
+      "startPosition": "呈俯臥姿勢面向推拉框，距離框體一臂的長度，框體同立柱星一\n條線。脊椎和骨盆保持中立位。雙腿與肩同寬並外旋，雙踝蹠屈，\n腳尖輕輕繃直。雙臂伸直，越過頭頂，雙手握框，與肩同寬，掌\n心向下。頭部懸於墊上方，同肩部呈一條線，保持肩朋骨穩定。\n俯臥推拉加後背伸展\n4. 降低脊椎",
+      "flow": "吸氣\n保持肩胛骨穩定，彎曲肘關節，將框拉至腦後。\n1根彈簧\n呼氣\n保持肘關節彎曲，伸展胸椎。\n起始姿勢\n吸氣\n保持肘關節彎曲，將胸攤返回至起始姿勢。\n呈俯臥姿勢面向推拉框，距離框體一臂的長度，框體同立柱星一\n呼氣 伸展肘關節，將框推過頭部。\n條線。脊椎和骨盆保持中立位。雙腿與肩同寬並外旋，雙踝蹠屈，\n腳尖輕輕繃直。雙臂伸直，越過頭頂，雙手握框，與肩同寬，掌\n重複練習3-5次。\n心向下。頭部懸於墊上方，同肩部呈一條線，保持肩朋骨穩定",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p056_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p056_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p057_action_01.jpg"
+      ],
+      "tags": [
+        "初級",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "推拉框上面彈簧動作",
+        "伸展",
+        "推",
+        "拉",
+        "俯臥"
+      ]
+    },
+    {
+      "id": "beginner-arms-backward",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "雙臂向後",
+      "english": "Arms Backward",
+      "pageStart": 58,
+      "pageEnd": 58,
+      "pageLabel": "p.58",
+      "difficulty": "初級",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "arms"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩"
+      ],
+      "summary": "前三角肌、二頭肌、胸大肌在向後擺動時離心控制，腹肌維持 C 曲線。",
+      "setup": "",
+      "startPosition": "呈坐姿，背對推拉框，體重落在坐骨後部。脊椎呈“C”字曲線彎曲；\n肩部位於髖部上方，推拉框遠離立柱最遠端同時與推拉框有一手\n臂的長度。腿部內收，膝關節彎曲。雙臂伸直，從軀幹後方伸出，\n抓住推拉框，掌心向下。肩胛骨保持穩定",
+      "flow": "準備，雙氣⋯\n•避免過度伸展雙肘\n呼氣 保持雙臀伸直，保持脊椎屈曲，將軀幹卷離腿部，稍稍向\n•儘可能保持肩胛骨穩定，避免肩部上提或過度後縮\n下和向後推框。\n•以髖屈肌和腹肌控制運動，以便體重壓力不會完全落在雙臂上\n吸氣|\n保持脊椎屈曲，同時將軀幹捲過雙腿上方，將推拉框拉至\n離開立柱的最遠距離。\n動怍調墊\n呼氣 允許推拉向上和向後活動，將軀幹卷離腿部，使肩部呈",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p058_action_01.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "推拉框上面彈簧動作",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉"
+      ]
+    },
+    {
+      "id": "beginner-side-arm-pull",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "手臂側拉",
+      "english": "Side Arm Pull",
+      "pageStart": 59,
+      "pageEnd": 59,
+      "pageLabel": "p.59",
+      "difficulty": "初級",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "lat",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "背闊肌和大圓肌下拉肱骨，腹斜肌/豎脊肌避免側屈。",
+      "setup": "",
+      "startPosition": "呈坐姿，側向。在墊上擺正位置，坐在立柱和推拉框之間，從而\n可以單手舒適抓框。骨盆和脊椎呈中立位。雙腿平行內收，小腿\n懸於凱迪拉克沿。離推拉框最近的那隻手臂向上抓框，略置於肩\n前，掌心朝向軀幹。另一隻手臂在體側放鬆。肩胛骨保持穩定",
+      "flow": "準備，吸氣⋯",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p059_action_01.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展",
+        "推拉框上面彈簧動作",
+        "側屈",
+        "推",
+        "拉"
+      ]
+    },
+    {
+      "id": "beginner-mermaid",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "美人魚姿",
+      "english": "Mermaid",
+      "pageStart": 60,
+      "pageEnd": 61,
+      "pageLabel": "p.60-61",
+      "difficulty": "初級",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "lat",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "腹斜肌控制側屈，背闊肌/大圓肌控制手臂下拉，骨盆保持穩定。",
+      "setup": "",
+      "startPosition": "一隻手臂，軀幹朝框傾斜，向上伸展手臂和頭頂部。\n呈坐姿，例向。骨盆和脊椎星中立位。雙膝關節彎曲，遠離推拉\n框的腿內旋，另一腿外旋，同時，腳蹬住另外一條腿的膝關節。\n骨盆正對前方，且儘量保持水平（可將重量落在一例臀部上）。距",
+      "flow": "呼氣\n伸展手臀，下推框體至通過立柱。同時，保持骨盆穩定，\n朝框側屈脊椎。另一隻手臂保持伸過頭頂。\n持穩定",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p060_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p060_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p061_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p061_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展",
+        "推拉框上面彈簧動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉"
+      ]
+    },
+    {
+      "id": "beginner-forward-push-thru",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "推拉向前",
+      "english": "Forward Push-Thru",
+      "pageStart": 62,
+      "pageEnd": 63,
+      "pageLabel": "p.62-63",
+      "difficulty": "初級",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "lat",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "腹直肌/腹斜肌使脊椎彎曲，背闊肌/大圓肌下壓框並穩定肩。",
+      "setup": "",
+      "startPosition": "軀幹星中立位，骨盆轉向雙腿，朝前方和上方推框，通過\n呈坐姿，面對推拉框。骨盆和脊椎呈中立位。雙腿伸直，平行，\n脊椎和雙臂形成一條連貫的對角線。\n踝背屈，雙足抵住立柱（如果雙腿伸直時無法保持骨盆呈中立位，\n可在開始時稍稍彎曲膝關節）。手臂朝前伸直，握住推拉框，與肩\n齊寬，掌心向下。肩胛骨保持穩定",
+      "flow": "吸氣\n開始時將髂前上棘卷離股骨前部，捲曲幅度至坐骨後側，\n曲：背渴肌和大圓肌用以將框下壓以及幫助穩定雙肩：肩胛骨穩\n保持雙臂伸直和肩胛骨穩定，從而將框下拉。\n呼氣\n從頭部開始，朝前逐節彎曲脊椎，將框拉伸，以腹肌保持\n腰椎支撐",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p062_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p062_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p063_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p063_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展",
+        "推拉框上面彈簧動作",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉"
+      ]
+    },
+    {
+      "id": "beginner-scapula-isolation",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "肩胛骨孤立練習（下面彈簧）",
+      "english": "Scapula Isolation",
+      "pageStart": 64,
+      "pageEnd": 65,
+      "pageLabel": "p.64-65",
+      "difficulty": "初級",
+      "equipment": "推拉框下面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "scapula"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定"
+      ],
+      "summary": "前鋸肌為重點的肩胛前引/後縮控制。",
+      "setup": "使用帶鎖釦的推拉彈簧連線到床架的眼鉤上（不是立柱",
+      "startPosition": "仰臥，骨盆和脊椎保持中立位。擺正位置，以便於雙臂伸直，框\n體與肩齊高。雙腿內收，膝關節彎曲（腿可伸直，但骨盆必須呈\n中立位）。雙管伸直，雙手握住推拉框，與肩同寬，學心背對面部。\n肩胛骨保持穩定",
+      "flow": "吸氣\n保持雙臂伸直，脊椎呈中立位，前引肩胛骨，將框推向正\n並連線到推拉框上方的其中一個眼鉤。將推拉彈簧連線到推拉框\n上方。\n的下方眼鉤上，確保所有彈簧夾完全鎖合，以及乙烯塑膠蓋罩保\n呼氣 保持雙管伸直，脊椎呈中立位，讓肩胛骨回到中立位，控\n護凱迪拉克床的墊面。\n制框的回程。\n董復練習5-10次。\n幫助，且於扶推拉框。教練不能把身體靠向框體。\n吸氣 保持雙臂伸直，脊椎呈中立位，後縮肩胛骨，讓框受控落下。\n2根彈簽\n呼氣\n保持雙管伸直，脊椎呈中立位，讓肩胛骨回到中立位，將\n框推向正上方。\n起始姿勢\n仰臥，骨盆和脊椎保持中立位。擺正位置，以便於雙臂伸直，框\n重複練習5-10次。\n體與肩齊高。雙腿內收，膝關節彎曲（腿可伸直，但骨盆必須呈\n中立位）。雙管伸直，雙手握住推拉框，與肩同寬，學心背對面部。\n肩胛骨保持穩定。\nCCOCCC0000000O\n肩醉骨孤立練習-前引\n1004",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p064_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p065_action_01.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "推拉框下面彈簧動作",
+        "推",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "beginner-chest-press",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "胸推動作",
+      "english": "Chest Press",
+      "pageStart": 66,
+      "pageEnd": 67,
+      "pageLabel": "p.66-67",
+      "difficulty": "初級",
+      "equipment": "推拉框下面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "arms"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩"
+      ],
+      "summary": "肱三頭肌和胸大肌上推框，肩胛骨保持貼合肋骨架。",
+      "setup": "",
+      "startPosition": "仰臥，骨盆和脊椎保持中立位。擺正位置，以便於雙臂伸直，推\n拉框與肩齊高。雙腿內收，膝關節彎曲（腿可伸直，但骨盆必須\n星中立位）。肘關節彎曲朝向兩側，雙手握住推拉框，與肩同寬",
+      "flow": "準備，吸氣⋯\n•保持肩胛骨平貼在肋骨架背面，不要隨肘關節伸展而外翻\n或前引\n呼氣 保持肩胛骨穩定，伸展肘關節，將框上推。\n吸氣 保持肩胛骨穩定，彎曲肘關節，控制框的返回。\n•手腕始終保持伸展\n重複練習5-10次",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p066_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p066_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p067_action_01.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "推拉框下面彈簧動作",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "beginner-leg-presses",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "腿部推拉",
+      "english": "Leg Presses",
+      "pageStart": 68,
+      "pageEnd": 69,
+      "pageLabel": "p.68-69",
+      "difficulty": "初級",
+      "equipment": "推拉框下面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "hips_legs"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "髖與腿"
+      ],
+      "summary": "腓腸肌/比目魚肌蹠屈，股四頭肌伸膝，並維持髖膝踝足正位。",
+      "setup": "",
+      "startPosition": "仰臥，頭部朝向推拉框，脊椎上部呈中立位。擺正位置，以便能",
+      "flow": "吸氣\n伸展膝關節，雙踝蹠屈，朝正上方推枉，賬骨置於墊上。\n保持雙腳在框上穩固。\n呼氣 保持膝關節伸展，保持骨盆和髖關節穩定，背屈踝關節。\n吸氣 雙踝蹠屈，將框上推。\n人士嘗試，以避免雙腳滑離框的危險。\n呼氣 屈膝，踝背屈，將框復位，回到起始姿勢。\n1根或2根彈簧\n重複練習10次。\n起始姿勢\n仰臥，頭部朝向推拉框，脊椎上部呈中立位。擺正位置，以便能",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p068_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p069_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p069_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "髖與腿",
+        "推拉框下面彈簧動作",
+        "旋轉",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "beginner-biceps-curls-supine",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "仰臥二頭肌捲曲",
+      "english": "Biceps Curls Supine",
+      "pageStart": 70,
+      "pageEnd": 71,
+      "pageLabel": "p.70-71",
+      "difficulty": "初級",
+      "equipment": "臂用彈簧",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "arms"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩"
+      ],
+      "summary": "二頭肌屈肘，肩胛穩定與軀幹穩定不可丟。",
+      "setup": "坐姿時將垂直滑槓設為與肩同高。將臂用彈簧連線到",
+      "startPosition": "仰臥，頭部離開垂直滑槓，骨盆和脊椎呈中立位。腿部內收，膝\n關節彎曲。雙臂握住拉環置於體側，掌心向上，肘關節置於墊上。\n肩胛骨保持穩定",
+      "flow": "",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p070_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p070_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p071_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p071_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "臂用彈簧",
+        "伸展",
+        "屈曲",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "beginner-midback-series",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "中背部系列動作",
+      "english": "Midback Series",
+      "pageStart": 72,
+      "pageEnd": 77,
+      "pageLabel": "p.72-77",
+      "difficulty": "初級",
+      "equipment": "臂用彈簧",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "arms"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩"
+      ],
+      "summary": "肱三頭肌下壓、雙臂伸直下壓、45 度、側面、畫弧；共同強調腹斜肌和肩胛穩定。",
+      "setup": "",
+      "startPosition": "仰臣，頭部朝垂直滑槓（遠離時將增加彈簧張力）。骨盆和脊椎呈\n中立位。雙腿併攏，彎曲，雙腳平放在墊上。肩部開啟，保持肩\n胛骨穩定。握住拉環，肘關節彎曲，仰臥於床，雙手置於肩前。\n1.掌心朝向髖部。\n2.掌心向上",
+      "flow": "準備，吸氣⋯\n仰臣，頭部朝垂直滑槓（遠離時將增加彈簧張力）。骨盆和脊椎呈\n呼氣 保持肩胛骨穩定，肱骨不動，伸展肘關節，手學朝墊壓床。\n中立位。雙腿併攏，彎曲，雙腳平放在墊上。肩部開啟，保持肩\n胛骨穩定。握住拉環，肘關節彎曲，仰臥於床，雙手置於肩前。\n吸氣 保持肩胛骨穩定，肱骨固定，肘關節彎曲，控制彈簧返回。\n董復練習5次。\n動作調整［練習1］",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p072_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p072_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p073_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p073_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p074_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p074_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p075_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p075_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p076_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p076_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p077_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p077_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "臂用彈簧",
+        "伸展",
+        "推",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "beginner-back-rowing-preps",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "後劃準備動作",
+      "english": "Back Rowing Preps",
+      "pageStart": 78,
+      "pageEnd": 87,
+      "pageLabel": "p.78-87",
+      "difficulty": "初級",
+      "equipment": "臂用彈簧",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "lat",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "後劃、開肘、飛翔、二頭肌、三頭肌和後卷變化；同時訓練後側肩帶與軀幹控制。",
+      "setup": "呈坐姿時將垂直滑槓調成與肩同高。將臂用彈簀連線",
+      "startPosition": "面向垂直滑槓坐立。骨盆和脊椎呈中立位。雙腿伸直併攏：雙踝\n蹠屈，腳趾輕輕繃直。雙臂向下伸直，略置於體前，抓住拉環，\n堂心向後。肩胛骨保持穩定。\n’雙臂後壓時，避免肩部呈現圓肩現象\n• 雙臂儘可能靠近體側\n2.掌心向內。\n2. 雙臂向後拉",
+      "flow": "準備，趿氣⋯\n呼氣 保持肩朋骨穩定，雙臂向後下方拉，以伸展肩部",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p078_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p078_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p079_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p079_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p080_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p080_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p081_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p081_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p082_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p082_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p083_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p083_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p084_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p084_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p085_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p085_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p086_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p086_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p087_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p087_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "臂用彈簧",
+        "伸展",
+        "拉"
+      ]
+    },
+    {
+      "id": "beginner-front-rowing-preps",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "前劃準備動作",
+      "english": "Front Rowing Preps",
+      "pageStart": 88,
+      "pageEnd": 91,
+      "pageLabel": "p.88-91",
+      "difficulty": "初級",
+      "equipment": "臂用彈簧",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "arms",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "柔韌與伸展"
+      ],
+      "summary": "向前伸直、第二種姿勢、雙手上託；前方肩帶動作配合中立坐姿。",
+      "setup": "",
+      "startPosition": "呈坐姿，背對垂直滑槓。骨盆和脊椎呈中立位。雙腿伸直併攏，\n雙踝蹠屈，腳趾輕輕繃直。雙臂向下伸直，略置於體後，抓住拉環，\n掌心向前。肩胛骨保持穩定",
+      "flow": "準備，吸氣⋯\n呼氣 保持肩胛骨穩定，彎曲肩部，雙臂直接向前和向上舉起。\n吸氣 保持肩胛骨穩定，向後伸展雙臂，控制彈簧返回。\n重複練習5次。\n要點［練習1］\n• 開始時雙臂儘可能靠近體側\n〇〇〇\n動作調整【絲習1〕",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p088_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p088_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p089_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p089_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p090_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p090_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p091_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p091_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "柔韌與伸展",
+        "臂用彈簧",
+        "伸展",
+        "推",
+        "拉"
+      ]
+    },
+    {
+      "id": "beginner-lower-middle-upper-trap-strengthener",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "下、中、上斜方肌強化",
+      "english": "Lower, Middle, Upper Trap Strengthener",
+      "pageStart": 92,
+      "pageEnd": 93,
+      "pageLabel": "p.92-93",
+      "difficulty": "初級",
+      "equipment": "下卷木桿",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "hips_legs"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "髖與腿"
+      ],
+      "summary": "以不同阻力方向強化斜方肌纖維，同時保持站姿骨盆和軀幹穩定。",
+      "setup": "將臂用彈簧連附到眼鉤上，針對斜方肌肌纖維進行練\n習。將泡沫拉環連線到彈簧上。針對上斜方肌進行練習，可使用\n立柱底部的眼鉤。針對中斜方肌進行練習，可將垂直滑槓的高度\n設為站立時與肩同高，並使用槓上的眼鉤。針對下斜方肌進行練習，\n可拆下下卷木桿，並將臂用彈簧連線到立柱頂部支桿上的眼鉤上",
+      "startPosition": "呈站姿，面朝垂直滑槓，雙腳分開，與髖同寬。骨盆和脊椎星中",
+      "flow": "準備，吸氣⋯\n［斜方肌］阻力來自下方時，加強上斜方肌，以穩定肩胛骨；阻力\n來自中間部位時，以中斜方肌穩定肩胛骨；阻力來自上方時，以\n呼氣 保持肩胛骨穩定，肘關節向後上方分彎曲。\n吸氣 伸展肘關節，向下和向前伸展雙臂，控制彈簧返回。\n中斜方肌\n準備，雙氣⋯\n呼氣 保持肩胛骨穩定，彎曲肘關節，向外和向後。\n吸氣 伸展肘關節，雙臂前伸，控制彈簧返回。\n上斜方肌",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p093_action_01.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "下卷木桿",
+        "臂用彈簧",
+        "臂用彈簧站姿動作",
+        "旋轉",
+        "伸展",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "beginner-chest-expansion-pulses",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "胸部擴張",
+      "english": "Chest Expansion / Pulses",
+      "pageStart": 95,
+      "pageEnd": 97,
+      "pageLabel": "p.95-97",
+      "difficulty": "初級",
+      "equipment": "臂用彈簧",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "lat",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "背闊肌、大圓肌、後三角肌伸展肩部；臀大肌/胭繩肌穩定站姿骨盆。",
+      "setup": "星站姿時將垂直滑槓調成與肩同高。將臂用彈簧連線",
+      "startPosition": "呈站姿，面朝垂直滑槓，雙腳分開，與髖同寬。骨盆和脊椎呈中\n立位。雙臂向下伸直，略置於體前，抓住拉環，掌心向後。肩胛\n4. 頭部轉向一側\n臂用彈簧站姿動作",
+      "flow": "準備，吸氣⋯",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p095_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p095_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p096_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p096_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p097_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p097_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展",
+        "臂用彈簧",
+        "臂用彈簧站姿動作",
+        "旋轉",
+        "伸展",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "beginner-arms-sideways",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "雙臂側展",
+      "english": "Arms Sideways",
+      "pageStart": 98,
+      "pageEnd": 99,
+      "pageLabel": "p.98-99",
+      "difficulty": "初級",
+      "equipment": "臂用彈簧",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "arms",
+        "hips_legs"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿"
+      ],
+      "summary": "肩部側向運動，重點在肩胛與站姿軀幹穩定。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "準備，吸氣⋯\n，保持雙臂伸直，不要過度伸展肘關節\n呼氣 雙臂伸直，位於一個穩定的高度，後推，保持站姿和肩肝\n骨穩定",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p098_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p098_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p098_action_03.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p099_action_01.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "臂用彈簧",
+        "臂用彈簧站姿動作",
+        "旋轉",
+        "伸展",
+        "推",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "beginner-biceps-curls",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "二頭肌捲曲（站姿）",
+      "english": "Biceps Curls",
+      "pageStart": 100,
+      "pageEnd": 101,
+      "pageLabel": "p.100-101",
+      "difficulty": "初級",
+      "equipment": "臂用彈簧",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "arms",
+        "hips_legs"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿"
+      ],
+      "summary": "二頭肌屈肘，腹斜肌/多裂肌防旋轉，下斜方肌/背闊肌防止肩上提。",
+      "setup": "將臂用彈簧連線到立柱的底部。將泡沫拉環連線到彈",
+      "startPosition": "呈站姿，面朝垂直滑槓，雙腳分開，與髖同寬。骨盆和脊椎呈中\n立位。雙臂伸直，置於體側，抓住拉環，掌心向前。肩胛骨保持",
+      "flow": "準備，吸氣⋯",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p100_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p100_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p101_action_01.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "臂用彈簧",
+        "臂用彈簧站姿動作",
+        "旋轉",
+        "伸展",
+        "屈曲",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "beginner-triceps-press",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "肱三頭肌下壓（站姿）",
+      "english": "Triceps Press",
+      "pageStart": 102,
+      "pageEnd": 103,
+      "pageLabel": "p.102-103",
+      "difficulty": "初級",
+      "equipment": "臂用彈簧",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "arms",
+        "hips_legs"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿"
+      ],
+      "summary": "肱三頭肌伸肘，站姿骨盆和肩胛穩定。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "準備，吸氣⋯\n呼氣 保持肩胛骨穩定，保持肱骨靜止不動，伸展肘關節，將雙\n手朝地面下拉。\n吸氣\n保持肩胛骨穩定，保持肱骨靜止不動，彎曲肘關節，控制",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p102_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p102_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p102_action_03.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "臂用彈簧",
+        "臂用彈簧站姿動作",
+        "旋轉",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "beginner-side-arm-work",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "側手臂練習",
+      "english": "Side Arm Work",
+      "pageStart": 104,
+      "pageEnd": 107,
+      "pageLabel": "p.104-107",
+      "difficulty": "初級",
+      "equipment": "臂用彈簧",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "arms",
+        "hips_legs"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿"
+      ],
+      "summary": "內旋、外旋、內收、外展；肩袖/肩帶與髖腿穩定共同參與。",
+      "setup": "將垂直滑槓設為與肘同高。將臂用彈簧連線到滑槓的\n眼鉤，並將泡沫拉環連線到彈簧上",
+      "startPosition": "呈站姿，面朝側方，雙腳分開，與髖同寬。骨盆和脊椎呈中立位。\n靠近彈簧的手抓住拉環，掌心向內。上臂置於體側。肘關節鸞曲，\n前臂同軀幹垂直。另一隻手輕壓大腿側部。肩胛骨保持穩定",
+      "flow": "準備，吸氣⋯\n呼氣 保持肩胛骨穩定，保持肱骨靜止不動，在肩關節向內旋轉。\n吸氣 保持肱骨靜止不動，然後返回起始姿勢，控制彈簧返回。\n童復絲習5-10次。\n動作調整［練習1］",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p104_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p105_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p106_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p106_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p106_action_03.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p107_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p107_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p107_action_03.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "臂用彈簧",
+        "臂用彈簧站姿動作",
+        "旋轉",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "beginner-snow-angels-standing-pull-down",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "雪地天使與站立下拉",
+      "english": "Snow Angels / Standing Pull Down",
+      "pageStart": 108,
+      "pageEnd": 111,
+      "pageLabel": "p.108-111",
+      "difficulty": "初級",
+      "equipment": "臂用彈簧",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "lat",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "背闊肌、胸大肌與肩胛穩定肌控制肩內收/下拉。",
+      "setup": "將臂用彈簧連線到沿立柱頂部的槓上的眼鉤上。將泡\n沫拉環連線到彈簧上",
+      "startPosition": "面朝凱迪拉克站立，離床越近越好。雙腳分開至與髖同寬。骨盆\n和脊椎呈中立位。雙臂仲直，朝兩側外展，低於肩部，抓住拉環，\n掌心向下。肩胛骨保持穩定",
+      "flow": "準備，吸氣⋯\n•利用臀大肌、膽繩肌和腹肌保持骨盆呈中立位\n呼氣 保持肩胛骨穩定，內收雙臂，將雙手拉向髖部。\n，要通過收緊腹肌來穩定軀幹，避免肋骨架上提或前傾\n吸氣 手臂恢復起始姿勢，控制彈贊復位。\n•手腕始終保持伸展\n重複練習5-10次。\n雙臂練習",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p108_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p108_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p108_action_03.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p109_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p109_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p109_action_03.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p110_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p110_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p111_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p111_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "臂用彈簧",
+        "臂用彈簧站姿動作",
+        "伸展",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "beginner-leg-springs-bend-stretch",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "腿用彈簧：屈伸練習",
+      "english": "Leg Springs Bend & Stretch",
+      "pageStart": 112,
+      "pageEnd": 115,
+      "pageLabel": "p.112-115",
+      "difficulty": "初級",
+      "equipment": "腿用彈簧",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "hips_legs"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "髖與腿"
+      ],
+      "summary": "髖伸展肌群、股四頭肌、髖旋轉控制，腹斜肌穩定骨盆。",
+      "setup": "呈坐姿時將垂直滑槓設為與肩同高。將腿用彈簧連線",
+      "startPosition": "仰臥，頭部朝向垂直滑槓。雙臂伸直，越過頭頂，雙手頂住立柱，\n位置略高於肩部，肩胛骨保持穩定。骨盆和脊椎呈中立位。雙腳\n套入腳帶，雙腿平行併攏，雙膝彎曲，雙踝背屈（保持雙腳在膝\n部上方，以免腳帶滑動）。\n骨盆可保持中立位。\n1.保持踝背屈。簡化協調性",
+      "flow": "準備，吸氣⋯\n呼氣 雙腿併攏，大腿內側相觸，雙腳蹬離，伸展膝部，伸展雙膝",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p112_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p112_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p113_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p113_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p114_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p114_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p115_action_01.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "腿用彈簧",
+        "旋轉",
+        "伸展",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "beginner-leg-springs-circles",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "腿用彈簧：畫弧",
+      "english": "Leg Springs Circles",
+      "pageStart": 116,
+      "pageEnd": 119,
+      "pageLabel": "p.116-119",
+      "difficulty": "初級",
+      "equipment": "腿用彈簧",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "hips_legs"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "髖與腿"
+      ],
+      "summary": "髖伸展、內收/外展、旋轉變化，重點是骨盆穩定和股骨轉動。",
+      "setup": "",
+      "startPosition": "以胭繩肌拉伸至最大限度為限，同時帶動骨盆向中立位移\n仰臥，頭部朝向垂直滑槓。雙臂伸直，越過頭頂，雙手頂住立柱，\n位置略高於肩部，肩胛骨保持穩定。腰椎下沉姿勢。雙腳套入腳\n動。到達弧形頂部時，併攏雙腿。\n帶內，雙腿平行並內收，沿對角線伸展，儘可能向下，動作幅度",
+      "flow": "吸氣 雙腿保持伸直，並向軀幹方向擺動，動作幅度以胭繩肌拉\n骨盆可保持中立位。\n伸至最大限度為限，同時帶動骨盆向中立位移動。\n呼氣\n雙腿分開，並向遠離軀幹的方向下壓拉環，在空中形成弧\n形。同時，腰椎下沉，到達弧形底部時，併攏雙腿。\n平行",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p116_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p116_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p117_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p117_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p118_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p118_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p119_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p119_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "腿用彈簧",
+        "旋轉",
+        "伸展",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "beginner-leg-springs-walks",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "腿用彈簧：走步",
+      "english": "Leg Springs Walks",
+      "pageStart": 120,
+      "pageEnd": 121,
+      "pageLabel": "p.120-121",
+      "difficulty": "初級",
+      "equipment": "腿用彈簧",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "hips_legs"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "髖與腿"
+      ],
+      "summary": "交替髖伸展，髖內收肌防止腿向側面張開。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "吸氣\n保持骨盆穩定，默數五個數，雙腿平行，稍稍彎曲一邊的\n髖部，同時稍稍伸展另一邊的髖部。一邊數數一邊換腿，\n兩側交替進行剪式動作模式。\n協調性：均勻完成雙腿剪交動作\n呼氣\n默數五個數，繼續一邊數數一邊換腿，兩側交替進行剪式\n動作模式運動雙腿",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p120_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p120_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p121_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p121_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "腿用彈簧",
+        "旋轉",
+        "伸展",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "beginner-side-lying-bend-stretch",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "腿用彈簧側躺：屈伸練習",
+      "english": "Side-Lying Bend & Stretch",
+      "pageStart": 122,
+      "pageEnd": 123,
+      "pageLabel": "p.122-123",
+      "difficulty": "初級",
+      "equipment": "腿用彈簧",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "hips_legs"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "髖與腿"
+      ],
+      "summary": "動作腿髖伸展肌群和股四頭肌蹬出，下側腹斜肌防止髖頂上拉。",
+      "setup": "星坐姿時將垂直滑槓設為與肩同高。將一條腿用彈簧",
+      "startPosition": "外蹬出，腳踝蹠屈。\n呈側躺姿勢，頭部朝向垂直滑槓。骨盆和脊椎星中立位。下臂伸直，\n向內彎曲髖部和膝關節至大約一半，背屈踝關節，返回起\n頭蟄在手簪上。上側手放在胸前墊上，以保持穩定，肩胛骨保持\n穩定。位於下方的腿伸直，平行伸展，同軀幹呈一條線（可以用\n支撐帶固定）。上方的腳置於帶內。位於上方的腿同腕部平行，膝\n關節彎曲，足部同下方腿的小腿中間部位呈一條線，踝背屈，腳",
+      "flow": "準備，吸氣⋯\n呼氣\n保持骨盆穩定，伸展上側腿部，將腳保持在髖下方高度向\n起始姿勢\n外蹬出，腳踝蹠屈。\n呈側躺姿勢，頭部朝向垂直滑槓。骨盆和脊椎星中立位。下臂伸直，\n吸氣\n向內彎曲髖部和膝關節至大約一半，背屈踝關節，返回起\n頭蟄在手簪上。上側手放在胸前墊上，以保持穩定，肩胛骨保持\n始姿勢。\n穩定。位於下方的腿伸直，平行伸展，同軀幹呈一條線（可以用\n支撐帶固定）。上方的腳置於帶內。位於上方的腿同腕部平行，膝\n每側重複練習5-10次。\n關節彎曲，足部同下方腿的小腿中間部位呈一條線，踝背屈，腳\n踵同坐骨呈一條線",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p122_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p122_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p123_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p123_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "腿用彈簧",
+        "腿用彈簧側躺練習",
+        "伸展",
+        "屈曲",
+        "拉",
+        "側躺"
+      ]
+    },
+    {
+      "id": "beginner-lift-lower",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "腿用彈簧側躺：抬腿與放腿",
+      "english": "Lift & Lower",
+      "pageStart": 124,
+      "pageEnd": 125,
+      "pageLabel": "p.124-125",
+      "difficulty": "初級",
+      "equipment": "腿用彈簧",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "hips_legs"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "髖與腿"
+      ],
+      "summary": "髖內收肌離心/向心控制，上下骨盆對齊。",
+      "setup": "呈坐姿時將垂直滑槓設力與啟同高。將一條腿用彈貨",
+      "startPosition": "縮帶動腿部下壓；以腹斜肌和豎脊肌穩定軀幹；以腹斜肌和多裂\n呈側躺姿勢，頭部朝向垂直滑槓。骨盆和脊椎呈中立位。下臂伸直，\n肌避免轉動；以位於下方的腹斜肌避免頂部拉起；肩胛骨穩\n頭墊在手臂上。上例手放在胸前墊上，以保持穩定，肩胛骨保持\n穩定。腿伸直，平行，伸展，同軀幹呈一條線（下方腿可以用支\n撐帶固定）。位於上方的腳置於帶內，踝關節蹠屈",
+      "flow": "吸氣\n保持骨盆穩定，位於上方的腿外展，保持平行正位，踝關\n000000 3\n節蹠屈。\n呼氣\n踝背屈，上方腿內收。\n每側重複練習5-10次。\n拾腿與放腿",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p124_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p124_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p125_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p125_action_02.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "腿用彈簧",
+        "腿用彈簧側躺練習",
+        "伸展",
+        "拉",
+        "側躺"
+      ]
+    },
+    {
+      "id": "beginner-side-stretch",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "側伸展",
+      "english": "Side Stretch",
+      "pageStart": 126,
+      "pageEnd": 127,
+      "pageLabel": "p.126-127",
+      "difficulty": "初級",
+      "equipment": "未標明",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "lat",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "側屈中拉伸背闊肌、腹斜肌、腰方肌，並維持軀幹正位。",
+      "setup": "將絨毛掛帶滑至距離立柱較近的位置",
+      "startPosition": "伸展時以腹肌用力，正確保持軀幹正位；避免脊椎伸展和肋\n稍離開立柱朝側方站立。雙腿伸直併攏，骨盆和脊椎呈中立位。\n距離立柱較遠的那隻於伸過頭頂抓住毛絨帶。距離立柱較近的那\n隻手抓住立柱，與腰齊高",
+      "flow": "準備，吸氣：\n呼氣 保持腹肌的支撐穩定和骨盆中立位，朝一側傾離凱迪拉克，\n從髖外側開始，因此脊椎朝立柱側彎，拉伸雙背。\n吸氣\n保持姿勢，並使氣息進入軀幹拉伸的一側。\n呼氣 將骨盆和脊椎返回至豎直位，彎曲肘關節，返回起始姿勢。\n動作調整1\n每側靈復練習3-5次",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p126_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p126_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p126_action_03.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p127_action_01.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "拉"
+      ]
+    },
+    {
+      "id": "beginner-biceps-curls",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "推拉框站姿：二頭肌捲曲",
+      "english": "Biceps Curls",
+      "pageStart": 128,
+      "pageEnd": 128,
+      "pageLabel": "p.128",
+      "difficulty": "初級",
+      "equipment": "推拉框站姿",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "arms",
+        "hips_legs"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿"
+      ],
+      "summary": "二頭肌屈肘，臀大肌/胭繩肌穩定站姿骨盆。",
+      "setup": "將推拉彈簧連線到立柱上位置最低的眼鉤上。將推拉",
+      "startPosition": "星站姿，面朝推拉框，雙腳分開，與腕同寬。骨盆和脊椎呈中立位",
+      "flow": "準備，吸氣⋯\n動怍調整\n呼氣 保持軀幹和肩胛骨穩定，彎曲肘關節，將框拉向肩部。由",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p128_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p128_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p128_action_03.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "推拉框站姿",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "beginner-triceps-press",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "推拉框站姿：肱三頭肌下壓",
+      "english": "Triceps Press",
+      "pageStart": 129,
+      "pageEnd": 129,
+      "pageLabel": "p.129",
+      "difficulty": "初級",
+      "equipment": "推拉框站姿",
+      "muscleKeys": [
+        "core",
+        "scapula",
+        "arms",
+        "hips_legs"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿"
+      ],
+      "summary": "肱三頭肌與三角肌抬框，返回時離心控制。",
+      "setup": "",
+      "startPosition": "呈站姿，面朝推拉框，雙腳分開，與髖同寬。骨盆和脊椎呈中立位。\n肘關節彎曲，雙手撐起推拉框，略高於肩。雙手握住框體，與肩",
+      "flow": "準備，吸氣⋯\n持穩定而非站立時鍪個腿部的穩定為重點",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p129_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p129_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p129_action_03.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "推拉框站姿",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "beginner-standing-push-thru",
+      "source": "beginner",
+      "sourceLabel": "初級",
+      "title": "推拉框站姿：站立推拉",
+      "english": "Standing Push-Thru",
+      "pageStart": 130,
+      "pageEnd": 131,
+      "pageLabel": "p.130-131",
+      "difficulty": "初級",
+      "equipment": "推拉框站姿",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "lat",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "腹直肌/腹斜肌捲起，臀大肌/胭繩肌控制骨盆，背闊肌/大圓肌下拉框。",
+      "setup": "將推拉框朝離開床體的方向擺動。將推拉彈簧從上述",
+      "startPosition": "將框帶至頭部，以肩胛骨能夠保持穩定為宜。\n呈站姿，面朝推拉框，雙腳分開，與髖同寬。骨盆和脊椎呈中立位。\n雙臂前伸，同肩部直接呈一條線，握住推拉框，掌心向下。肩胛",
+      "flow": "吸氣\n保持肩胛骨穩定，彎曲肘關節，將框下拉至軀幹前。\n呼氣\n從頭開始，通過屈曲逐節下滾，必要時彎曲膝關節，以腳\n中心保持平衡。同時，伸展雙臂，將框朝立往下推。伸展\n幫助，且手扶推拉框。教練不能把身體靠向框體（無論上下）。\n脊椎至中立位，同地面平行時，從尾椎骨到雙手星一條線。\n1根或2根彈簧\n接下來⋯\n吸氣 保持骨盆和脊椎呈中立位，雙腳站穩，肘關節向兩側彎曲，\n起始姿勢\n將框帶至頭部，以肩胛骨能夠保持穩定為宜。\n呈站姿，面朝推拉框，雙腳分開，與髖同寬。骨盆和脊椎呈中立位。\n雙臂前伸，同肩部直接呈一條線，握住推拉框，掌心向下。肩胛\n呼氣 伸展肘關節。\n骨保持穩定。\n手肘屈伸練習童復了次。\n站立推拉",
+      "images": [
+        "../wiki/assets/cadillac_beginner_actions/p130_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p130_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p130_action_03.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p131_action_01.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p131_action_02.jpg",
+        "../wiki/assets/cadillac_beginner_actions/p131_action_03.jpg"
+      ],
+      "tags": [
+        "初級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展",
+        "推拉框站姿",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-neck-pull",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "引頸前伸",
+      "english": "NECK PULL",
+      "pageStart": 26,
+      "pageEnd": 27,
+      "pageLabel": "p.26-27",
+      "difficulty": "中級",
+      "equipment": "下卷木杆",
+      "muscleKeys": [
+        "core"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定"
+      ],
+      "summary": "引頸前伸：主要歸入核心與腰骨盆穩定；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "將下卷彈簧連線到立柱頂部支桿上的眼鉤上。\n將彈簧連線到下卷木桿的眼鉤上（參見凱迪拉克的構造）。\n同時，彎曲肘關節，下拉木桿",
+      "startPosition": "呈坐姿，面向下卷木桿。骨盆和脊椎呈中立位。雙腿伸直，平行，\n踝背屈，雙足蹬住立柱（如果雙腿伸直時無法保持骨盆呈中立位，\n開始時可稍稍彎曲膝關節，隨著骨盆卷離股骨再伸展膝關節）。手\n臂朝前伸直，握住下卷木桿，與肩齊寬，掌心向下。肩胛骨保持",
+      "flow": "準備，吸氣⋯\n呼氣 保持肩胛骨穩定使髂前上棘離開大腿骨前部，脊椎隨著開\n始屈曲繼續逐節捲動著墊。經過腰椎下沉，直到呈平躺姿\n勢，骨盆和脊椎呈中立位。\n吸氣 從頭部開始，通過屈曲逐節捲動脊椎，直到肩胛骨離開墊",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p026_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p027_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "下卷木桿",
+        "伸展",
+        "屈曲",
+        "拉"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-roll-down-with-back-extension",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "後卷加背部伸展",
+      "english": "ROLL DOWN WITH BACK EXTENSION",
+      "pageStart": 28,
+      "pageEnd": 29,
+      "pageLabel": "p.28-29",
+      "difficulty": "中級",
+      "equipment": "下卷木杆",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "後卷加背部伸展：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "呈坐姿，面向下卷木桿。骨盆和脊椎呈中立位。雙腿伸直，平行，\n踝背屈，雙足蹬住立柱（如果雙腿伸直時無法保持骨盆呈中立位，\n開始時可稍稍彎曲膝關節，隨著骨盆卷離股骨再伸展膝關節）。手\n臂朝前伸直，握住下卷木桿，與肩齊寬，掌心向下",
+      "flow": "準備，吸氣…\n呼氣 保持肩胛骨穩定使髂前上棘離開大腿骨前部，脊椎逐節彎\n曲向下捲動著墊。經過腰椎下沉，直到呈平躺姿勢，骨盆\n這個方向重複練習3次。\n和脊椎呈中立位。\n吸氣\n彎曲肘關節，便於穩定肩胛骨和均勻伸展脊椎即可，從胸\n椎開始，胸骨朝木桿拾起。然後將骨盆轉向雙腿，將軀幹\n從墊上抬離，拉伸脊椎呈中立豎直位，此時體重落在坐\n骨上。\n這個方向重複練習3次",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p028_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p029_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "下卷木桿",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-twist-with-pulses",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "有節奏的扭轉",
+      "english": "TWIST WITH PULSES",
+      "pageStart": 30,
+      "pageEnd": 31,
+      "pageLabel": "p.30-31",
+      "difficulty": "中級",
+      "equipment": "下卷木杆",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "lat",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "有節奏的扭轉：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、背闊肌、大圓肌與拉力鏈；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "吸氣\n保持骨盆穩定，朝動作臂的方向旋轉脊椎，讓手臂隨著軀\n踝背屈，雙足蹬住立柱（如果雙腿伸直時無法保持骨盆呈中立位，\n幹上部的旋轉伸向側方。\n開始時，隨著骨盆卷離股骨，可稍稍彎曲和伸長膝關節）。雙臂伸\n呼氣\n默數三個數，將動作臂放落至墊，將其滑向立柱，同時骨\n直，一隻手握住下卷木桿的中央，另一隻手伸直至下卷木桿的下\n盆傾斜離開雙腿，另一側的髖部稍稍離開墊，從另一側的\n方，掌心均朝下。\n足部到手形成一條對角線。讓頭部跟隨軀幹轉動。每呼吸\n難 體重大.\n一次滑至更遠距離。\n吸氣\n脊椎保持旋轉，軀幹兩側保持等長，起身，恢復至豎直位置，\n從而使重心均勻分配在兩坐骨上，並使兩側髖部均勻落在\n墊上。\n呼氣 上軀幹轉到中央位置，改變握住下卷木桿的手。\n每個方向重複練習3次，兩側交替進行。\n下沉完成",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p030_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p030_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p031_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p031_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展",
+        "下卷木桿",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-port-de-bras",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "手臂動作",
+      "english": "PORT DE BRAS",
+      "pageStart": 32,
+      "pageEnd": 33,
+      "pageLabel": "p.32-33",
+      "difficulty": "中級",
+      "equipment": "下卷木杆",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "手臂動作：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "準備，吸氣•\n呼氣 使髂前上棘離開大腿骨前部，脊椎逐節彎曲向下捲動著墊。\n同時，動作臂先向下沿墊上一側伸展，再向立杆方向伸展。\n保持骨盆正對前方，讓軀幹上部朝動作臂方向旋轉。然後\n將動作臂畫弧繞過頭頂，並在穿過中線時，讓軀幹上部\n旋轉。\n吸氣 從頭部開始屈曲脊椎逐節捲起，逐節活動椎骨，通過腰椎\n下沉捲動至中立位坐姿。繼續將動作臂向下繞至另外一側，\n讓軀幹上部返回面朝前方，脊椎呈豎直位。\n每個方向重複練習3次，每次交替",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p032_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p032_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p033_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p033_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "下卷木桿",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-side-bend",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "側彎",
+      "english": "SIDE BEND",
+      "pageStart": 34,
+      "pageEnd": 35,
+      "pageLabel": "p.34-35",
+      "difficulty": "中級",
+      "equipment": "下卷木杆",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "側彎：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "吸氣 穩定骨盆和脊椎呈中立位，沿床拉伸軀幹，開始側彎脊椎\n離開墊，下臂跟隨軀幹離墊",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p034_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p034_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p035_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p035_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "下卷木桿",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "側躺"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-twist-around-the-world",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "轉遍世界",
+      "english": "TWIST AROUND THE WORLD",
+      "pageStart": 36,
+      "pageEnd": 37,
+      "pageLabel": "p.36-37",
+      "difficulty": "高階",
+      "equipment": "下卷木杆",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "lat",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "轉遍世界：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、背闊肌、大圓肌與拉力鏈；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "吸氣\n保持肩胛骨穩定，雙臂和木桿與雙肩協調一致，骨盆正對\n踝背屈，雙足蹬住立柱（如果雙腿伸直時無法保持骨盆呈中立位，\n前方，軀幹上部朝一側旋轉。\n開始時，隨著骨盆卷離股骨，可稍稍彎曲和伸長膝關節）。手臂朝\n呼氣\n脊椎保持穩定，軀幹兩側保持均勻伸直，且側轉姿勢保持\n前伸直，握住下卷木桿，與肩齊寬，掌心向下。肩胛骨保持穩定。\n不變，向側後方傾斜上身，使之成對角線姿勢，另一側的\n髖部可稍稍離床。同時，保持雙臂和軀幹協調一致，令位\n於後方的肘關節向外和向回揮動，使之成對角線姿勢。繼\n續呼氣和收縮腹肌，以彎曲脊椎，轉動軀幹上部，面向前方，\n從而令髖部返回墊。\n吸氣\n將上部軀幹旋轉到另一側，等長拉伸軀幹兩側，且側轉姿\n勢保持不變，向側後方傾斜上身，使之成對角線姿勢，另\n一側的髖部可稍稍離床。同時，保持雙臂和軀幹協調一致，\n令位於後方的肘關節向外和向回揮動，使之成對角線姿勢。\n呼氣\n保持脊椎轉動，軀幹兩側等長，軀幹返回豎直位，讓體重\n落在兩塊坐骨上，兩側髖部均勻位於墊上，正對前方，然\n後將軀幹上部旋轉至前方。\n每側重複練習3次",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p036_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p036_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p037_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p037_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展",
+        "下卷木桿",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-thigh-stretch",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "大腿伸展",
+      "english": "THIGH STRETCH",
+      "pageStart": 38,
+      "pageEnd": 39,
+      "pageLabel": "p.38-39",
+      "difficulty": "高階",
+      "equipment": "下卷木杆",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "大腿伸展：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "跪在墊上，面向下卷木桿。骨盆和脊椎呈中立位，股骨呈豎直\n位，膝關節與髖同寬。手臂朝前伸直，握住下卷木桿，與肩齊寬，\n掌心向下。肩胛骨保持穩定",
+      "flow": "吸氣\n保持肩胛骨穩定，從雙膝到頭頂呈一條線，向後傾斜股骨，\n同時軀幹保持一體與股骨一起離開垂直線，以保持穩定為\n限度，拉伸股四頭肌以後傾。\n呼氣\n保持雙臂伸直，下壓木桿，進一步調動彈簧阻力，使股骨\n和軀幹一體回到豎直位。\n重複練習5次",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p038_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p039_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "下卷木桿",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-airplane",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "飛翔動作",
+      "english": "AIRPLANE",
+      "pageStart": 40,
+      "pageEnd": 41,
+      "pageLabel": "p.40-41",
+      "difficulty": "高階",
+      "equipment": "下卷木杆",
+      "muscleKeys": [
+        "core"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定"
+      ],
+      "summary": "飛翔動作：主要歸入核心與腰骨盆穩定；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "仰臥，頭部朝向下卷木桿。骨盆和脊椎呈中立位。雙膝關節彎曲，\n鉤住，下卷木桿與髖同寬。雙踝蹠屈，腳尖輕輕繃直。雙手伸過\n頭頂，握住兩側立柱，稍高過肩。胭繩肌在彈簧阻力作用下主動\n體升起，膝關節朝正上方伸展，體重落在胸椎上部",
+      "flow": "正向。\n壓至墊，繼續呼氣，完成整個練習。\n準備，吸氣⋯\n每個方向重複練習3到5次。\n呼氣 穩定骨盆，彎曲髖部，將木桿拉向軀幹。然後收縮腹肌，\n從尾椎骨開始，將脊椎逐節捲動離墊，直到體重落在胸椎\n上部。\n吸氣 保持骨盆靜止，伸展髖部，膝關節朝正上方延伸。然後，\n通過軀幹和髖部保持身體呈橋式姿勢，將身體向下降落，\n直到腳趾接觸墊。然後從上部胸椎開始逐節活動脊椎，回\n落墊上",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p040_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p040_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p041_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p041_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "下卷木桿",
+        "伸展",
+        "屈曲",
+        "拉",
+        "橋式",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-triceps-lunge",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "肱三頭肌弓步",
+      "english": "TRICEPS LUNGE",
+      "pageStart": 42,
+      "pageEnd": 43,
+      "pageLabel": "p.42-43",
+      "difficulty": "中級",
+      "equipment": "下卷木杆站姿",
+      "muscleKeys": [
+        "core",
+        "arms",
+        "hips_legs"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "手臂與胸肩",
+        "髖與腿"
+      ],
+      "summary": "肱三頭肌弓步：主要歸入核心與腰骨盆穩定、手臂、三角肌、胸大肌與前臂、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "將下卷彈簧連線到立柱頂部短支桿上的眼鉤上（參見凱",
+      "startPosition": "呈站姿，背對下卷木桿。骨盆和脊椎呈中立位，用大腿骨支撐骨盆，\n骨盆穩定在中立位。身體呈弓步姿勢，一隻腳置於另外一隻腳的\n前方。位於前方的膝關節和髖部屈曲，位於後方的腿伸直。整個\n身體傾離凱迪拉克，頭頂至位於後方的踵部呈一條線。雙手抓住\n下卷木桿，與肩同寬，肘關節彎曲，而且朝向前方。肩胛骨保持",
+      "flow": "準備，吸氣…\n•在手臂運動時保持肩胛骨穩定\n呼氣 身體呈弓步姿勢，穩定軀幹和骨盆，保持肩部穩定，肱骨\n靜止不動，伸展肘關節將木桿推離。\n•保持肱骨穩定\n吸氣 保持肘關節前伸，肱骨保持靜止，彎曲肘關節，控制木桿\n，保持肩部、肘關節和腕關節朝前呈一條線\n返回。\n，保持腹肌用力，以穩定軀幹，不要讓肋骨架前凸，導致脊\n椎伸展\n重複練習10次。\n，手腕始終保持伸展",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p042_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p043_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p043_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p043_action_03.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "下卷木桿",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-ballet-stretches-standing",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "芭蕾伸展站姿",
+      "english": "BALLET STRETCHES STANDING",
+      "pageStart": 44,
+      "pageEnd": 49,
+      "pageLabel": "p.44-49",
+      "difficulty": "中級",
+      "equipment": "秋幹",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "芭蕾伸展站姿：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "水平滑槓沿水平槓滑動一半距離。將鞦韆連線到滑槓\n的眼鉤上，將鞦韆帶連線到鞦韆底部",
+      "startPosition": "站在凱迪拉克上，面向鞦韆。支撐腿伸直，動作腿伸直後，踝關\n節落在鞦韆上。雙腿外旋。骨盆和脊椎呈中立位，骨盆儘可能保\n持水平正對前方。雙手抓住水平槓，肩胛骨保持穩定",
+      "flow": "屈伸練習…\n吸氣 重心再次落在文撐腿上，將動作腿另一側的手臂枱過頭頂。\n吸氣 保持骨盆正對前方且位於支撐腿的正上方，彎曲支撐腿的\n屈曲和伸展⋯\n膝關節。\n呼氣 脊椎前彎至動作腿上方，動作臂伸向腳的方向。\n呼氣 伸展支撐腿的膝關節。\n吸氣 逐節向上活動脊椎至中立位，動作臂高過頭頂。\n吸氣\n儘可能保持骨盆正對前方，踮起腳尖，重心落在前腳掌上，\n呼氣\n保持骨盆中立，伸展胸椎，直到胸骨朝正上方伸展；保持\n踝關節蹠屈。\n動作臂高過頭頂。\n呼氣 落下支撐腿腳跟。\n吸氣 脊椎返回中立位",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p044_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p045_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p046_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p047_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p048_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p049_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-spread-eagle",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "展翅雄鷹",
+      "english": "SPREAD EAGLE",
+      "pageStart": 50,
+      "pageEnd": 51,
+      "pageLabel": "p.50-51",
+      "difficulty": "中級",
+      "equipment": "秋幹",
+      "muscleKeys": [
+        "core",
+        "scapula"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定"
+      ],
+      "summary": "展翅雄鷹：主要歸入核心與腰骨盆穩定、肩胛穩定與上背穩定肌；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "懸於水平槓，身體正向面對正上方。雙腿伸直，踝關節置於鞦韆\n活動脊椎，伸展髖部至以大腿骨支撐骨盆呈中立位，身體\n頂部，雙腿外旋，雙腳鉤住鞦韆彈簧。雙手握住水平槓，使當骨\n從雙腳到肩部呈一條線。保持頸椎伸長，但略微屈曲，雙\n盆上提，身體呈一直線姿勢時，雙手與雙肩上下對齊。骨盆向墊\n眼朝向雙腳的方向。\n下落，儘可能呈中立位。肩胛骨保持穩定。\n彎曲肘關節，便於穩定肩胛骨和均勻伸展脊椎即可，從胸",
+      "flow": "準備，吸氣⋯\n起始姿勢\n呼氣 雙腿保持伸直，穩定肩胛骨，從尾椎骨開始通過屈曲逐節\n懸於水平槓，身體正向面對正上方。雙腿伸直，踝關節置於鞦韆\n活動脊椎，伸展髖部至以大腿骨支撐骨盆呈中立位，身體\n頂部，雙腿外旋，雙腳鉤住鞦韆彈簧。雙手握住水平槓，使當骨\n從雙腳到肩部呈一條線。保持頸椎伸長，但略微屈曲，雙\n盆上提，身體呈一直線姿勢時，雙手與雙肩上下對齊。骨盆向墊\n眼朝向雙腳的方向。\n下落，儘可能呈中立位。肩胛骨保持穩定。\n吸氣\n彎曲肘關節，便於穩定肩胛骨和均勻伸展脊椎即可，從胸\n椎開始，胸骨朝向正上方抬起。\n呼氣 從頭部開始，回到中立位，以大腿骨支撐骨盆呈中立位，\n身體從雙腳至雙肩呈一條線。然後通過屈曲逐節活動脊椎，\n開始拉伸肘關節。\n吸氣\n通過屈曲繼續逐節活動脊椎至中立位，讓髖部放鬆至屈曲，\n骨盆落回起始姿勢。\n重複練習3-5次。\n上的時候，先上一條月想屁服落，\n再上另外一條腿",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p050_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p050_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p051_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p051_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p051_action_03.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "肩胛與上背穩定",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-pull-up",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "上拉",
+      "english": "PULL UP",
+      "pageStart": 52,
+      "pageEnd": 54,
+      "pageLabel": "p.52-54",
+      "difficulty": "中級",
+      "equipment": "鞦韆",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "lat",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "上拉：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、背闊肌、大圓肌與拉力鏈；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "懸於水平槓，身體正向面對正上方。雙腿伸直，踝關節置於鞦韆\n頂部，雙腿外旋，雙腳鉤住彈簧。雙手握住水平槓，使當骨盆上\n提，身體呈一直線姿勢時，雙手與雙肩上下對齊。骨盆向墊下落，\n儘可能呈中立位。肩胛骨保持穩定",
+      "flow": "吸氣 通過屈曲繼續逐節活動脊椎至中立位，讓髖部放鬆至屈曲，\n骨盆落回起始姿勢。\n開始⋯\n吸氣準備。\n呼氣\n保持雙腿伸直，從尾椎骨開始通過屈曲逐節活動脊椎，伸\n展髖部至以大腿骨支撐骨盆呈中立位，身體從雙腳到肩部\n呈一條線。保持頸椎伸長，但略微屈曲，雙眼朝向雙腳的\n方向。\n吸氣 保持姿勢",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p052_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p052_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p053_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p053_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p054_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-reverse-pull-up",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "反向上拉",
+      "english": "REVERSE PULL UP",
+      "pageStart": 55,
+      "pageEnd": 55,
+      "pageLabel": "p.55",
+      "difficulty": "高階",
+      "equipment": "鞦韆",
+      "muscleKeys": [
+        "core",
+        "lat"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "背闊肌與拉力鏈"
+      ],
+      "summary": "反向上拉：主要歸入核心與腰骨盆穩定、背闊肌、大圓肌與拉力鏈；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "高骨盆\n懸於水平槓，身體正向面對凱迪拉克床。雙手抓住水平槓，略位\n，請勿將身體降低至超過能夠保持穩定的位置以下。\n於肩部前，雙腿伸直併攏，雙腳鉤住鞦韆帶。腰椎和骨盆儘可能\n呈中立位，胸椎和頸椎稍稍伸展。眼睛注視前方。肘關節彎曲",
+      "flow": "吸氣 穩定骨盆和脊椎，伸展肘關節，降低軀幹至以能夠維持肩\n條腿置於鞦韆上，對於體重的支撐力較小，因此在整個練習中雙\n胛骨穩定為宜。\n臂必須承擔更多力道。\n呼氣 彎曲肘關節，雙腿下壓至鞦韆帶上，將上身抬至儘可能高\n的位置。\n重複練習3-5次",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p055_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p055_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "背闊肌與拉力鏈",
+        "伸展",
+        "拉"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-walkover",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "跨步",
+      "english": "WALKOVER",
+      "pageStart": 56,
+      "pageEnd": 57,
+      "pageLabel": "p.56-57",
+      "difficulty": "高階",
+      "equipment": "鞦韆",
+      "muscleKeys": [
+        "core"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定"
+      ],
+      "summary": "跨步：主要歸入核心與腰骨盆穩定；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "水平滑槓的放置須確保雙腿分開時一隻腳的踝關節置",
+      "startPosition": "站在凱迪拉克上，面向鞦韆。支撐腿伸直，動作腿伸直後，踝關\n從頭部開始彎曲脊椎，伸展膝關節，彎曲髖部，軀幹倒立，\n節落在鞦韆上。雙腿外旋。骨盆和脊椎呈中立位，骨盆儘可能保\n踝關節落在支桿上。\n持水平正對前方。雙手抓住水平槓，肩胛骨保持穩定。\n雙腿叉開，採用劈又姿勢懸掛片刻，然後位於後方的踝關\n彎曲前腿，將其朝下方鞦韆伸展",
+      "flow": "吸氣\n下壓鞦韆，彎曲另外一條腿，將踝關節置於水平滑槓上。\n太遠，伸向支桿的腳可能脫落。\n保持臀大肌和膕繩肌支撐，以保持骨盆提起。\n呼氣\n置於鞦韆上的腿彎曲，兩腿又開，採用劈又姿勢懸掛片刻，\n位於後方的踝關節伸向立柱頂部上方的支桿。\n以確保練習者雙手抓牢，槓上雙腳也安全放置。\n吸氣\n位於前方的踝關節伸向立柱頂部的支桿，因此兩邊踝關節\n能夠牢固地落在支桿頂部，髖部屈曲，軀幹倒立。\n防滑。\n呼氣 背屈踝關節，雙腳鉤在支桿上，彎曲膝關節，脊椎和髖部\n起始姿勢\n完全伸展，身體面朝墊。\n站在凱迪拉克上，面向鞦韆。支撐腿伸直，動作腿伸直後，踝關\n吸氣\n從頭部開始彎曲脊椎，伸展膝關節，彎曲髖部，軀幹倒立，\n節落在鞦韆上。雙腿外旋。骨盆和脊椎呈中立位，骨盆儘可能保\n踝關節落在支桿上。\n持水平正對前方。雙手抓住水平槓，肩胛骨保持穩定。\n呼氣\n雙腿叉開，採用劈又姿勢懸掛片刻，然後位於後方的踝關\n節伸向水平滑槓。\n吸氣\n彎曲前腿，將其朝下方鞦韆伸展。\n呼氣 彎曲另外一條腿，朝下方墊伸展。\n每側重複練習1次",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p056_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p057_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "伸展",
+        "屈曲",
+        "拉",
+        "懸掛"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-scissors-in-air",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "空中剪刀式",
+      "english": "SCISSORS IN AIR",
+      "pageStart": 58,
+      "pageEnd": 59,
+      "pageLabel": "p.58-59",
+      "difficulty": "高階",
+      "equipment": "鞦韆",
+      "muscleKeys": [
+        "core"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定"
+      ],
+      "summary": "空中剪刀式：主要歸入核心與腰骨盆穩定；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "站在凱迪拉克上，面向鞦韆。支撐腿伸直，動作腿伸直後，踝關\n節落在鞦韆上。雙腿外旋。骨盆和脊椎呈中立位，骨盆儘可能保\n持水平正對前方。雙手抓住水平槓，肩胛骨保持穩定",
+      "flow": "吸氣 下壓鞦韆，彎曲另外一條腿，將踝關節置於水平滑槓上。\n保持膽繩肌和臀大肌支撐，以保持骨盆提起。\n呼氣 雙腿又開，位於前方的踝關節伸向水平滑槓，位於後方的\n呼氣 置於鞦韆上的腿彎曲，兩腿又開，採用劈又姿勢懸掛片刻，\n踝關節伸向立柱頂部的支桿。\n然後位於後方的踝關節伸向立柱頂部上方的支桿。\n吸氣 彎曲後腿，朝下方鞦韆伸展。\n吸氣 雙腿伸向正上方，軀幹倒立。\n呼氣 彎曲另外一條腿，朝下方墊伸展",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p058_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p058_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p059_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p059_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "伸展",
+        "拉",
+        "懸掛"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-bicycle-in-air",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "空中腳踏車式動作",
+      "english": "BICYCLE IN AIR",
+      "pageStart": 60,
+      "pageEnd": 61,
+      "pageLabel": "p.60-61",
+      "difficulty": "高階",
+      "equipment": "秋幹",
+      "muscleKeys": [
+        "core"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定"
+      ],
+      "summary": "空中腳踏車式動作：主要歸入核心與腰骨盆穩定；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "在髖部伸展，雙腿呈剪交姿勢。\n站在凱迪拉克上，面向鞦韆。支撐腿伸直，動作腿伸直後，踝關\n節落在鞦韆上。雙腿外旋。骨盆和脊椎呈中立位，骨盆儘可能保\n持水平正對前方。雙手抓住水平槓，肩胛骨保持穩定。\n在髖部伸展，雙腿呈剪交姿勢",
+      "flow": "吸氣\n下壓鞦韆，彎曲另外一條腿，將踝關節置於水平滑槓上。\n重複練習3-5次。\n保持臀大肌和胭繩肌支撐，以保持骨盆提起。\n結束動作⋯\n呼氣\n．置於鞦韆上的腿彎曲，兩腿叉開，採用劈叉姿勢懸掛片刻，\n繼續吸氣，雙腿向上伸向正上方。\n然後位於後方的踝關節伸向立柱頂部上方的支桿。\n呼氣\n雙腿叉開，位於前方的踝關節伸向水平滑槓，位於後方的\n吸氣\n雙腿向上伸向正上方，身體倒立。\n踝關節伸向立柱頂部的支桿。\n吸氣 彎曲前腿，將其朝下方鞦韆伸展。\n呼氣 彎曲另外一條腿，朝下方墊伸展",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p060_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p060_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p061_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p061_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "伸展",
+        "屈曲",
+        "拉",
+        "懸掛"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-tuck-into-flexion-extension",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "捲曲到彎曲和伸展",
+      "english": "TUCK INTO FLEXION & EXTENSION",
+      "pageStart": 62,
+      "pageEnd": 63,
+      "pageLabel": "p.62-63",
+      "difficulty": "高階",
+      "equipment": "秋幹",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "柔韌與伸展"
+      ],
+      "summary": "捲曲到彎曲和伸展：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "站在凱迪拉克上，面向鞦韆。支撐腿伸直，動作腿伸直後，踝關\n節落在鞦韆上。雙腿外旋。骨盆和脊椎呈中立位，骨盆儘可能保\n持水平正對前方。雙手抓住水平槓，肩胛骨保持穩定",
+      "flow": "呼氣 彎曲另外一條腿，朝下方墊伸展。\n吸氣\n下壓鞦韆，彎曲另外一條腿，將踝關節置於水平滑槓上。\n保持胭繩肌和臀大肌支撐，以保持骨盆提起。\n每側重複練習1次。\n呼氣 彎曲位於鞦韆上的腿，雙腿分叉。\n吸氣 雙腿伸向正上方，軀幹倒立",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p062_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p062_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p062_action_03.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p062_action_04.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p063_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p063_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "柔韌與伸展",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "懸掛"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-sit-up-combo",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "起坐複合練習",
+      "english": "SIT UP COMBO",
+      "pageStart": 64,
+      "pageEnd": 65,
+      "pageLabel": "p.64-65",
+      "difficulty": "中級",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "起坐複合練習：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、手臂、三角肌、胸大肌與前臂；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "將推拉彈簧連線到沿立柱頂部的槓上的眼鉤上。將推",
+      "startPosition": "仰臥，頭部朝向推拉框。骨盆和脊椎呈中立位。擺正位置，雙手\n持框時明顯低於肩高。雙腿併攏，彎曲，雙腳平放在墊上。雙臂\n伸直，握住框體，掌心向內",
+      "flow": "準備，吸氣⋯\n呼氣 從頭部開始，通過屈曲逐節活動脊椎，直到骶骨部位剛剛\n離開墊，體重落在坐骨後方。同時，彎曲肘關節，穩定肩\n幫助，且手扶推拉框。教練不能把身體靠向框體。\n胛骨，以調動彈簧支撐。\n開始時2根建寶，然後1概彈寶，羅後不用消寶，限肌慈、\n吸氣 保持姿勢。\n起始姿勢\n接下來⋯\n仰臥，頭部朝向推拉框。骨盆和脊椎呈中立位。擺正位置，雙手\n呼氣 通過腰椎下沉將腰椎和胸椎下部卷至墊；保持軀幹上部彎\n持框時明顯低於肩高。雙腿併攏，彎曲，雙腳平放在墊上。雙臂\n曲至離開墊。\n伸直，握住框體，掌心向內。\n吸氣 開始時肋骨架朝骨盆滑動並捲起，直到骶骨部位剛剛離開\n墊，體重落在坐骨後方。\n重複練習5-10次",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p064_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p064_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p065_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "推拉框上面彈簧動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-teaser-series",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "平行伸展系列練習",
+      "english": "TEASER SERIES",
+      "pageStart": 66,
+      "pageEnd": 71,
+      "pageLabel": "p.66-71",
+      "difficulty": "中級",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "lat",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "平行伸展系列練習：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、背闊肌、大圓肌與拉力鏈；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "仰臥，頭部朝向推拉框。骨盆和脊椎呈中立位。擺正位置，雙手\n節卷落回墊。同時，伸長雙腿，朝墊下落，彎曲肘關節，\n上伸持框時略低於肩高。雙腿伸直且併攏。雙臂伸直，推框過頭頂，\n雙手與肩同寬，掌心向上。肩胛骨保持穩定。\n返回中立位。然後拉伸雙臂，將框推過頭頂",
+      "flow": "吸氣 穩定肩胛骨，彎曲肘關節，將框帶到額頭前方。\n1根彈簧\n呼氣 從頭部開始，通過腰椎下沉逐節活動脊椎離墊。同時，彎",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p066_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p067_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p068_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p069_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p070_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "推拉框上面彈簧動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-push-thru-with-feet",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "雙腳推拉",
+      "english": "PUSH THRU WITH FEET",
+      "pageStart": 72,
+      "pageEnd": 75,
+      "pageLabel": "p.72-75",
+      "difficulty": "中級",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "雙腳推拉：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "仰臣，頭部朝向下卷木桿。骨盆和脊椎呈中立位。擺正位置，從\n而令骶骨部位呆在墊上，雙腿朝正上方伸展。雙腿伸直併攏，腳\n掌蹬住推拉框，位於兩根立柱中間。雙臂置於身體兩側，掌心向下。\n雙腳推拉\n重複3次，然後換腿。\n2. 彎曲雙膝\n3. 伸直雙腿",
+      "flow": "吸氣 彎曲膝關節，將框拉向軀幹。腰椎下沉，但保持骶骨置於\n保持雙腳在框上穩固。\n墊上。\n1根彈簧\n呼氣 保持骶骨置於墊上，拉伸雙腿，將框朝向正上方。然後從",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p072_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p073_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p074_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p075_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "下卷木桿",
+        "推拉框上面彈簧動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-cat",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "貓背",
+      "english": "CAT",
+      "pageStart": 76,
+      "pageEnd": 77,
+      "pageLabel": "p.76-77",
+      "difficulty": "中級",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "貓背：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "跪立，面向推拉框，擺正位置，以便於雙臂伸展，軀幹呈豎直位，\n當框處於最高位置時雙肩據框約有一臂距離。骨盆和脊椎呈中立",
+      "flow": "吸氣 以大腿和軀幹為一整體向後傾離開豎直位，雙臂伸直，開\n始將框下拉至低於肩的高度。\n呼氣 從頭部開始，從頭部至尾椎骨逐節活動脊椎至屈曲，下拉\n框體，朝向立柱。\n吸氣 繼續將框上移，同時保持肩膀高於框的高度，從尾椎骨開\n始逐節伸展脊椎。\n呼氣\n保持雙臂伸直，從尾椎骨開始，通過屈曲逐節活動脊椎，\n經過後仰姿勢，返回豎直位",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p076_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p077_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "推拉框上面彈簧動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-push-thru-on-stomach-back-extended",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "俯臥推拉加後背伸展",
+      "english": "PUSH THRU ON STOMACH BACK EXTENDED",
+      "pageStart": 78,
+      "pageEnd": 79,
+      "pageLabel": "p.78-79",
+      "difficulty": "中級",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "柔韌與伸展"
+      ],
+      "summary": "俯臥推拉加後背伸展：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "呈俯臥姿勢面向推拉框，距離框體一臂的長度，框體同立柱呈一\n條線。脊椎和骨盆保持中立位。雙腿與肩同寬並外旋，雙踝蹠屈，\n腳尖輕輕繃直。雙臂伸直，越過頭頂，雙手握框，與肩同寬，掌\n心向下。頭部懸於墊上方，與雙肩呈一條線。肩胛骨保持穩定",
+      "flow": "吸氣 開始時保持肩胛骨穩定，彎曲肘關節，將框帶至頭部後方。\n呼氣 伸直雙臂，框體上推，伸展脊椎，以保持舒適力宜，不要\n將恥骨抬離墊。\n吸氣\n彎曲肘關節，將框體帶至頭部後方，開始朝墊子的方向朝\n下方和後方拉伸軀幹。\n呼氣 完成全程向下伸展動作，伸直雙臂，將框推過立柱。\n重複練習3-5次",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p078_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p079_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "柔韌與伸展",
+        "推拉框上面彈簧動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "俯臥"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-mermaid-with-rotation",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "旋轉美人魚姿",
+      "english": "MERMAID WITH ROTATION",
+      "pageStart": 80,
+      "pageEnd": 81,
+      "pageLabel": "p.80-81",
+      "difficulty": "中級",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "arms",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "柔韌與伸展"
+      ],
+      "summary": "旋轉美人魚姿：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、手臂、三角肌、胸大肌與前臂；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "呈坐姿，側向。骨盆和脊椎呈中立位。雙膝關節彎曲，遠離推拉\n肘，使框體向內靠近頭部。\n框的腿內旋，另一腿外旋，同時，腳蹬住另外一條腿的膝關節。\n骨盆正對前方，且儘量保持水平（可將重量落在一側臀部上）。距\n框最近的手臂伸長，握住框體略比肩部靠前，掌心向下；另外一\n隻手臂側方放鬆，掌心向上。肩胛骨保持穩定",
+      "flow": "吸氣\n位，彎曲肘關節，將框帶至胸前。\n保持肩胛骨穩定，向框彎曲臂的肘關節，以將框拉下。同時，\n將動作臂伸過頭頂。\n呼氣 向上拉伸手臂，整個軀幹前傾，骨盆、脊椎和頭部呈一條線，\n以腹肌支撐，頭頂朝框伸展。\n洲學：更穩定，旋轉更，同哪更才有",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p080_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p081_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "柔韌與伸展",
+        "推拉框上面彈簧動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-side-body-twist",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "側體扭轉",
+      "english": "SIDE BODY TWIST",
+      "pageStart": 82,
+      "pageEnd": 83,
+      "pageLabel": "p.82-83",
+      "difficulty": "高階",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "lat",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "側體扭轉：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、背闊肌、大圓肌與拉力鏈；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "呈側躺姿勢，頭部朝向推拉框。骨盆和脊椎呈中立位，骨盆和肋\n骨的一側直接壓在另一側上。雙腿伸直平行併攏。下臂伸直，抓",
+      "flow": "吸氣 穩定肩胛骨，開始側屈軀幹，側彎向正上方；彎曲位於下\n以彎曲腰椎，穩定骨盆以支撐雙腿重量\n方的肘關節，將框帶至腰部，雙腿離開墊。位於上方的手\n沿大腿朝腳部滑動。\n呼氣 伸展肘關節，控制框體朝上，同時旋轉軀幹，面向雙腿，\n髖部頂端落在墊上，彎曲髖部，令雙腿同軀幹呈“V”字。\n平衡：呈V形姿勢\n位於上方的手朝雙腳伸展，呈平行伸展姿勢。\n協調性：配合呼吸運動軀幹、手臂和腿部",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p082_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p082_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p083_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展",
+        "推拉框上面彈簧動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "側躺"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-push-thru-on-back-with-extension",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "仰臥推拉加伸展",
+      "english": "PUSH THRU ON BACK WITH EXTENSION",
+      "pageStart": 84,
+      "pageEnd": 87,
+      "pageLabel": "p.84-87",
+      "difficulty": "高階",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "仰臥推拉加伸展：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、手臂、三角肌、胸大肌與前臂；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "仰臥，頭部朝向推拉框，擺正位置，雙臂伸直時框體稍位於肩部\n上，每次完成一塊椎骨。同時，拉伸雙臂，軀幹和雙臂呈\n高度以下。骨盆和脊椎呈中立位。雙腿內收，膝關節彎曲，雙腿\n置於墊上。雙臂伸直，與肩同寬，推拉框抬過頭頂，面朝上方。\n肩胛骨保持穩定。\n以使頭部回墊。\n拉伸脊椎至中立位，將框拉向前額，然後伸展肘關節，將\n仰臥推拉加伸展",
+      "flow": "正向⋯\n1根或2根彈簧\n吸氣 保持肩胛骨穩定，彎曲肘關節，將框拉至額頭前。\n起始姿勢\n呼氣 用額頭追隨框，從頭部開始，通過屈曲將脊椎逐節卷離墊\n仰臥，頭部朝向推拉框，擺正位置，雙臂伸直時框體稍位於肩部\n上，每次完成一塊椎骨。同時，拉伸雙臂，軀幹和雙臂呈\n高度以下。骨盆和脊椎呈中立位。雙腿內收，膝關節彎曲，雙腿\n一條線，以坐骨稍後方保持穩定。\n置於墊上。雙臂伸直，與肩同寬，推拉框抬過頭頂，面朝上方。\n吸氣 彎曲肘關節，以實現肩胛骨穩定和伸展脊椎為宜，開始時\n肩胛骨保持穩定。\n胸骨朝向框體。保持脊椎伸展，並後傾骨盆離開大腿骨，\n以使頭部回墊。\n呼氣\n拉伸脊椎至中立位，將框拉向前額，然後伸展肘關節，將\n經過頭頂推過立柱",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p084_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p084_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p085_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p085_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p086_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p087_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "推拉框上面彈簧動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-bridge",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "橋式",
+      "english": "BRIDGE",
+      "pageStart": 88,
+      "pageEnd": 94,
+      "pageLabel": "p.88-94",
+      "difficulty": "高階",
+      "equipment": "推拉框上面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "橋式：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、手臂、三角肌、胸大肌與前臂；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "體，以伸展脊椎，然後從膝關節至頭頂保持橋式姿勢，利\n呈坐姿，面向下卷木桿。骨盆和脊椎呈中立位。雙腿伸直，平行，\n用雙腿和框體將整個身體抬離墊。\n踝關節蹠屈，雙足腳蹠球部蹬住立柱（如果雙腿伸直時無法保持\n骨盆呈中立位，開始時，可彎曲雙膝，隨著骨盆卷離股骨，再伸\n長膝關節）。手臂朝前伸直，握住推拉框，與肩齊寬，掌心向下。\n動脊椎",
+      "flow": "吸氣 開始時髂前上棘卷離股骨前方，以彎曲腰椎。\n2根彈簧\n呼氣 彎曲膝關節，屈曲時脊椎沿床滑向立柱，骨盆卷離墊，伸\n展髖部，直到落在肩部",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p088_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p089_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p090_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p091_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p092_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p092_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p093_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p093_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p094_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "下卷木桿",
+        "推拉框上面彈簧動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "橋式"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-knee-raises",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "膝部上提",
+      "english": "KNEE RAISES",
+      "pageStart": 95,
+      "pageEnd": 95,
+      "pageLabel": "p.95",
+      "difficulty": "高階",
+      "equipment": "水平槓垂掛",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "lat",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "膝部上提：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、背闊肌、大圓肌與拉力鏈；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "準備，吸氣⋯\n呼氣 保持軀幹和雙臂穩定，彎曲髖部和膝關節，將膝部帶至\n耐力：穩定肩胛骨，雙臂支撐軀幹重量\n胸部",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p095_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-knee-raises-with-obliques",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "膝部上提加側旋轉",
+      "english": "KNEE RAISES WITH OBLIQUES",
+      "pageStart": 96,
+      "pageEnd": 97,
+      "pageLabel": "p.96-97",
+      "difficulty": "高階",
+      "equipment": "水平槓垂掛",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "lat",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "膝部上提加側旋轉：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、背闊肌、大圓肌與拉力鏈；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "準備，吸氣⋯\n呼氣 保持軀幹和雙臂穩定，保持上體靜止，彎曲髖部和膝關節，\n將膝部帶至一側肩部。\n耐力：穩定肩胛骨，雙臂支撐軀幹重量\n吸氣 保持軀幹和雙臂穩定，伸展髖部和膝關節，雙腳伸向地面\n時加以控制。\n每側重複統習5-10次",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p096_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p097_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-circles",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "畫弧",
+      "english": "CIRCLES",
+      "pageStart": 98,
+      "pageEnd": 99,
+      "pageLabel": "p.98-99",
+      "difficulty": "高階",
+      "equipment": "水平槓垂掛",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "畫弧：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "準備，吸氣…\n正向⋯\n呼氣 穩定軀幹和雙臂，保持上體靜止，保持雙腿伸直併攏，彎\n耐力：穩定肩胛骨，雙臂文撐軀幹重量\n曲髖部，儘可能抬高雙腿",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p098_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p098_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p099_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p099_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-beats",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "拍擊",
+      "english": "BEATS",
+      "pageStart": 100,
+      "pageEnd": 101,
+      "pageLabel": "p.100-101",
+      "difficulty": "高階",
+      "equipment": "水平槓垂掛",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "lat",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "拍擊：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、背闊肌、大圓肌與拉力鏈；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "吸氣\n默數四個數，開合雙腿，踝關節蹠屈，強調內收。\n平槓，與肩同寬（使用防滑墊防滑）。肩胛骨保持穩定。脊椎微微\n呼氣\n默數四個數，開合雙腿，踝背屈，強調內收。\n從而讓大腿不要靠在床沿上。\n整套動作練習4組",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p100_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-monkey",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "猴姿",
+      "english": "MONKEY",
+      "pageStart": 102,
+      "pageEnd": 103,
+      "pageLabel": "p.102-103",
+      "difficulty": "中級",
+      "equipment": "推拉框下面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "猴姿：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "使用帶鎖釦的推拉彈簧連線到床架的眼鉤上（不是立柱\n上的眼鉤）。朝床的方向擺動推拉框，保險鏈掛在水平框中間眼鉤，\n並連線到推拉框上方的其中一個眼鉤。將推拉彈簧連線到推拉框\n的下方眼鉤上，確保所有彈簧夾完全鎖合，乙烯塑膠蓋罩保護凱\n幫助，且手扶推拉框。教練不能把身體靠向框體。應使用防滑墊",
+      "startPosition": "仰臥，頸部離開推拉框邊緣。腳蹠球部牢固托住推拉框，踝背屈，\n膝關節彎曲，雙腿內收並保持平行。雙臂伸直，雙手抓住雙腳所\n觸框體之外的部分，肩胛骨保持穩定。脊椎彎曲，骨盆和腰椎背\n由教練提供幫助妥善放置雙腳\n3. 踝關節背屈",
+      "flow": "",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p102_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p103_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "推拉框下面彈簧動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-guillotine",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "斷頭臺",
+      "english": "GUILLOTINE",
+      "pageStart": 104,
+      "pageEnd": 105,
+      "pageLabel": "p.104-105",
+      "difficulty": "中級",
+      "equipment": "推拉框下面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "斷頭臺：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "仰臣，擺正位置，頸部位於推拉框的正下方。雙臂伸直，伸過頭頂，\n抓住立柱，稍稍高過肩部，肩胛骨保持穩定。腳蹠球部牢固托住\n推拉框，踝背屈，膝關節彎曲，雙腿內收並保持平行。骶骨開始\n由教練提供幫助妥善放置雙腳",
+      "flow": "準備，吸氣⋯\n呼氣 伸展膝關節，雙踝蹠屈，朝正上方推框，骶骨置於墊上。\n幫助，且手扶推拉框。教練不能把身體靠向框體。應使用防滑墊，\n然後保持雙腿伸直，從尾椎骨開始逐節卷離墊，直至以胸\n保持雙腳在框上穩固。\n椎保持穩定。\n1根彈簧\n吸氣 保持軀幹靜止，彎曲膝關節，背屈踝關節，將框帶向骨盆。\n起始姿勢\n呼氣 保持軀幹靜止不動，伸展膝關節，踝關節蹠屈，將框推向\n仰臣，擺正位置，頸部位於推拉框的正下方。雙臂伸直，伸過頭頂，\n正上方。\n抓住立柱，稍稍高過肩部，肩胛骨保持穩定。腳蹠球部牢固托住\n吸氣 保持姿勢。\n推拉框，踝背屈，膝關節彎曲，雙腿內收並保持平行。骶骨開始\n呼氣 讓雙腿繼續伸直，從胸椎開始逐節活動脊椎，下行著床，\n卷離墊，因此腰椎呈屈曲狀態。\n直至骶骨接觸墊。\n吸氣 屈膝，踝背屈，讓骶骨卷離墊並回到起始姿勢。\n重複練習3-5次。\n先做猴姿預備",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p104_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p104_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p105_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p105_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p105_action_03.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "推拉框下面彈簧動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-hip-opener",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "HIP OPENER",
+      "english": "HIP OPENER",
+      "pageStart": 106,
+      "pageEnd": 107,
+      "pageLabel": "p.106-107",
+      "difficulty": "中級",
+      "equipment": "推拉框下面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "HIP OPENER：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "呈側躺姿勢，頭部朝向推拉框。骨盆和脊椎儘量保持在中立位，\n肋骨的一側上下對齊另一側上。骨盆可稍微向後旋轉，從而避免\n對膝關節產生扭轉。下臂伸直，頭墊在手臂上。位於下方的腿伸\n直，並與軀幹形成一條直線。位於上方的膝關節彎曲外旋，膝關\n節朝向上肩後方，膝關節同腳中心對齊。腳蹠球部置於推拉框上。\n位於上方的手置於體前保持平衡。\n髖部伸展\n3. 踝關節背屈\n4. 踝關節蹠屈",
+      "flow": "吸氣 伸展膝關節，踝關節蹠屈，將框推向正上方。\n呼氣 保持膝關節伸展，保持骨盆穩定，大腿骨保持外旋於髖臼，\n幫助，且手扶推拉框。教練不能把身體靠向框體。應使用防滑墊，\n背屈踝關節。\n保持雙腳在框上穩固。\n吸氣 踝關節蹠屈，腳蹠球部朝向正上方。\n1根彈簧\n呼氣 屈膝（以肩部上方為目標），踝背屈，回到起始姿勢。\n起始姿勢\n董復練習5次。\n呈側躺姿勢，頭部朝向推拉框。骨盆和脊椎儘量保持在中立位，\n肋骨的一側上下對齊另一側上。骨盆可稍微向後旋轉，從而避免\n對膝關節產生扭轉。下臂伸直，頭墊在手臂上。位於下方的腿伸\n直，並與軀幹形成一條直線。位於上方的膝關節彎曲外旋，膝關\n節朝向上肩後方，膝關節同腳中心對齊。腳蹠球部置於推拉框上。\n位於上方的手置於體前保持平衡。\n髖部伸展",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p106_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p106_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p107_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "推拉框下面彈簧動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "側躺"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-teaser-series",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "平行伸展系列練習",
+      "english": "TEASER SERIES",
+      "pageStart": 108,
+      "pageEnd": 113,
+      "pageLabel": "p.108-113",
+      "difficulty": "高階",
+      "equipment": "推拉框下面彈簧動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "平行伸展系列練習：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、手臂、三角肌、胸大肌與前臂；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "仰臥，骨盆和脊椎呈中立位，頭部朝向推拉框。擺正位置，雙手\n節卷落回墊。同時，伸長雙腿朝墊落下。\n持框時略低於肩高。雙臂彎曲，抓住框體，與肩同寬。雙腿伸展\n並併攏。肩胛骨保持穩定。\n返回中立位。然後彎曲雙肘",
+      "flow": "吸氣 伸展肘關節，將框上推",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p108_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p109_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p110_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p111_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p112_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p113_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "推拉框下面彈簧動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-back-rowing",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "後劃",
+      "english": "BACK ROWING",
+      "pageStart": 114,
+      "pageEnd": 117,
+      "pageLabel": "p.114-117",
+      "difficulty": "中級",
+      "equipment": "臂用彈簧",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "lat",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "後劃：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、背闊肌、大圓肌與拉力鏈；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "坐姿時將垂直滑槓設為與肩同高。將臂用彈簧連線到\n滑槓的眼鉤，並將泡沫拉環連線到彈簧上",
+      "startPosition": "面向垂直滑槓坐立。骨盆和脊椎呈中立位。雙腿伸直併攏，雙踝\n的位置，不要失去肩胛骨的穩定。\n蹠屈，腳趾輕輕繃直。雙臂前伸，高度略低於肩部，虛抱成環形，\n雙手成拳狀握住拉環，掌心朝向軀幹。肩胛骨保持穩定。\n腳上方，掌心向外",
+      "flow": "準備，吸氣⋯\n呼氣 開始向後捲動，使髂前上棘離開大腿骨前部，腰椎儘量彎\n重複練習5次。\n曲，彎曲幅度以腹肌能保持平坦為限（上脊椎隨腰椎彎曲\n而彎曲）。同時，穩定肩胛骨，彎曲雙肘，雙手靠向胸骨方向",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p114_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p114_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p115_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p116_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p117_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p117_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "臂用彈簧",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-front-rowing",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "前劃",
+      "english": "FRONT ROWING",
+      "pageStart": 118,
+      "pageEnd": 125,
+      "pageLabel": "p.118-125",
+      "difficulty": "中級",
+      "equipment": "臂用彈簧",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "前劃：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、手臂、三角肌、胸大肌與前臂；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "呈坐姿，背對垂直滑槓。骨盆和脊椎呈中立位。雙腿伸直併攏，\n雙踝蹠屈，腳趾輕輕繃直。雙肘彎曲，使其位置略比身體靠後（雙\n肩不圓肩），前臂水平伸直，掌心向下。肩胛骨保持穩定",
+      "flow": "吸氣 肩胛骨與軀幹保持穩定，雙手向前上方推動拉環，同時帶\n動雙肘伸展，直到雙手與眼睛齊平。\n協調性：配合呼吸來運動手臂\n呼氣 保持雙臂伸直，雙臂向墊上的方向下落。\n吸氣 保持雙臂伸直，穩定肩胛骨，抬高雙臂過頭頂。\n呼氣 雙臂保持伸直，向身體兩側畫弧，再下落至髖部兩側，最\n後彎曲雙肘，並翻轉手掌，使掌心向下，回到起始姿勢。\n亞復練習5次。\n手筲畫弧",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p118_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p118_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p119_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p119_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p120_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p120_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p121_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p121_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p122_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p122_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p123_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p123_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p124_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p124_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p125_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p125_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "臂用彈簧",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-flying-eagle-with-leg-springs",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "飛鷹姿（以腿用彈簧完成）",
+      "english": "FLYING EAGLE WITH LEG SPRINGS",
+      "pageStart": 126,
+      "pageEnd": 127,
+      "pageLabel": "p.126-127",
+      "difficulty": "高階",
+      "equipment": "臂用彈簧",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "lat",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "飛鷹姿（以腿用彈簧完成）：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、背闊肌、大圓肌與拉力鏈；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "呈坐姿時將垂直滑槓設為與肩同高。將腿用彈簧連線\n到滑槓的眼鉤，並將帶襯墊拉帶連線到彈簧上",
+      "startPosition": "呈俯臥姿勢，頭部朝向垂直滑槓，距立柱約一臂之長度。骨盆和\n脊椎呈中立位。雙腿伸直，外旋，與肩同寬（可以用支撐帶固定\n雙腳）。雙臂伸直，雙手套入拉環。雙手伸過頭頂，稍微離開床側，\n呈“V”字型姿勢。肩胛骨保持穩定",
+      "flow": "",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p126_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p126_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p127_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p127_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "臂用彈簧",
+        "腿用彈簧",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉",
+        "俯臥"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-side-twist-standing",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "側轉站姿",
+      "english": "SIDE TWIST STANDING",
+      "pageStart": 128,
+      "pageEnd": 129,
+      "pageLabel": "p.128-129",
+      "difficulty": "中級",
+      "equipment": "臂用彈簧站姿動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "柔韌與伸展"
+      ],
+      "summary": "側轉站姿：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "呈站姿時將垂直滑槓設為與肩同高。將臂用彈簧連線",
+      "startPosition": "呈站姿，距離垂直滑槓約一臂長度。骨盆和脊椎呈中立位。側立，\n彈簧方向的腹外斜肌和另一側的腹內斜肌，以使脊椎旋轉，並在\n骨盆正對前方，軀幹上部略微朝向立柱旋轉。雙腳與髖同寬，雙\n腿伸直。雙手抓住拉環，位於胸骨正前方，臂略低於肩高，形成\n圓形。肩胛骨保持穩定",
+      "flow": "",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p128_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p128_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p129_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p129_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "柔韌與伸展",
+        "臂用彈簧",
+        "臂用彈簧站姿動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-reverse-expansion",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "反向擴張",
+      "english": "REVERSE EXPANSION",
+      "pageStart": 130,
+      "pageEnd": 135,
+      "pageLabel": "p.130-135",
+      "difficulty": "中級",
+      "equipment": "臂用彈簧站姿動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "lat",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "反向擴張：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、背闊肌、大圓肌與拉力鏈；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "將臂用彈簧連線到立柱的底部。將泡沫拉環連線到彈\n2.備選彈簧位置。彈簧連線到垂直滑槓，以改變阻力的角度",
+      "startPosition": "星站姿，背對垂直滑槓。骨盆和脊椎呈中立位，整個身體朝離開\n凱迪拉克的方向傾斜。雙腳與髖同寬，雙腿伸直。雙臂伸直，朝\n下和略朝軀幹後方伸展。雙手抓住拉環，掌心向前。肩胛骨保持\n2. 雙臂前伸",
+      "flow": "準備，顧氣：\n星站姿，背對垂直滑槓。骨盆和脊椎呈中立位，整個身體朝離開\n呼氣 保持肩胛骨穩定，雙臂前伸至視線的高度。\n凱迪拉克的方向傾斜。雙腳與髖同寬，雙腿伸直。雙臂伸直，朝\n吸氣 保持肩胛骨穩定，軀幹傾斜呈穩定狀態，然後雙臂向下向\n下和略朝軀幹後方伸展。雙手抓住拉環，掌心向前。肩胛骨保持\n穩定。\n後伸展，回到起始姿勢。\n重複練習4次。\n［9係燦散體態有挑戰\n向前伸直\n不要骰走",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p130_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p130_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p131_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p132_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p133_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p133_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p134_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p134_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p135_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p135_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "背闊肌與拉力鏈",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "臂用彈簧",
+        "臂用彈簧站姿動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-offering",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "雙手上託",
+      "english": "OFFERING",
+      "pageStart": 136,
+      "pageEnd": 137,
+      "pageLabel": "p.136-137",
+      "difficulty": "中級",
+      "equipment": "臂用彈簧站姿動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "雙手上託：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、手臂、三角肌、胸大肌與前臂；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "準備，吸氣：\n呼氣 穩定肩胛骨，雙肘伸展，雙臂前伸至與肩部齊高。\n骨保持穩定\n吸氣 保持雙臂伸直，掌心向上，水平向兩側外展雙臂，以能夠\n保持肩胛骨穩定為宜。\n呼氣 雙臂保持伸直，水平內收至肩部正前方。\n吸氣 彎曲肘關節，將雙臂返回至起始姿勢。\n重複練習5次",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p136_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p136_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p137_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "臂用彈簧",
+        "臂用彈簧站姿動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-hug-a-tree",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "抱大樹",
+      "english": "HUG A TREE",
+      "pageStart": 138,
+      "pageEnd": 138,
+      "pageLabel": "p.138",
+      "difficulty": "中級",
+      "equipment": "臂用彈簧站姿動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "抱大樹：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、手臂、三角肌、胸大肌與前臂、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "準備，吸氣⋯\n，用臀大肌、胭繩肌和腹肌將骨盆穩定在中立位\n呼氣 保持肩胛骨、軀幹和雙腿穩定，雙手朝前聚合畫弧。\n，手腕始終保持伸展\n吸氣\n保持肩胛骨穩定，軀幹傾斜呈穩定狀態，然後開啟雙臂回\n到起始姿勢",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p138_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p138_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "臂用彈簧",
+        "臂用彈簧站姿動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-butterfly",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "蝴蝶姿",
+      "english": "BUTTERFLY",
+      "pageStart": 139,
+      "pageEnd": 139,
+      "pageLabel": "p.139",
+      "difficulty": "中級",
+      "equipment": "臂用彈簧站姿動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "柔韌與伸展"
+      ],
+      "summary": "蝴蝶姿：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "準備，吸氣⋯\n•用臀大肌、膕繩肌和腹肌將骨盆穩定在中立位\n呼氣 保持骨盆和軀幹正對前方，骨盆靜止。雙手以同等力道抓\n住拉環，脊椎朝一側彎曲，保持雙臂同軀幹協調一致。\n•髖外展肌用力，以避免側彎時骨盆側移\n吸氣 脊椎返回豎直位。\n•例移前拉伸脊椎，以避免壓迫椎骨\n• 雙手以同等力道抓住拉環，因此軀幹不會旋轉\n每側重複練習3次，兩側交替進行。\n•保持脊椎在矢狀面上呈中立位，避免伸展\n•",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p139_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p139_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "柔韌與伸展",
+        "臂用彈簧",
+        "臂用彈簧站姿動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-punches",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "擊拳動作",
+      "english": "PUNCHES",
+      "pageStart": 140,
+      "pageEnd": 141,
+      "pageLabel": "p.140-141",
+      "difficulty": "中級",
+      "equipment": "臂用彈簧站姿動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "擊拳動作：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、手臂、三角肌、胸大肌與前臂；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "準備，吸氣⋯\n得到鍛鍊\n呼氣 通過軀幹和雙腿保持肩胛骨穩定和正對前方，伸展一側肘\n關節，朝正前方擊拳。\n骨保持穩定\n吸氣 保持肩胛骨穩定，軀幹傾斜呈穩定狀態，然後屈肘回到起\n始姿勢。\n每側重複練習8-10次（交替）",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p140_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p140_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p141_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p141_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "臂用彈簧",
+        "臂用彈簧站姿動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-fencer-lunges",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "擊劍者弓步",
+      "english": "FENCER LUNGES",
+      "pageStart": 142,
+      "pageEnd": 143,
+      "pageLabel": "p.142-143",
+      "difficulty": "中級",
+      "equipment": "臂用彈簧站姿動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "擊劍者弓步：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、手臂、三角肌、胸大肌與前臂；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "呈站姿，距離垂直滑槓約一臂長度。骨盆和脊椎呈中立位，骨盆\n正對側向。雙腿伸直且併攏。靠近立柱的手抓住後側拉環，遠離\n線跨步，同時屈膝形成弓步。同時，靠近立柱的手向上呈\n立柱的手抓住前側拉環。距離立柱較近的手臂的拳頭位於另一隻\n手的拳頭的上方，雙手靠近身體中線。肩胛骨保持穩定。\n前，掌心向外。兩個肩胛骨保持穩定",
+      "flow": "準備，吸氣：\n呈站姿，距離垂直滑槓約一臂長度。骨盆和脊椎呈中立位，骨盆\n呼氣 保持軀幹呈中立位和豎直位，雙腳平行，外側的腳向對角\n正對側向。雙腿伸直且併攏。靠近立柱的手抓住後側拉環，遠離\n線跨步，同時屈膝形成弓步。同時，靠近立柱的手向上呈\n立柱的手抓住前側拉環。距離立柱較近的手臂的拳頭位於另一隻\n對角線上伸越過軀幹；另外一隻手下拉遠離軀幹，前臂旋\n手的拳頭的上方，雙手靠近身體中線。肩胛骨保持穩定。\n前，掌心向外。兩個肩胛骨保持穩定。\n吸氣 雙腳併攏，彎曲雙肘回到起始姿勢。\n每側重複練習5次。\n動作調整準備動作-1\n起始姿勢\n弓步\n內側手在上",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p142_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p142_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p142_action_03.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p143_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p143_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "臂用彈簧",
+        "臂用彈簧站姿動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-squats",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "下蹲練習",
+      "english": "SQUATS",
+      "pageStart": 144,
+      "pageEnd": 145,
+      "pageLabel": "p.144-145",
+      "difficulty": "中級",
+      "equipment": "臂用彈簧站姿動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "下蹲練習：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "準備，吸氣•\n呼氣 從頭部開始，逐節活動脊椎至屈曲，保持尾椎骨下降，骨\n盆呈豎直位，彎曲膝關節。同時，保持肩胛骨穩定，前臂\n旋前，雙臂下拉和後拉。身體重心略微後斜，以對抗彈簧\n阻力。\n吸氣\n協調性：配合雙臂和呼吸進行的軀幹運動\n伸展膝關節，拉伸脊椎至豎直位，雙臂返回起始姿勢。身\n體重心略微前斜，位於腳心正上方。\n呼氣 保持脊椎呈豎直位和中立位，彎曲膝關節，保持尾椎骨朝\n下，骨盆呈豎直位。同時，保持肱骨靜止不動，彎曲肘關節，\n將雙手拉向耳部。身體重心略微後斜，以對抗彈簧阻力。\n吸氣 伸展雙膝並伸展雙肘，回到起始姿勢。身體重心略微前斜，\n位於腳心正上方。\n重複練習5次",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p144_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p144_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p145_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p145_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "臂用彈簧",
+        "臂用彈簧站姿動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-beats",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "拍擊",
+      "english": "BEATS",
+      "pageStart": 146,
+      "pageEnd": 147,
+      "pageLabel": "p.146-147",
+      "difficulty": "中級",
+      "equipment": "腿用彈簧",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "拍擊：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "呈坐姿時將垂直滑槓設為與肩同高。將腿用彈簧連線\n到槓的眼鉤，並將連帶襯墊拉帶連線到彈簧上",
+      "startPosition": "仰臥，頭部朝向滑槓。雙臂伸直，越過頭頂，雙手頂住立柱，位\n置略高於肩部，肩胛骨保持穩定。骨盆和脊椎呈中立位。雙腳套\n入腳帶內，雙腿內收並外旋，沿對角線伸展，儘可能向下，動作\n幅度以骨盆能保持穩定為限。雙踝蹠屈，腳尖輕輕繃直",
+      "flow": "吸氣\n默數四個數，踝關節蹠屈，每次吸氣時內收雙腿，微微張開，\n骨保持穩定\n從而 “拍打”四次。\n呼氣\n默數四個數，踝背屈，每次呼氣時內收雙腿，微微張開，\n從而“拍打”四次。\n整套動作練習4組",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p146_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p146_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p147_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "腿用彈簧",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-short-spine",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "脊椎捲曲",
+      "english": "SHORT SPINE",
+      "pageStart": 148,
+      "pageEnd": 149,
+      "pageLabel": "p.148-149",
+      "difficulty": "高階",
+      "equipment": "腿用彈簧",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "脊椎捲曲：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "仰臥，頭部朝向垂直滑槓。雙臂伸直，越過頭頂，雙手頂住立柱，\n位置略高於肩部，肩胛骨保持穩定。骨盆和脊椎呈中立位。雙腳\n持腳跟併攏，將其拉向骨盆。然後保持腳跟與骨盆的相對\n套入腳帶內，雙腿內收並外旋，沿對角線伸展，儘可能向下，動\n作幅度以骨盆能保持穩定為限。\n保持軀幹姿勢，雙腳蹬向正上方，以伸展膝關節。旋轉雙",
+      "flow": "正向⋯\n直至骶骨觸墊。接下來雙腿外旋。\n吸氣\n旋轉雙腿至平行。不用髖部屈曲，收縮腹肌，從尾椎骨至\n每個方向重複練習3次。\n胸椎上部逐節活動脊椎離墊，雙腿朝向正上方。然後，保\n持軀幹姿勢，彎曲雙膝，雙踝背屈，雙腿外旋，向坐骨方",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p148_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p149_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "腿用彈簧",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-long-spine",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "脊椎伸展",
+      "english": "LONG SPINE",
+      "pageStart": 150,
+      "pageEnd": 151,
+      "pageLabel": "p.150-151",
+      "difficulty": "高階",
+      "equipment": "腿用彈簧",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "脊椎伸展：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "仰臥，頭部朝向垂直滑槓。雙臂伸直，越過頭頂，雙手頂住立柱，\n位置略高於肩部，肩胛骨保持穩定。骨盆和脊椎呈中立位。雙腳\n套入腳帶內，雙腿內收並外旋，沿對角線伸展，儘可能向下，動\n作幅度以骨盆能保持穩定為限",
+      "flow": "正向•\n每個方向重複練習3次。\n吸氣 旋轉雙腿至平行。不用髖部屈曲，收縮腹肌，從尾椎骨至\n胸椎上部逐節活動脊椎離墊，雙腿朝向正上方。然後外旋",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p150_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p151_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "髖與腿",
+        "柔韌與伸展",
+        "腿用彈簧",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-magician-circles",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "魔術師畫弧",
+      "english": "MAGICIAN CIRCLES",
+      "pageStart": 152,
+      "pageEnd": 153,
+      "pageLabel": "p.152-153",
+      "difficulty": "高階",
+      "equipment": "腿用彈簧",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "魔術師畫弧：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "仰臥，頭部朝向垂直滑槓。雙臂伸直，越過頭頂，雙手頂住立柱，\n位置略高於肩部，肩胛骨保持穩定。骨盆和脊椎呈中立位。雙腳\n軀幹擺動，雙腿外展，以能夠保持骨盆穩定為限。到達弧\n套入腳帶內，雙腿內收並外旋，沿對角線伸展，儘可能向下，動\n形頂部時，併攏雙腿。\n作幅度以骨盆能保持穩定為限",
+      "flow": "準備，吸氣⋯\n每個方向重複練習10次。\n呼氣 保持雙腿相對穩定，從尾椎骨開始逐節活動脊椎離墊，直\n結束動作⋯\n到落在胸椎上部，身體從雙肩至雙腳呈一條線；腰椎呈中\n吸氣 保持姿勢。\n立位。\n呼氣 從胸椎開始，通過屈曲逐節活動脊椎，直到在墊上達到中\n正向⋯\n立位。\n吸氣 保持軀幹和骨盆穩定，雙腿外旋，雙腿從髖部朝正上方擺\n動，以能夠保持骨盆穩定為限。\n呼氣\n保持軀幹和骨盆穩定，雙腿外旋，外展畫弧（畫弧時感覺\n雙腿推離軀幹）然後在弧底內收雙腿",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p152_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p152_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p153_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p153_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "髖與腿",
+        "柔韌與伸展",
+        "腿用彈簧",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "推",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-magician-beats",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "魔術師拍擊",
+      "english": "MAGICIAN BEATS",
+      "pageStart": 154,
+      "pageEnd": 155,
+      "pageLabel": "p.154-155",
+      "difficulty": "高階",
+      "equipment": "腿用彈簧",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "魔術師拍擊：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "仰臥，頭部朝向垂直滑槓。雙臂伸直，越過頭頂，雙手頂住立柱，\n位置略高於肩部，肩胛骨保持穩定。骨盆和脊椎呈中立位。雙腳\n套入腳帶內，雙腿內收並外旋，沿對角線伸展，儘可能向下，動\n作幅度以骨盆能保持穩定力限",
+      "flow": "",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p154_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p154_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p155_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "腿用彈簧",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "仰臥"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-magician-walks",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "魔術師踏步",
+      "english": "MAGICIAN WALKS",
+      "pageStart": 156,
+      "pageEnd": 157,
+      "pageLabel": "p.156-157",
+      "difficulty": "高階",
+      "equipment": "腿用彈簧",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "魔術師踏步：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "仰部，頭部朝向垂直滑槓。雙臂伸直，越過頭頂，雙手頂住立柱，\n位置略高於肩部，肩胛骨保持穩定。骨盆和脊椎呈中立位。雙腳\n套入腳帶內，雙腿內收，平行，沿對角線伸展，儘可能向下，動\n作幅度以骨盆能保持穩定為限",
+      "flow": "",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p156_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p156_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p157_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "高階",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "腿用彈簧",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-scissors",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "剪刀式",
+      "english": "SCISSORS",
+      "pageStart": 158,
+      "pageEnd": 159,
+      "pageLabel": "p.158-159",
+      "difficulty": "中級",
+      "equipment": "腿用彈簧側躺練習",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "柔韌與伸展"
+      ],
+      "summary": "剪刀式：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "呈坐姿時將垂直滑槓設為與肩同高。將腿用彈簧連線",
+      "startPosition": "裂肌避免旋轉；以位於下方的腹斜肌避免髖頂部抬起；髖內收肌\n呈側躺姿勢，頭部朝向垂直滑槓。骨盆和脊椎呈中立位。下臂伸直，\n頭墊在手臂上。上側手放在胸前墊上，以保持穩定，肩胛骨保持\n穩定。位於下方的腿伸直，平行伸展，同軀幹呈一條線，稍離開\n墊。位於上方的腿平行，同位於上方的髖部呈一條線，踝關節蹠屈，\n腳帶套在足弓上",
+      "flow": "吸氣\n保持雙腿伸長，骨盆保持穩定，位於上方的腿朝前剪交，\n位於下方的腿朝後剪交，因此雙足各朝向一方立柱。\n呼氣\n：交替雙腿，從而令位於上方的腿朝後伸直，而位於下方的\n腿朝前伸展。\n重複練習8-10次。\n雙腿聚合，動作結束",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p158_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p158_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p159_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "柔韌與伸展",
+        "腿用彈簧",
+        "腿用彈簧側躺練習",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉",
+        "側躺"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-ovals",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "橢圓",
+      "english": "OVALS",
+      "pageStart": 160,
+      "pageEnd": 161,
+      "pageLabel": "p.160-161",
+      "difficulty": "中級",
+      "equipment": "腿用彈簧側躺練習",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "橢圓：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "呈側躺姿勢，頭部朝向垂直滑槓。骨盆和脊椎呈中立位。下臂伸\n直，頭墊在手臂上。上側手放在胸前墊上，以保持穩定，肩胛骨\n保持穩定。位於下方的腿伸直，平行伸展，同軀幹呈一條線（可\n以用支撐帶固定）。位於上方的腿平行，同位於上方的髖部呈一條\n線，踝關節蹠屈彎曲，腳帶套在足弓上。\n注意事項：單腳水平畫橢圓形",
+      "flow": "正向⋯\n呈側躺姿勢，頭部朝向垂直滑槓。骨盆和脊椎呈中立位。下臂伸\n吸氣 單腿朝前畫弧，稍微抬起。\n直，頭墊在手臂上。上側手放在胸前墊上，以保持穩定，肩胛骨\n呼氣 單腿朝後畫弧，然後內收。\n保持穩定。位於下方的腿伸直，平行伸展，同軀幹呈一條線（可\n以用支撐帶固定）。位於上方的腿平行，同位於上方的髖部呈一條\n反向練習⋯\n線，踝關節蹠屈彎曲，腳帶套在足弓上。\n準備，吸氣：\n呼氣 單腿朝後畫弧，稍微抬起。\n吸氣 單腿朝前畫弧，然後內收。\n每個方向重複練習5-10次",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p160_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p160_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p161_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p161_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "腿用彈簧",
+        "腿用彈簧側躺練習",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "側躺"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-side-kick-stretch",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "側踢伸展",
+      "english": "SIDE KICK STRETCH",
+      "pageStart": 162,
+      "pageEnd": 163,
+      "pageLabel": "p.162-163",
+      "difficulty": "中級",
+      "equipment": "腿用彈簧側躺練習",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "側踢伸展：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "呈側躺姿勢，頭部朝向垂直滑槓。骨盆和脊椎呈中立位。下臂伸直，\n支撐頭部。上側手放在胸前墊上，以保持穩定，肩胛骨保持穩定。\n位於下方的腿伸直，平行伸展，同軀幹呈一條線（可以用支撐帶\n固定）。位於上方的腿平行，同位於上方的髖部呈一條線，踝關節\n蹠屈，腳帶套在足弓上。\n儘可能保持髖部屈曲，不要後傾骨盆，踝關節蹠屈，伸展\n膝關節，足部朝向正前方",
+      "flow": "呼氣\n腿伸直外旋，髖部伸展，腿部向後方伸展，保持骨盆穩定。\n正向⋯\n吸氣 踝關節蹠屈，位於上方的髖部屈曲，足部朝正前方伸，以\n重複練習3次。\n能夠保持骨盆穩定為宜。\n呼氣 背屈踝關節，彎曲位於上方的膝關節，將其帶至胸前。\n吸氣\n保持膝關節彎曲，伸展髖部，大腿同位於下方的腿呈一\n條線。\n呼氣\n雙踝蹠屈，外旋上腿，伸展膝部和髖部，使腿部向後方伸展，\n保持骨盆穩定。\n重複練習3次",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p162_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p163_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "腿用彈簧",
+        "腿用彈簧側躺練習",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "側躺"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-develope",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "繃緊伸展",
+      "english": "DEVELOPE",
+      "pageStart": 164,
+      "pageEnd": 165,
+      "pageLabel": "p.164-165",
+      "difficulty": "中級",
+      "equipment": "腿用彈簧側躺練習",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "繃緊伸展：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "正向⋯\n支撐頭部。上側手放在胸前墊上，以保持穩定，肩胛骨保持穩定。\n位於下方的腿伸直，平行伸展，同軀幹呈一條線（可以用支撐帶\n吸氣 保持軀幹和骨盆穩定，腿部外旋，背屈踝關節，彎曲位於\n固定）。位於上方的腿外旋，同位於上方的髖部呈一條線，踝關節\n上方的膝關節，使上腳沿著下腿內側移動，控制彈簧。繼\n續外展股骨，膝部朝肩部移動。保持股骨靜止不動，伸展\n蹠屈，腳帶套在足弓上。\n膝關節，踝關節蹠屈，腳趾伸向水平槓。\n呼氣\n保持雙腿伸長，踝關節蹠屈，內收髖部，將位於上方的腿\n拉向位於下方的腿。\n反向練習⋯\n吸氣 保持腿部伸直外旋，踝關節蹠屈，外展腿部，腳趾伸向水\n平槓，高度以能夠保持骨盆穩定為宜。\n呼氣\n背屈踝關節，朝肩部方向屈曲膝關節，然後伸展膝關節，\n踵部朝下方腿內側滑移。\n單腿事曲\n每個方向重複練習3-5次。\n孫腳發踏車.",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p164_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p164_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p165_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p165_action_02.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "腿用彈簧",
+        "腿用彈簧側躺練習",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉",
+        "側躺"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-rond-de-jambe",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "腿轉圈",
+      "english": "ROND DE JAMBE",
+      "pageStart": 166,
+      "pageEnd": 167,
+      "pageLabel": "p.166-167",
+      "difficulty": "中級",
+      "equipment": "腿用彈簧側躺練習",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "腿轉圈：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "",
+      "flow": "正向⋯\n吸氣 保持軀幹穩定，腿部外旋，彎曲髖部，腿部前伸。然後繼\n以保持高度\n續保持在髖關節外旋，水平外展，腿部伸向側方。\n呼氣 繼續外旋髖日中的腿部，腿部伸向髖部後方。然後內收，\n時，內收肌等長收縮，以保持高度；腿部伸向側方時，髖外展肌\n雙腿聚合。\n反向練習⋯\n吸氣 保持軀幹穩定，腿部後伸，伸展髖部。然後繼續保持在髖\n關節外旋，水平內收，腿部伸向側方。\n呼氣\n，繼續外旋髖曰中的腿部，腿部伸向髖部正前方。然後內收，\n協調性：配合呼吸進行腿部運動\n雙腿聚合。\n每個方向重複練習3-5次",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p166_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p167_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "腿用彈簧",
+        "腿用彈簧側躺練習",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "側躺"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-ballet-stretches",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "芭蕾伸展",
+      "english": "BALLET STRETCHES",
+      "pageStart": 168,
+      "pageEnd": 169,
+      "pageLabel": "p.168-169",
+      "difficulty": "中級",
+      "equipment": "毛絨掛帶動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "芭蕾伸展：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "將絨毛掛帶滑至距離立柱較近的位置",
+      "startPosition": "站在凱迪拉克上，面向支撐腿前方的立柱。支撐腿伸直，動作腿\n伸直，踝關節固定絨毛掛帶上，置於髖部前方。雙腿外旋。骨盆\n和脊椎呈中立位，骨盆儘可能保持水平正對前方。雙手抓住肩部\n上方的水平槓，肩胛骨保持穩定",
+      "flow": "屈伸練習⋯•\n過渡⋯\n吸氣 保持骨盆正對前方且位於支撐腿的正上方，彎曲支撐腿的\n繼續吸氣，彎曲支撐腿的膝關節。\n膝關節。\n呼氣 支撐腿的腳蹠球部著地，向側面旋轉軀幹，然後落踵。\n呼氣 伸展支撐腿的膝關節。\n骨盆儘可能保持水平正對前方，繼續外旋雙腿。動作腿略\n微置於髖部前方。\n吸氣 儘可能保持骨盆正對前方，踮起腳尖，重心落在前腳掌上，\n踝關節蹠屈。\n屈伸練習⋯\n呼氣 落下支撐腿腳跟。\n吸氣 保持骨盆正對前方且位於支撐腿的正上方，彎曲支撐腿的\n膝關節。\n弓步前移⋯\n呼氣 伸展支撐腿的膝關節。\n吸氣 拉伸脊椎。\n吸氣 儘可能保持骨盆正對前方，踮起腳尖，重心落在前腳掌上，\n呼氣 保持支撐腿伸直，身體重心前移，以能夠保持骨盆水平正\n踝關節蹠屈。\n呼氣 落下支撐腿腳跟。\n吸氣 重心再次落在支撐腿上，將動作腿另一側的手臂抬過頭頂",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p168_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "髖與腿",
+        "柔韌與伸展",
+        "絨毛掛帶動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉",
+        "站姿"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-spread-eagle",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "展翅雄鷹",
+      "english": "SPREAD EAGLE",
+      "pageStart": 170,
+      "pageEnd": 171,
+      "pageLabel": "p.170-171",
+      "difficulty": "中級",
+      "equipment": "毛絨掛帶動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "scapula",
+        "arms",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "展翅雄鷹：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、肩胛穩定與上背穩定肌、手臂、三角肌、胸大肌與前臂；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "",
+      "startPosition": "懸於水平槓，身體正向面對正上方。雙腿伸直，踝關節牢固置於\n絨毛掛帶上。雙手握住水平槓，使當骨盆上提，身體呈一直線姿\n身體從雙腳至雙肩呈一條線。完全伸直雙臂。然後通過屈\n勢時，雙手與雙肩上下對齊。骨盆向墊下落，儘可能呈中立位。\n穩定肩胛骨，以保護雙肩。\n骨盆落回起始姿勢",
+      "flow": "準備，吸氣⋯\n呼氣 雙腿保持伸直，穩定肩胛骨，從尾椎骨開始通過屈曲逐節\n活動脊椎，伸展髖部至以大腿骨支撐骨盆呈中立位，身體\n從雙腳到肩部呈一條線。保持頸椎伸長，但略微屈曲，雙\n眼朝向雙腳的方向。\n吸氣\n彎曲肘關節，便於穩定肩胛骨和均勻伸展脊椎即可，從胸\n椎開始，胸骨朝向正上方抬起。然後將髖部進一步伸展，\n整個身體呈弓形",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p170_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p171_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "肩胛與上背穩定",
+        "手臂與胸肩",
+        "髖與腿",
+        "柔韌與伸展",
+        "絨毛掛帶動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-abdominal-curls",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "腹肌捲曲",
+      "english": "ABDOMINAL CURLS",
+      "pageStart": 172,
+      "pageEnd": 172,
+      "pageLabel": "p.172",
+      "difficulty": "中級",
+      "equipment": "毛絨掛帶動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "柔韌與伸展"
+      ],
+      "summary": "腹肌捲曲：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "絨毛掛帶滑至水平槓中間位置",
+      "startPosition": "懸掛，而雙腳牢固置於絨毛掛帶上。以胸椎上部貼墊。雙手置於\n大腿後方或交叉在體前",
+      "flow": "準備，吸氣⋯\n呼氣 略微彎曲膝關節，收縮腹肌，上體朝雙腿方向彎離墊。\n吸氣 保持脊椎彎曲，軀幹朝墊下落，但不接觸。\n重複練習10次。\n重複最後一個動作時，軀幹回落在墊上，放鬆膝關節。\n或後襬：髖屈那",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p172_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "柔韌與伸展",
+        "絨毛掛帶動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "懸掛"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-half-hang",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "半懸掛",
+      "english": "HALF HANG",
+      "pageStart": 173,
+      "pageEnd": 173,
+      "pageLabel": "p.173",
+      "difficulty": "中級",
+      "equipment": "毛絨掛帶動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "lat",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "半懸掛：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、背闊肌、大圓肌與拉力鏈、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "絨毛掛帶滑至水平槓中間位置",
+      "startPosition": "懸掛，而雙腳牢固置於絨毛掛帶上。以胸椎上部貼墊",
+      "flow": "",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p173_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展",
+        "絨毛掛帶動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉",
+        "懸掛"
+      ]
+    },
+    {
+      "id": "intermediate_advanced-full-hang",
+      "source": "intermediate_advanced",
+      "sourceLabel": "中高階",
+      "title": "完全懸掛姿勢",
+      "english": "FULL HANG",
+      "pageStart": 174,
+      "pageEnd": 175,
+      "pageLabel": "p.174-175",
+      "difficulty": "中級",
+      "equipment": "毛絨掛帶動作",
+      "muscleKeys": [
+        "core",
+        "spine",
+        "lat",
+        "hips_legs",
+        "mobility"
+      ],
+      "muscles": [
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展"
+      ],
+      "summary": "完全懸掛姿勢：主要歸入核心與腰骨盆穩定、脊椎屈曲、伸展、旋轉與側屈、背闊肌、大圓肌與拉力鏈、髖與腿部控制；OCR 目標肌肉段落見下方摘錄。",
+      "setup": "將絨毛掛帶沿水平槓滑至遠端，靠近凱迪拉克的下卷\n完全懸掛姿勢 1 FULL HANG 1\n木桿端。卸開下卷木桿，將垂直滑槓移動至立柱頂端",
+      "startPosition": "懸掛，而雙腳牢固置於絨毛掛帶上。以胸椎上部貼墊",
+      "flow": "準備，吸氣•\n呼氣 收縮腹肌，雙肩離開凱迪拉克的床沿。然後讓上體懸掛於\n床沿上方，對脊椎施加牽引力。\n正常呼吸\n自由懸掛幾秒鐘，以不超過一分鐘為宜。雙手接觸墊，或\n雙臂超過頭頂。\n接下來⋯",
+      "images": [
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p174_action_01.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p174_action_02.jpg",
+        "../wiki/assets/cadillac_intermediate_advanced_actions/p175_action_01.jpg"
+      ],
+      "tags": [
+        "中高階",
+        "中級",
+        "核心與腰骨盆穩定",
+        "脊椎活動",
+        "背闊肌與拉力鏈",
+        "髖與腿",
+        "柔韌與伸展",
+        "下卷木桿",
+        "絨毛掛帶動作",
+        "旋轉",
+        "側屈",
+        "伸展",
+        "屈曲",
+        "拉",
+        "懸掛"
+      ]
+    }
+  ],
+  "tagCounts": {
+    "核心與腰骨盆穩定": 104,
+    "伸展": 103,
+    "拉": 97,
+    "屈曲": 82,
+    "肩胛與上背穩定": 82,
+    "髖與腿": 79,
+    "柔韌與伸展": 76,
+    "脊椎活動": 69,
+    "旋轉": 67,
+    "中高階": 61,
+    "側屈": 59,
+    "推": 50,
+    "初級": 45,
+    "中級": 39,
+    "手臂與胸肩": 39,
+    "背闊肌與拉力鏈": 28,
+    "仰臥": 26,
+    "站姿": 26,
+    "推拉框上面彈簧動作": 22,
+    "臂用彈簧": 22,
+    "高階": 22,
+    "下卷木桿": 21,
+    "腿用彈簧": 17,
+    "臂用彈簧站姿動作": 15,
+    "側躺": 10,
+    "懸掛": 8,
+    "推拉框下面彈簧動作": 7,
+    "腿用彈簧側躺練習": 7,
+    "絨毛掛帶動作": 5,
+    "俯臥": 4,
+    "推拉框站姿": 3,
+    "橋式": 2
+  }
+};

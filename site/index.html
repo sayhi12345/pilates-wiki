@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>凱迪拉克動作索引</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">STOTT PILATES Cadillac Wiki</p>
+        <h1>凱迪拉克動作索引</h1>
+      </div>
+      <div class="header-stats" aria-label="資料統計">
+        <span id="exerciseCount">0 動作</span>
+        <span id="activeFilter">全部肌群</span>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="索引">
+        <section class="panel">
+          <div class="panel-title">肌群</div>
+          <div id="muscleFilters" class="button-stack"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title">Tags</div>
+          <div id="tagFilters" class="tag-cloud"></div>
+        </section>
+      </aside>
+
+      <section class="list-panel" aria-label="動作列表">
+        <div class="search-row">
+          <input id="searchInput" type="search" placeholder="搜尋動作、器械、tag" autocomplete="off">
+          <select id="sourceFilter" aria-label="來源">
+            <option value="all">全部</option>
+            <option value="beginner">初級</option>
+            <option value="intermediate_advanced">中高階</option>
+          </select>
+        </div>
+        <div id="activeTags" class="active-tags"></div>
+        <div id="exerciseList" class="exercise-list"></div>
+      </section>
+
+      <section class="detail-panel" aria-label="動作詳情">
+        <article id="exerciseDetail" class="detail"></article>
+      </section>
+    </main>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
