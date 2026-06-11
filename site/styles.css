@@ -449,6 +449,7 @@ body.lightbox-open {
   max-width: min(90vw, 1180px);
   max-height: 90vh;
   justify-items: center;
+  touch-action: pan-y;
 }
 
 .lightbox-image {
@@ -476,6 +477,7 @@ body.lightbox-open {
   position: fixed;
   top: 18px;
   right: 18px;
+  z-index: 2;
   width: 42px;
   height: 42px;
   border: 1px solid rgba(248, 239, 227, 0.35);
@@ -487,8 +489,46 @@ body.lightbox-open {
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
 }
 
+.lightbox-nav {
+  position: fixed;
+  top: 50%;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 64px;
+  border: 1px solid rgba(248, 239, 227, 0.28);
+  border-radius: 8px;
+  background: rgba(255, 250, 241, 0.92);
+  color: var(--ink);
+  font-size: 42px;
+  line-height: 1;
+  transform: translateY(-50%);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+}
+
+.lightbox-nav[hidden] {
+  display: none;
+}
+
+.lightbox-nav-prev {
+  left: 18px;
+}
+
+.lightbox-nav-next {
+  right: 18px;
+}
+
+.lightbox-nav:disabled {
+  cursor: default;
+  opacity: 0.34;
+}
+
 .lightbox-close:hover,
-.lightbox-close:focus-visible {
+.lightbox-close:focus-visible,
+.lightbox-nav:not(:disabled):hover,
+.lightbox-nav:focus-visible {
   background: white;
   outline: none;
 }
@@ -619,7 +659,7 @@ body.lightbox-open {
   }
 
   .lightbox {
-    padding: 16px;
+    padding: 16px 12px;
   }
 
   .lightbox-content {
@@ -641,6 +681,22 @@ body.lightbox-open {
   .lightbox-close {
     top: 12px;
     right: 12px;
+  }
+
+  .lightbox-nav {
+    width: 38px;
+    height: 52px;
+    border-radius: 8px;
+    font-size: 34px;
+    background: rgba(255, 250, 241, 0.84);
+  }
+
+  .lightbox-nav-prev {
+    left: 8px;
+  }
+
+  .lightbox-nav-next {
+    right: 8px;
   }
 
   .sidebar .panel + .panel {

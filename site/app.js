@@ -11,6 +11,7 @@ const state = {
 };
 
 let lastLightboxTrigger = null;
+let lightboxTouchStart = null;
 
 const els = {
   exerciseCount: document.getElementById("exerciseCount"),
@@ -27,6 +28,8 @@ const els = {
   lightboxImage: document.getElementById("lightboxImage"),
   lightboxCaption: document.getElementById("lightboxCaption"),
   lightboxClose: document.getElementById("lightboxClose"),
+  lightboxPrev: document.getElementById("lightboxPrev"),
+  lightboxNext: document.getElementById("lightboxNext"),
 };
 
 const byId = new Map(data.exercises.map((exercise) => [exercise.id, exercise]));
@@ -237,11 +240,7 @@ function renderDetail() {
       const index = Number(imageButton.getAttribute("data-lightbox-index"));
       const src = exercise.images[index];
       if (!src) return;
-      openLightbox({
-        src,
-        alt: `${exercise.title} 動作圖 ${index + 1}`,
-        caption: `${exercise.title} · ${exercise.pageLabel} · 圖 ${index + 1}`,
-      }, imageButton);
+      openLightbox(exercise, index, imageButton);
     });
   });
 
@@ -252,8 +251,13 @@ function renderDetail() {
   });
 }
 
-function openLightbox(image, trigger) {
-  state.lightbox = image;
+function openLightbox(exercise, index, trigger) {
+  state.lightbox = {
+    title: exercise.title,
+    pageLabel: exercise.pageLabel,
+    images: exercise.images.slice(),
+    index,
+  };
   lastLightboxTrigger = trigger || null;
   renderLightbox();
 }
@@ -261,6 +265,7 @@ function openLightbox(image, trigger) {
 function closeLightbox() {
   if (!state.lightbox) return;
   state.lightbox = null;
+  lightboxTouchStart = null;
   renderLightbox();
   if (lastLightboxTrigger?.isConnected) {
     lastLightboxTrigger.focus();
@@ -274,16 +279,38 @@ function renderLightbox() {
     els.lightboxImage.removeAttribute("src");
     els.lightboxImage.alt = "";
     els.lightboxCaption.textContent = "";
+    els.lightboxPrev.disabled = true;
+    els.lightboxNext.disabled = true;
+    els.lightboxPrev.hidden = true;
+    els.lightboxNext.hidden = true;
     document.body.classList.remove("lightbox-open");
     return;
   }
 
-  els.lightboxImage.src = state.lightbox.src;
-  els.lightboxImage.alt = state.lightbox.alt;
-  els.lightboxCaption.textContent = state.lightbox.caption;
+  const shouldFocusClose = els.imageLightbox.hidden;
+  const { title, pageLabel, images, index } = state.lightbox;
+  const total = images.length;
+  const src = images[index];
+  els.lightboxImage.src = src;
+  els.lightboxImage.alt = `${title} 動作圖 ${index + 1}`;
+  els.lightboxCaption.textContent = `${title} · ${pageLabel} · 圖 ${index + 1} / ${total}`;
+  els.lightboxPrev.disabled = index <= 0;
+  els.lightboxNext.disabled = index >= total - 1;
+  els.lightboxPrev.hidden = total <= 1;
+  els.lightboxNext.hidden = total <= 1;
   els.imageLightbox.hidden = false;
   document.body.classList.add("lightbox-open");
-  els.lightboxClose.focus();
+  if (shouldFocusClose) {
+    els.lightboxClose.focus();
+  }
+}
+
+function showLightboxImage(delta) {
+  if (!state.lightbox) return;
+  const nextIndex = state.lightbox.index + delta;
+  if (nextIndex < 0 || nextIndex >= state.lightbox.images.length) return;
+  state.lightbox.index = nextIndex;
+  renderLightbox();
 }
 
 function renderStats(exercises) {
@@ -334,9 +361,21 @@ els.sourceFilter.addEventListener("change", (event) => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && state.lightbox) {
-    closeLightbox();
-    return;
+  if (state.lightbox) {
+    if (event.key === "Escape") {
+      closeLightbox();
+      return;
+    }
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showLightboxImage(-1);
+      return;
+    }
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showLightboxImage(1);
+      return;
+    }
   }
   if (event.key !== "Escape" || !state.detailOpen) return;
   state.detailOpen = false;
@@ -344,11 +383,32 @@ document.addEventListener("keydown", (event) => {
 });
 
 els.lightboxClose.addEventListener("click", closeLightbox);
+els.lightboxPrev.addEventListener("click", () => showLightboxImage(-1));
+els.lightboxNext.addEventListener("click", () => showLightboxImage(1));
 
 els.imageLightbox.addEventListener("click", (event) => {
   if (event.target === els.imageLightbox) {
     closeLightbox();
   }
 });
+
+els.imageLightbox.addEventListener("touchstart", (event) => {
+  if (!state.lightbox || state.lightbox.images.length <= 1) return;
+  const touch = event.changedTouches[0];
+  lightboxTouchStart = {
+    x: touch.clientX,
+    y: touch.clientY,
+  };
+}, { passive: true });
+
+els.imageLightbox.addEventListener("touchend", (event) => {
+  if (!state.lightbox || !lightboxTouchStart) return;
+  const touch = event.changedTouches[0];
+  const deltaX = touch.clientX - lightboxTouchStart.x;
+  const deltaY = touch.clientY - lightboxTouchStart.y;
+  lightboxTouchStart = null;
+  if (Math.abs(deltaX) < 48 || Math.abs(deltaX) < Math.abs(deltaY) * 1.25) return;
+  showLightboxImage(deltaX < 0 ? 1 : -1);
+}, { passive: true });
 
 render();
