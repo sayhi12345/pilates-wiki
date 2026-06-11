@@ -377,9 +377,7 @@ def infer_equipment(text: str) -> str:
 
 def summary_for(exercise: dict, groups: list[str], excerpt: str) -> str:
     group_names = "、".join(GROUPS[group]["title"] for group in groups[:4])
-    if excerpt:
-        return f"{opencc(exercise['title'])}：主要歸入{group_names}；依 OCR 原理/目標肌肉段落整理。"
-    return f"{opencc(exercise['title'])}：主要歸入{group_names}；依頁面標題、動作說明與動作圖整理。"
+    return f"{opencc(exercise['title'])}：主要歸入{group_names}。"
 
 
 def page_range_text(start: int, end: int) -> str:

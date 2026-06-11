@@ -199,6 +199,16 @@ def clean_text(text: str, limit: int = 1100) -> str:
     return text
 
 
+def clean_summary(text: str) -> str:
+    text = re.sub(r"[ \t]+", " ", text)
+    text = re.sub(r"[；;]?\s*依\s*OCR\s*原理/目標肌肉段落整理。?", "", text)
+    text = re.sub(r"[；;]?\s*依頁面標題、動作說明與動作圖整理。?", "", text)
+    text = text.strip(" ：:；;，,\\n")
+    if text and not text.endswith(("。", "！", "？", ".", "…", "⋯")):
+        text += "。"
+    return text
+
+
 def normalized_heading(line: str) -> str:
     return line.strip().strip(" ：:；;，,。…⋯")
 
@@ -219,6 +229,15 @@ def is_breath_or_flow_cue(line: str) -> bool:
 def is_flow_cue(line: str) -> bool:
     return bool(
         re.match(
+            r"^(準備|開始|接下來|結束動作|過渡|吸氣|呼氣|繼續吸氣|繼續呼氣|正向|反向|屈伸|收縮|弓步|側彎|下蹲)",
+            normalized_heading(line),
+        )
+    )
+
+
+def is_standard_flow_cue(line: str) -> bool:
+    return bool(
+        re.match(
             r"^(準備|吸氣|呼氣|正向|反向|屈伸|收縮|弓步|側彎|下蹲)",
             normalized_heading(line),
         )
@@ -226,6 +245,10 @@ def is_flow_cue(line: str) -> bool:
 
 
 def is_repeat_line(line: str) -> bool:
+    return bool(re.match(r"^(重複練習|董復練習|葷復練習|垂復練習|每側重複練習)", normalized_heading(line)))
+
+
+def is_standard_repeat_line(line: str) -> bool:
     return bool(re.match(r"^(重複練習|董復練習|每側重複練習)", normalized_heading(line)))
 
 
@@ -271,6 +294,14 @@ def is_non_flow_line(line: str) -> bool:
             "原理",
             "注意事項",
         ]
+    )
+
+
+def is_multicolumn_non_flow_line(line: str) -> bool:
+    stripped = normalized_heading(line)
+    return is_non_flow_line(line) or any(
+        token in stripped
+        for token in ["協調性", "耐力", "平衡性", "本體感受"]
     )
 
 
@@ -377,6 +408,95 @@ def is_start_line(line: str) -> bool:
     )
 
 
+def is_section_noise(line: str, title: str) -> bool:
+    stripped = normalized_heading(line)
+    if not stripped:
+        return True
+    if stripped in {"練習", "起始姿勢", "起姶姿勢", "起始婆勢"}:
+        return True
+    if stripped.startswith(("要點", "動作調整", "動怍調整", "原理")):
+        return True
+    if is_footer_or_caption(line, title):
+        return True
+    if re.fullmatch(r"\d+", stripped):
+        return True
+    if title and (
+        title.replace(" ", "") in stripped.replace(" ", "")
+        or (len(stripped) >= 2 and stripped in title)
+    ):
+        return True
+    if re.fullmatch(r"[A-Z][A-Z0-9 &'’/\\:,-]+", stripped):
+        return True
+    return False
+
+
+def is_flow_noise_fragment(line: str) -> bool:
+    stripped = normalized_heading(line)
+    if not stripped:
+        return False
+    if any(
+        token in stripped
+        for token in [
+            "開始時2根",
+        ]
+    ):
+        return True
+    if re.match(r"^(準備|開始|接下來|結束動作|過渡|吸氣|呼氣|繼續吸氣|繼續呼氣|重複練習|董復練習|葷復練習|垂復練習|每側重複練習)", stripped):
+        return False
+    return any(
+        token in stripped
+        for token in [
+            "腳踏桿調到",
+            "頭墊平放",
+            "掛1根",
+            "掛2根",
+            "掛3根",
+            "根據個人",
+            "仰臥",
+            "俯臥",
+            "側躺",
+            "坐直",
+            "面向",
+            "背向",
+            "跪在",
+            "側身站",
+            "雙腳抵住",
+            "雙踝",
+            "蹠屈",
+            "雙臂前伸，高度",
+            "雙手套入拉環",
+            "掌心",
+            "手指伸直",
+            "骨盆和脊椎保持中立位",
+            "脊椎和骨盆保持中立位",
+            "大腿骨豎直",
+            "懸空，脊椎",
+            "虛抱成環形",
+            "預留足夠空間",
+            "以便到時能使骶骨",
+            "貼墊，而不離墊",
+            "可採取",
+            "收縮一側",
+            "收縮靠近",
+            "以使脊椎",
+            "平衡：",
+            "幫助，且手扶",
+            "教練不能",
+            "應使用防滑墊",
+            "練習者可能會",
+            "動作調整",
+            "動怍調",
+            "動作調墊",
+            "merrithew",
+            "merrieW",
+            "PUBLISHING",
+            "PUBUSHING",
+            "PUBUISHING",
+            "初級勸作",
+        ]
+    )
+
+
 def extract_setup(text: str) -> str:
     lines = text.splitlines()
     markers = ["裝置安裝", "設備安裝", "沒備安裝", "设备安装", "装置安装"]
@@ -422,7 +542,10 @@ def extract_start_position(text: str) -> str:
     return ""
 
 
-def extract_flow(text: str, title: str) -> str:
+def extract_flow(text: str, title: str, source_key: str = "") -> str:
+    if source_key:
+        return extract_multicolumn_flow(text, title)
+
     lines = text.splitlines()
     start_index = None
     for index, line in enumerate(lines):
@@ -442,8 +565,8 @@ def extract_flow(text: str, title: str) -> str:
             break
         if is_non_flow_line(next_line) or is_note_line(next_line):
             continue
-        cue = is_flow_cue(next_line)
-        repeat = is_repeat_line(next_line)
+        cue = is_standard_flow_cue(next_line)
+        repeat = is_standard_repeat_line(next_line)
         if not flow_started:
             if not cue:
                 continue
@@ -453,6 +576,41 @@ def extract_flow(text: str, title: str) -> str:
         collected.append(next_line.strip())
         if repeat:
             break
+        if len("\n".join(collected)) >= 1300:
+            break
+    return clean_text("\n".join(collected), limit=1300)
+
+
+def extract_multicolumn_flow(text: str, title: str) -> str:
+    lines = text.splitlines()
+    start_index = None
+    for index, line in enumerate(lines):
+        if normalized_heading(line) == "練習":
+            start_index = index
+            break
+    if start_index is None:
+        return ""
+    collected = []
+    flow_started = False
+    for next_line in lines[start_index + 1:]:
+        if is_section_noise(next_line, title):
+            continue
+        setup_line = is_setup_line(next_line)
+        if setup_line and not (flow_started and collected and not ends_sentence(collected[-1])):
+            continue
+        if is_flow_noise_fragment(next_line):
+            continue
+        if is_multicolumn_non_flow_line(next_line) or is_note_line(next_line):
+            continue
+        cue = is_flow_cue(next_line)
+        repeat = is_repeat_line(next_line)
+        if not flow_started:
+            if not cue:
+                continue
+            flow_started = True
+        elif not cue and not repeat and (not collected or ends_sentence(collected[-1])):
+            continue
+        collected.append(next_line.strip())
         if len("\n".join(collected)) >= 1300:
             break
     return clean_text("\n".join(collected), limit=1300)
@@ -491,12 +649,12 @@ def build_exercises(source: dict) -> list[dict]:
         group_text = parse_field(block["body"], "肌群分類")
         difficulty = parse_field(block["body"], "難度")
         equipment = parse_field(block["body"], "器械/章節")
-        summary = parse_field(block["body"], "摘要")
+        summary = clean_summary(parse_field(block["body"], "摘要"))
         images = parse_images(block["body"])
         full_ocr = exercise_ocr_text(ocr, start, end)
         setup = extract_setup(full_ocr)
         start_position = extract_start_position(full_ocr)
-        flow = extract_flow(full_ocr, title)
+        flow = extract_flow(full_ocr, title, source["key"])
         muscle_keys = group_keys(group_text)
         exercise = {
             "id": slugify(english or title, source["key"]),
