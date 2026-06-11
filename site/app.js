@@ -7,7 +7,10 @@ const state = {
   source: "all",
   selectedId: "",
   detailOpen: false,
+  lightbox: null,
 };
+
+let lastLightboxTrigger = null;
 
 const els = {
   exerciseCount: document.getElementById("exerciseCount"),
@@ -20,6 +23,10 @@ const els = {
   exerciseDetail: document.getElementById("exerciseDetail"),
   searchInput: document.getElementById("searchInput"),
   sourceFilter: document.getElementById("sourceFilter"),
+  imageLightbox: document.getElementById("imageLightbox"),
+  lightboxImage: document.getElementById("lightboxImage"),
+  lightboxCaption: document.getElementById("lightboxCaption"),
+  lightboxClose: document.getElementById("lightboxClose"),
 };
 
 const byId = new Map(data.exercises.map((exercise) => [exercise.id, exercise]));
@@ -84,6 +91,7 @@ function renderMuscles() {
     const el = button("", `muscle-button ${state.muscle === group.key ? "is-active" : ""}`, () => {
       state.muscle = group.key;
       state.detailOpen = false;
+      closeLightbox();
       render();
     }, { pressed: state.muscle === group.key });
     el.innerHTML = `
@@ -106,6 +114,7 @@ function renderTags() {
         const el = button(`${tag} ${count}`, `tag-button ${state.tag === tag ? "is-active" : ""}`, () => {
           state.tag = state.tag === tag ? "" : tag;
           state.detailOpen = false;
+          closeLightbox();
           render();
         }, { pressed: state.tag === tag });
         container.appendChild(el);
@@ -119,6 +128,7 @@ function renderActiveTags() {
   const clear = button(`Tag: ${state.tag} ×`, "clear-button", () => {
     state.tag = "";
     state.detailOpen = false;
+    closeLightbox();
     render();
   });
   els.activeTags.appendChild(clear);
@@ -139,6 +149,7 @@ function renderList(exercises) {
     const row = button("", `exercise-row ${state.selectedId === exercise.id ? "is-active" : ""}`, () => {
       state.selectedId = exercise.id;
       state.detailOpen = true;
+      closeLightbox();
       render();
     }, { pressed: state.selectedId === exercise.id, title: exercise.title });
     const tags = exercise.tags.slice(0, 4).map((tag) => `<span class="mini-tag">${escapeHtml(tag)}</span>`).join("");
@@ -171,7 +182,9 @@ function renderDetail() {
 
   const images = exercise.images.map((src, index) => `
     <figure class="figure">
-      <img src="${escapeAttr(src)}" alt="${escapeAttr(`${exercise.title} 動作圖 ${index + 1}`)}" loading="lazy">
+      <button class="figure-button" type="button" data-lightbox-index="${index}">
+        <img src="${escapeAttr(src)}" alt="${escapeAttr(`${exercise.title} 動作圖 ${index + 1}`)}" loading="lazy">
+      </button>
       <figcaption>${escapeHtml(exercise.pageLabel)} · 圖 ${index + 1}</figcaption>
     </figure>
   `).join("");
@@ -214,14 +227,63 @@ function renderDetail() {
       const tag = tagButton.getAttribute("data-tag") || "";
       state.tag = state.tag === tag ? "" : tag;
       state.detailOpen = false;
+      closeLightbox();
       render();
+    });
+  });
+
+  els.exerciseDetail.querySelectorAll("[data-lightbox-index]").forEach((imageButton) => {
+    imageButton.addEventListener("click", () => {
+      const index = Number(imageButton.getAttribute("data-lightbox-index"));
+      const src = exercise.images[index];
+      if (!src) return;
+      openLightbox({
+        src,
+        alt: `${exercise.title} 動作圖 ${index + 1}`,
+        caption: `${exercise.title} · ${exercise.pageLabel} · 圖 ${index + 1}`,
+      }, imageButton);
     });
   });
 
   els.exerciseDetail.querySelector(".detail-close")?.addEventListener("click", () => {
     state.detailOpen = false;
+    closeLightbox();
     render();
   });
+}
+
+function openLightbox(image, trigger) {
+  state.lightbox = image;
+  lastLightboxTrigger = trigger || null;
+  renderLightbox();
+}
+
+function closeLightbox() {
+  if (!state.lightbox) return;
+  state.lightbox = null;
+  renderLightbox();
+  if (lastLightboxTrigger?.isConnected) {
+    lastLightboxTrigger.focus();
+  }
+  lastLightboxTrigger = null;
+}
+
+function renderLightbox() {
+  if (!state.lightbox) {
+    els.imageLightbox.hidden = true;
+    els.lightboxImage.removeAttribute("src");
+    els.lightboxImage.alt = "";
+    els.lightboxCaption.textContent = "";
+    document.body.classList.remove("lightbox-open");
+    return;
+  }
+
+  els.lightboxImage.src = state.lightbox.src;
+  els.lightboxImage.alt = state.lightbox.alt;
+  els.lightboxCaption.textContent = state.lightbox.caption;
+  els.imageLightbox.hidden = false;
+  document.body.classList.add("lightbox-open");
+  els.lightboxClose.focus();
 }
 
 function renderStats(exercises) {
@@ -240,6 +302,7 @@ function render() {
   renderActiveTags();
   renderList(exercises);
   renderDetail();
+  renderLightbox();
   renderStats(exercises);
 }
 
@@ -259,19 +322,33 @@ function escapeAttr(value) {
 els.searchInput.addEventListener("input", (event) => {
   state.query = event.target.value;
   state.detailOpen = false;
+  closeLightbox();
   render();
 });
 
 els.sourceFilter.addEventListener("change", (event) => {
   state.source = event.target.value;
   state.detailOpen = false;
+  closeLightbox();
   render();
 });
 
 document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && state.lightbox) {
+    closeLightbox();
+    return;
+  }
   if (event.key !== "Escape" || !state.detailOpen) return;
   state.detailOpen = false;
   render();
+});
+
+els.lightboxClose.addEventListener("click", closeLightbox);
+
+els.imageLightbox.addEventListener("click", (event) => {
+  if (event.target === els.imageLightbox) {
+    closeLightbox();
+  }
 });
 
 render();

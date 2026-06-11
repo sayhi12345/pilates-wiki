@@ -386,8 +386,25 @@ h1 {
   box-shadow: var(--shadow);
 }
 
-.figure img {
+.figure-button {
   display: block;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.figure-button:focus-visible {
+  outline: 3px solid rgba(160, 77, 60, 0.45);
+  outline-offset: -3px;
+}
+
+.figure img,
+.lightbox-image {
+  display: block;
+}
+
+.figure img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -406,6 +423,74 @@ h1 {
   color: var(--muted);
   padding: 18px;
   text-align: center;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  background: rgba(19, 20, 18, 0.88);
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+.lightbox-content {
+  display: grid;
+  gap: 12px;
+  max-width: min(90vw, 1180px);
+  max-height: 90vh;
+  justify-items: center;
+}
+
+.lightbox-image {
+  max-width: 90vw;
+  max-height: 82vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #111;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+.lightbox-caption {
+  margin: 0;
+  max-width: 90vw;
+  color: #f8efe3;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(248, 239, 227, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 250, 241, 0.94);
+  color: var(--ink);
+  font-size: 28px;
+  line-height: 1;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus-visible {
+  background: white;
+  outline: none;
 }
 
 @media (max-width: 1180px) {
@@ -531,6 +616,31 @@ h1 {
 
   .image-grid {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .lightbox {
+    padding: 16px;
+  }
+
+  .lightbox-content {
+    max-width: 96vw;
+    max-height: 92vh;
+  }
+
+  .lightbox-image {
+    max-width: 96vw;
+    max-height: 80vh;
+  }
+
+  .lightbox-caption {
+    max-width: 92vw;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+  }
+
+  .lightbox-close {
+    top: 12px;
+    right: 12px;
   }
 
   .sidebar .panel + .panel {
