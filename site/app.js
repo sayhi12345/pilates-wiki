@@ -13,6 +13,7 @@ const els = {
   activeFilter: document.getElementById("activeFilter"),
   muscleFilters: document.getElementById("muscleFilters"),
   tagFilters: document.getElementById("tagFilters"),
+  mobileTagFilters: document.getElementById("mobileTagFilters"),
   activeTags: document.getElementById("activeTags"),
   exerciseList: document.getElementById("exerciseList"),
   exerciseDetail: document.getElementById("exerciseDetail"),
@@ -25,6 +26,20 @@ const byId = new Map(data.exercises.map((exercise) => [exercise.id, exercise]));
 function muscleCount(key) {
   if (key === "all") return data.exercises.length;
   return data.exercises.filter((exercise) => exercise.muscleKeys.includes(key)).length;
+}
+
+function shortMuscleLabel(key, label) {
+  const labels = {
+    all: "全部",
+    core: "核心",
+    spine: "脊椎",
+    scapula: "肩胛",
+    lat: "背闊",
+    arms: "手臂",
+    hips_legs: "髖腿",
+    mobility: "伸展",
+  };
+  return labels[key] || label.slice(0, 2);
 }
 
 function filteredExercises() {
@@ -69,21 +84,29 @@ function renderMuscles() {
       state.muscle = group.key;
       render();
     }, { pressed: state.muscle === group.key });
-    el.innerHTML = `<span>${escapeHtml(group.label)}</span><span class="count">${muscleCount(group.key)}</span>`;
+    el.innerHTML = `
+      <span class="muscle-label" data-short="${escapeAttr(shortMuscleLabel(group.key, group.label))}">${escapeHtml(group.label)}</span>
+      <span class="count">${muscleCount(group.key)}</span>
+    `;
     els.muscleFilters.appendChild(el);
   });
 }
 
 function renderTags() {
-  els.tagFilters.innerHTML = "";
+  const containers = [els.tagFilters, els.mobileTagFilters].filter(Boolean);
+  containers.forEach((container) => {
+    container.innerHTML = "";
+  });
   Object.entries(data.tagCounts)
     .slice(0, 28)
     .forEach(([tag, count]) => {
-      const el = button(`${tag} ${count}`, `tag-button ${state.tag === tag ? "is-active" : ""}`, () => {
-        state.tag = state.tag === tag ? "" : tag;
-        render();
-      }, { pressed: state.tag === tag });
-      els.tagFilters.appendChild(el);
+      containers.forEach((container) => {
+        const el = button(`${tag} ${count}`, `tag-button ${state.tag === tag ? "is-active" : ""}`, () => {
+          state.tag = state.tag === tag ? "" : tag;
+          render();
+        }, { pressed: state.tag === tag });
+        container.appendChild(el);
+      });
     });
 }
 
