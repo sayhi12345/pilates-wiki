@@ -124,11 +124,10 @@ def opencc(text: str) -> str:
 
 
 def read_ocr(path: Path) -> dict[int, str]:
-    pages: dict[int, str] = {}
-    for line in path.read_text(encoding="utf-8").splitlines():
-        row = json.loads(line)
-        pages[int(row["page"])] = opencc(row["text"])
-    return pages
+    rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines()]
+    delimiter = "\n<<<PILATES_PAGE_BREAK>>>\n"
+    converted = opencc(delimiter.join(row["text"] for row in rows)).split(delimiter)
+    return {int(row["page"]): text for row, text in zip(rows, converted, strict=True)}
 
 
 def slugify(text: str, source_key: str) -> str:
@@ -172,6 +171,19 @@ def parse_field(body: str, label: str) -> str:
     return match.group(1).strip() if match else ""
 
 
+def parse_multiline_field(body: str, label: str) -> str:
+    match = re.search(rf"^- {re.escape(label)}：(.*)(?:\n((?:  .*(?:\n|$))*))", body, re.M)
+    if not match:
+        return ""
+    first = match.group(1).strip()
+    continuation = "\n".join(
+        line.strip()
+        for line in (match.group(2) or "").splitlines()
+        if line.strip()
+    )
+    return clean_text("\n".join(part for part in [first, continuation] if part), limit=1600)
+
+
 def parse_images(body: str) -> list[str]:
     images = []
     for match in re.finditer(r"!\[[^\]]*\]\(([^)]+)\)", body):
@@ -193,7 +205,43 @@ def group_keys(group_text: str) -> list[str]:
 def clean_text(text: str, limit: int = 1100) -> str:
     text = re.sub(r"[ \t]+", " ", text)
     text = re.sub(r"\n{3,}", "\n\n", text)
+    replacements = {
+        "董復練習": "重複練習",
+        "葷復練習": "重複練習",
+        "垂復練習": "重複練習",
+        "面復練習": "重複練習",
+        "西復練習": "重複練習",
+        "照氣": "吸氣",
+        "肩朋骨": "肩胛骨",
+        "府胛骨": "肩胛骨",
+        "學心": "掌心",
+        "下卷木枉": "下卷木桿",
+        "推拉枉": "推拉框",
+        "推拉准": "推拉框",
+        "仰臣^": "仰臥",
+        "仰臣": "仰臥",
+        "齊離": "齊高",
+        "與宿同寬": "與肩同寬",
+        "伸查": "伸直",
+        "雙管": "雙臂",
+        "弹簽": "彈簧",
+        "彈簽": "彈簧",
+        "潤繩肌": "胭繩肌",
+        "脊椎星中": "脊椎呈中",
+        "準備，雙氣": "準備，吸氣",
+        "劈又": "劈叉",
+        "高拾": "高抬",
+        "上拾": "上抬",
+        "接餚": "接著",
+        "腳踏杆": "腳踏桿",
+        "骨盆和脊椎是中立位": "骨盆和脊椎呈中立位",
+        "骨盆是中立位": "骨盆呈中立位",
+    }
+    for old, new in replacements.items():
+        text = text.replace(old, new)
     text = text.strip(" ：:；;，,。\\n")
+    if text.endswith("肩胛骨保持"):
+        text += "穩定"
     if len(text) > limit:
         text = text[:limit].rstrip() + "…"
     return text
@@ -245,11 +293,11 @@ def is_standard_flow_cue(line: str) -> bool:
 
 
 def is_repeat_line(line: str) -> bool:
-    return bool(re.match(r"^(重複練習|董復練習|葷復練習|垂復練習|每側重複練習)", normalized_heading(line)))
+    return bool(re.match(r"^(重複練習|董復練習|葷復練習|垂復練習|面復練習|西復練習|每側重複練習)", normalized_heading(line)))
 
 
 def is_standard_repeat_line(line: str) -> bool:
-    return bool(re.match(r"^(重複練習|董復練習|每側重複練習)", normalized_heading(line)))
+    return bool(re.match(r"^(重複練習|董復練習|面復練習|西復練習|每側重複練習)", normalized_heading(line)))
 
 
 def is_note_line(line: str) -> bool:
@@ -532,8 +580,10 @@ def extract_start_position(text: str) -> str:
         if normalized_heading(line) not in {"起始姿勢", "起姶姿勢", "起始婆勢"}:
             continue
         collected = []
-        for next_line in lines[index + 1:index + 16]:
+        for next_line in lines[index + 1:index + 24]:
             heading = normalized_heading(next_line)
+            if heading in {"原理", "要點", "動作調整"} and not collected:
+                continue
             if heading in {"練習", "原理", "要點", "動作調整"}:
                 break
             if is_start_line(next_line):
@@ -630,10 +680,11 @@ def tags_for(exercise: dict, ocr_text: str) -> list[str]:
     for equipment in EQUIPMENT_TAGS:
         if equipment.upper() in haystack:
             tags.append(opencc(equipment))
+    blocked_tags = {"推", "拉", "彈簧"}
     for tag, needles in ACTION_TAG_RULES:
         if any(needle.upper() in haystack for needle in needles):
             tags.append(tag)
-    return list(dict.fromkeys(tag for tag in tags if tag))
+    return list(dict.fromkeys(tag for tag in tags if tag and tag not in blocked_tags))
 
 
 def build_exercises(source: dict) -> list[dict]:
@@ -652,9 +703,9 @@ def build_exercises(source: dict) -> list[dict]:
         summary = clean_summary(parse_field(block["body"], "摘要"))
         images = parse_images(block["body"])
         full_ocr = exercise_ocr_text(ocr, start, end)
-        setup = extract_setup(full_ocr)
-        start_position = extract_start_position(full_ocr)
-        flow = extract_flow(full_ocr, title, source["key"])
+        setup = parse_multiline_field(block["body"], "器材設置") or extract_setup(full_ocr)
+        start_position = parse_multiline_field(block["body"], "起始姿勢") or extract_start_position(full_ocr)
+        flow = parse_multiline_field(block["body"], "動作流程") or extract_flow(full_ocr, title, source["key"])
         muscle_keys = group_keys(group_text)
         exercise = {
             "id": slugify(english or title, source["key"]),

@@ -181,6 +181,39 @@ class ExtractFlowTest(unittest.TestCase):
         self.assertTrue(all("依 OCR 原理/目標肌肉段落整理" not in exercise["summary"] for exercise in exercises))
         self.assertTrue(all("依頁面標題、動作說明與動作圖整理" not in exercise["summary"] for exercise in exercises))
 
+    def test_wiki_manual_fields_override_interleaved_ocr(self):
+        exercises = build_data.build_exercises(
+            next(source for source in build_data.SOURCES if source["key"] == "beginner")
+        )
+        exercise = next(
+            exercise
+            for exercise in exercises
+            if exercise["english"] == "Roll-Down with Back Extension Prep"
+        )
+
+        self.assertIn("雙腿伸直、平行", exercise["startPosition"])
+        self.assertIn("重複練習 3-5 次", exercise["flow"])
+        self.assertNotIn("始，通過屈曲將脊椎卷離墊", exercise["startPosition"])
+        self.assertNotIn("推", exercise["tags"])
+        self.assertNotIn("拉", exercise["tags"])
+        self.assertNotIn("彈簧", exercise["tags"])
+
+    def test_cadillac_teaser_series_uses_manual_series_flow(self):
+        exercises = build_data.build_exercises(
+            next(source for source in build_data.SOURCES if source["key"] == "intermediate_advanced")
+        )
+        exercise = next(
+            exercise
+            for exercise in exercises
+            if exercise["english"] == "TEASER SERIES" and exercise["pageLabel"] == "p.66-71"
+        )
+
+        self.assertIn("使用 1 根彈簧", exercise["setup"])
+        self.assertIn("臂腿同時", exercise["flow"])
+        self.assertIn("單腿調整", exercise["flow"])
+        self.assertNotIn("調過位置", exercise["startPosition"])
+        self.assertNotIn("彎曲…", exercise["flow"])
+
 
 if __name__ == "__main__":
     unittest.main()
