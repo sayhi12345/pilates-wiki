@@ -1,4 +1,4 @@
-# Stott Pilates Cadillac LLM Wiki
+# Stott Pilates Equipment LLM Wiki
 
 這個 wiki 依照 LLM Wiki 模式建立：原始來源不可改，OCR/截圖保留在 `raw/` 與 `assets/`，可讀整理頁放在 `sources/`、`exercises/`、`muscles/`。
 
@@ -8,11 +8,17 @@
 - [[sources/cadillac_intermediate_advanced_source|凱迪拉克中高階 source note]]：處理範圍、OCR、截圖 manifest、全頁影像連結。
 - `凯迪拉克初级.pdf`：原始 PDF。
 - `凯迪拉克中高级.pdf`：原始 PDF。
+- [[sources/reformer_beginner_source|普拉提塑身機初級 source note]]：處理範圍、OCR、截圖 manifest、全頁影像連結。
+- [[sources/reformer_intermediate_source|普拉提塑身機中級 source note]]：處理範圍、OCR、截圖 manifest、全頁影像連結。
+- `a塑身机初级扫描.pdf`：原始 PDF。
+- `a_普拉提塑身机中级.pdf`：原始 PDF。
 
 ## Exercise Catalog
 
 - [[exercises/cadillac-beginner-exercises|凱迪拉克初級動作索引]]：依頁碼列出所有整理出的動作，附肌群分類與動作圖。
 - [[exercises/cadillac-intermediate-advanced-exercises|凱迪拉克中高階動作索引]]：依頁碼列出中級/高階動作，附肌群分類與動作圖。
+- [[exercises/reformer-beginner-exercises|普拉提塑身機初級動作索引]]：依頁碼列出塑身機初級動作，附肌群分類與動作圖。
+- [[exercises/reformer-intermediate-exercises|普拉提塑身機中級動作索引]]：依頁碼列出塑身機中級動作，附肌群分類與動作圖。
 
 ## Muscle / Muscle Group Pages
 
@@ -40,3 +46,5 @@
 - 動作圖裁切：121 頁含動作圖，共 216 張/區域。
 - 圖片裁切採寧可保留章節照片、器械示意，也不要漏掉動作序列的策略。
 - 凱迪拉克中高階：已跳過 PDF 第 1-5 頁與第 176-180 頁；整理 61 個動作條目；動作圖裁切 162 頁、242 張/區域。
+- 普拉提塑身機初級：已跳過 PDF 第 1-5 頁與第 112-116 頁；整理 44 個動作條目。
+- 普拉提塑身機中級：已跳過 PDF 第 1-5 頁與第 164-168 頁；整理 66 個動作條目。

@@ -1,0 +1,162 @@
+# 塑身機初級：肩胛與上背穩定
+
+肩胛骨貼合肋骨架、避免上提或外翻，並配合上背穩定肌群控制拉環與腳踏桿。
+
+## 整理原則
+
+- 依 OCR 的原理/目標肌肉段落、動作標題與頁面動作圖共同分類。
+- 若同一系列包含多個編號變化，保留為同一條目，避免拆散教學上下文。
+
+## 相關動作
+
+### 腳部練習 (FOOTWORK)
+
+- 頁碼：p.28-33
+- 器械/章節：腳踏桿、彈簧、頭墊
+- 摘要：腳部練習：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、手臂與胸肩；依 OCR 原理/目標肌肉段落整理。
+- 動作索引：[[../exercises/reformer-beginner-exercises#腳部練習|查看完整條目]]
+- 代表圖：![](../assets/reformer_beginner_actions/p028_action_01.jpg)
+
+### 百次拍擊 (HUNDRED)
+
+- 頁碼：p.40-41
+- 器械/章節：腳踏桿、彈簧、頭墊、拉環與繩索
+- 摘要：百次拍擊：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、背闊肌與拉力鏈；依 OCR 原理/目標肌肉段落整理。
+- 動作索引：[[../exercises/reformer-beginner-exercises#百次拍擊|查看完整條目]]
+- 代表圖：![](../assets/reformer_beginner_actions/p040_action_01.jpg)
+
+### 中背部系列動作 (MIDBACK SERIES)
+
+- 頁碼：p.50-54
+- 器械/章節：腳踏桿、彈簧、頭墊、拉環與繩索
+- 摘要：中背部系列動作：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、手臂與胸肩；依 OCR 原理/目標肌肉段落整理。
+- 動作索引：[[../exercises/reformer-beginner-exercises#中背部系列動作|查看完整條目]]
+- 代表圖：![](../assets/reformer_beginner_actions/p050_action_01.jpg)
+
+### 後劃準備動作 (BACK ROWING PREPS)
+
+- 頁碼：p.55-63
+- 器械/章節：腳踏桿、彈簧、頭墊、拉環與繩索
+- 摘要：後劃準備動作：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、背闊肌與拉力鏈；依 OCR 原理/目標肌肉段落整理。
+- 動作索引：[[../exercises/reformer-beginner-exercises#後劃準備動作|查看完整條目]]
+- 代表圖：![](../assets/reformer_beginner_actions/p055_action_01.jpg)
+
+### 側坐手臂準備動作 (SIDE ARM PREPS SITTING)
+
+- 頁碼：p.64-67
+- 器械/章節：腳踏桿、彈簧、拉環與繩索
+- 摘要：側坐手臂準備動作：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、手臂與胸肩；依 OCR 原理/目標肌肉段落整理。
+- 動作索引：[[../exercises/reformer-beginner-exercises#側坐手臂準備動作|查看完整條目]]
+- 代表圖：![](../assets/reformer_beginner_actions/p064_action_01.jpg)
+
+### 側轉坐姿 (SIDE TWIST SITTING)
+
+- 頁碼：p.68-69
+- 器械/章節：腳踏桿、彈簧、拉環與繩索、塑身機盒子
+- 摘要：側轉坐姿：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、髖與腿；依頁面標題、動作說明與動作圖整理。
+- 動作索引：[[../exercises/reformer-beginner-exercises#側轉坐姿|查看完整條目]]
+- 代表圖：![](../assets/reformer_beginner_actions/p068_action_01.jpg)
+
+### 前劃準備動作 (FRONT ROWING PREPS)
+
+- 頁碼：p.70-73
+- 器械/章節：腳踏桿、彈簧、拉環與繩索
+- 摘要：前劃準備動作：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、背闊肌與拉力鏈；依 OCR 原理/目標肌肉段落整理。
+- 動作索引：[[../exercises/reformer-beginner-exercises#前劃準備動作|查看完整條目]]
+- 代表圖：![](../assets/reformer_beginner_actions/p070_action_01.jpg)
+
+### 腹部按摩 (STOMACH MASSAGE)
+
+- 頁碼：p.74-77
+- 器械/章節：腳踏桿、彈簧
+- 摘要：腹部按摩：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、手臂與胸肩；依 OCR 原理/目標肌肉段落整理。
+- 動作索引：[[../exercises/reformer-beginner-exercises#腹部按摩|查看完整條目]]
+- 代表圖：![](../assets/reformer_beginner_actions/p074_action_01.jpg)
+
+### 雙臂拉動拉環 盒子豎放 (ARMS PULLING STRAPS, LONG BOX)
+
+- 頁碼：p.78-81
+- 器械/章節：腳踏桿、彈簧、頭墊、拉環與繩索、塑身機盒子
+- 摘要：雙臂拉動拉環 盒子豎放：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、背闊肌與拉力鏈；依 OCR 原理/目標肌肉段落整理。
+- 動作索引：[[../exercises/reformer-beginner-exercises#雙臂拉動拉環-盒子豎放|查看完整條目]]
+- 代表圖：![](../assets/reformer_beginner_actions/p078_action_01.jpg)
+
+### 弓背 盒子橫放 (ROUND BACK, SHORT BOX)
+
+- 頁碼：p.82
+- 器械/章節：腳踏桿、彈簧、頭墊、塑身機盒子、腳帶
+- 摘要：弓背 盒子橫放：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、髖與腿；依頁面標題、動作說明與動作圖整理。
+- 動作索引：[[../exercises/reformer-beginner-exercises#弓背-盒子橫放|查看完整條目]]
+- 代表圖：![](../assets/reformer_beginner_actions/p082_action_01.jpg)
+
+### 直背 盒子橫放 (STRAIGHT BACK, SHORT BOX)
+
+- 頁碼：p.83-84
+- 器械/章節：腳踏桿、彈簧、頭墊、塑身機盒子、腳帶
+- 摘要：直背 盒子橫放：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、髖與腿；依 OCR 原理/目標肌肉段落整理。
+- 動作索引：[[../exercises/reformer-beginner-exercises#直背-盒子橫放|查看完整條目]]
+- 代表圖：![](../assets/reformer_beginner_actions/p083_action_01.jpg)
+
+### 扭轉 盒子橫放 (TWIST, SHORT BOX)
+
+- 頁碼：p.85
+- 器械/章節：腳踏桿、彈簧、頭墊、塑身機盒子、腳帶
+- 摘要：扭轉 盒子橫放：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、手臂與胸肩；依 OCR 原理/目標肌肉段落整理。
+- 動作索引：[[../exercises/reformer-beginner-exercises#扭轉-盒子橫放|查看完整條目]]
+- 代表圖：![](../assets/reformer_beginner_actions/p085_action_01.jpg)
+
+### 樹姿 盒子橫放 (TREE, SHORT BOX)
+
+- 頁碼：p.86-87
+- 器械/章節：腳踏桿、彈簧、頭墊、塑身機盒子、腳帶
+- 摘要：樹姿 盒子橫放：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、髖與腿；依頁面標題、動作說明與動作圖整理。
+- 動作索引：[[../exercises/reformer-beginner-exercises#樹姿-盒子橫放|查看完整條目]]
+- 代表圖：![](../assets/reformer_beginner_actions/p086_action_01.jpg)
+
+### 大象姿 (ELEPHANT)
+
+- 頁碼：p.88-89
+- 器械/章節：腳踏桿、彈簧
+- 摘要：大象姿：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、手臂與胸肩；依 OCR 原理/目標肌肉段落整理。
+- 動作索引：[[../exercises/reformer-beginner-exercises#大象姿|查看完整條目]]
+- 代表圖：![](../assets/reformer_beginner_actions/p088_action_01.jpg)
+
+### 美人魚姿 (MERMAID)
+
+- 頁碼：p.90-91
+- 器械/章節：腳踏桿、彈簧
+- 摘要：美人魚姿：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、手臂與胸肩；依 OCR 原理/目標肌肉段落整理。
+- 動作索引：[[../exercises/reformer-beginner-exercises#美人魚姿|查看完整條目]]
+- 代表圖：![](../assets/reformer_beginner_actions/p090_action_01.jpg)
+
+### 膝部伸展 (KNEE STRETCHES)
+
+- 頁碼：p.95-97
+- 器械/章節：腳踏桿、彈簧
+- 摘要：膝部伸展：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、手臂與胸肩；依 OCR 原理/目標肌肉段落整理。
+- 動作索引：[[../exercises/reformer-beginner-exercises#膝部伸展|查看完整條目]]
+- 代表圖：![](../assets/reformer_beginner_actions/p095_action_01.jpg)
+
+### 髖部上抬 (HIP LIFT)
+
+- 頁碼：p.101
+- 器械/章節：腳踏桿、彈簧、頭墊
+- 摘要：髖部上抬：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、髖與腿；依頁面標題、動作說明與動作圖整理。
+- 動作索引：[[../exercises/reformer-beginner-exercises#髖部上抬|查看完整條目]]
+- 代表圖：![](../assets/reformer_beginner_actions/p101_action_01.jpg)
+
+### 髖部起伏 (HIP ROLLS)
+
+- 頁碼：p.102-103
+- 器械/章節：腳踏桿、彈簧、頭墊
+- 摘要：髖部起伏：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、髖與腿；依頁面標題、動作說明與動作圖整理。
+- 動作索引：[[../exercises/reformer-beginner-exercises#髖部起伏|查看完整條目]]
+- 代表圖：![](../assets/reformer_beginner_actions/p102_action_01.jpg)
+
+### 側劈叉 (SIDE SPLITS)
+
+- 頁碼：p.106-108
+- 器械/章節：腳踏桿、彈簧
+- 摘要：側劈叉：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、手臂與胸肩；依 OCR 原理/目標肌肉段落整理。
+- 動作索引：[[../exercises/reformer-beginner-exercises#側劈叉|查看完整條目]]
+- 代表圖：![](../assets/reformer_beginner_actions/p106_action_01.jpg)

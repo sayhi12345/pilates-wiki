@@ -23,6 +23,18 @@ SOURCES = [
         "exercise_md": ROOT / "wiki" / "exercises" / "cadillac-intermediate-advanced-exercises.md",
         "ocr": ROOT / "wiki" / "raw" / "cadillac_intermediate_advanced_ocr_p006-p175.jsonl",
     },
+    {
+        "key": "reformer_beginner",
+        "label": "塑身機初級",
+        "exercise_md": ROOT / "wiki" / "exercises" / "reformer-beginner-exercises.md",
+        "ocr": ROOT / "wiki" / "raw" / "reformer_beginner_ocr_p006-p111.jsonl",
+    },
+    {
+        "key": "reformer_intermediate",
+        "label": "塑身機中級",
+        "exercise_md": ROOT / "wiki" / "exercises" / "reformer-intermediate-exercises.md",
+        "ocr": ROOT / "wiki" / "raw" / "reformer_intermediate_ocr_p006-p163.jsonl",
+    },
 ]
 
 MUSCLE_LABELS = {
@@ -59,6 +71,14 @@ EQUIPMENT_TAGS = [
     "秋干",
     "水平杠垂掛",
     "毛絨掛帶動作",
+    "腳踏桿",
+    "彈簧",
+    "頭墊",
+    "拉環與繩索",
+    "塑身機盒子",
+    "腳帶",
+    "健身板",
+    "普拉提塑身機",
 ]
 
 ACTION_TAG_RULES = [
@@ -74,6 +94,10 @@ ACTION_TAG_RULES = [
     ("仰臥", ["仰臥", "SUPINE", "ON BACK"]),
     ("俯臥", ["俯臥", "STOMACH"]),
     ("側躺", ["側躺", "SIDE-LYING", "側躺練習"]),
+    ("盒上", ["盒子", "BOX", "LONG BOX", "SHORT BOX"]),
+    ("跪姿", ["跪", "KNEELING", "KNEE"]),
+    ("劈叉", ["劈叉", "SPLITS"]),
+    ("腳部系列", ["腳部練習", "FOOTWORK"]),
 ]
 
 
@@ -90,6 +114,9 @@ def opencc(text: str) -> str:
     return (
         converted
         .replace("木杆", "木桿")
+        .replace("腳踏杆", "腳踏桿")
+        .replace("脚踏桿", "腳踏桿")
+        .replace("头墊", "頭墊")
         .replace("秋干", "鞦韆")
         .replace("秋幹", "鞦韆")
         .replace("毛絨掛帶", "絨毛掛帶")
@@ -189,6 +216,27 @@ def is_breath_or_flow_cue(line: str) -> bool:
     return bool(re.match(r"^(準備|吸氣|呼氣|反向|正向|收縮|屈曲|弓步|重複練習|董復練習)", stripped))
 
 
+def is_flow_cue(line: str) -> bool:
+    return bool(
+        re.match(
+            r"^(準備|吸氣|呼氣|正向|反向|屈伸|收縮|弓步|側彎|下蹲)",
+            normalized_heading(line),
+        )
+    )
+
+
+def is_repeat_line(line: str) -> bool:
+    return bool(re.match(r"^(重複練習|董復練習|每側重複練習)", normalized_heading(line)))
+
+
+def is_note_line(line: str) -> bool:
+    return normalized_heading(line).startswith(("•", "・", "·"))
+
+
+def ends_sentence(line: str) -> bool:
+    return line.strip().endswith(("。", "！", "？", ".", "…", "⋯"))
+
+
 def is_footer_or_caption(line: str, title: str) -> bool:
     stripped = normalized_heading(line)
     if not stripped:
@@ -234,6 +282,13 @@ def is_setup_line(line: str) -> bool:
         token in stripped
         for token in [
             "彈簧",
+            "腳踏桿",
+            "頭墊",
+            "拉環",
+            "繩索",
+            "塑身機盒子",
+            "腳帶",
+            "滑墊固定栓",
             "木桿",
             "鞦韆",
             "推拉框",
@@ -339,6 +394,15 @@ def extract_setup(text: str) -> str:
             if is_setup_line(next_line):
                 collected.append(next_line.strip())
         return clean_text("\n".join(collected), limit=650)
+
+    for index, line in enumerate(lines):
+        if normalized_heading(line) not in {"起始姿勢", "起姶姿勢", "起始婆勢"}:
+            continue
+        collected = []
+        for previous_line in lines[max(0, index - 10):index]:
+            if is_setup_line(previous_line):
+                collected.append(previous_line.strip())
+        return clean_text("\n".join(collected), limit=650)
     return ""
 
 
@@ -369,19 +433,26 @@ def extract_flow(text: str, title: str) -> str:
         return ""
     collected = []
     flow_started = False
+    soft_headings = {"要點", "動作調整", "原理"}
     for next_line in lines[start_index + 1:]:
         heading = normalized_heading(next_line)
-        if heading in {"要點", "動作調整", "原理"}:
-            break
+        if heading in soft_headings:
+            continue
         if collected and is_footer_or_caption(next_line, title):
             break
-        if is_non_flow_line(next_line):
+        if is_non_flow_line(next_line) or is_note_line(next_line):
             continue
+        cue = is_flow_cue(next_line)
+        repeat = is_repeat_line(next_line)
         if not flow_started:
-            if not re.match(r"^(準備|吸氣|呼氣|正向|反向|屈伸|收縮|弓步|側彎|下蹲)", heading):
+            if not cue:
                 continue
             flow_started = True
+        elif not cue and not repeat and (not collected or ends_sentence(collected[-1])):
+            continue
         collected.append(next_line.strip())
+        if repeat:
+            break
         if len("\n".join(collected)) >= 1300:
             break
     return clean_text("\n".join(collected), limit=1300)
