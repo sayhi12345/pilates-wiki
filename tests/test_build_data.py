@@ -121,6 +121,66 @@ class ExtractFlowTest(unittest.TestCase):
         self.assertNotIn("弓步，面向腳踏桿", flow)
         self.assertNotIn("平衡：弓步姿勢", flow)
 
+    def test_reformer_intermediate_chest_expansion_keeps_start_action_cue(self):
+        flow = self.flow_for("reformer_intermediate", "胸部擴張")
+
+        self.assertIn("開始向後拉動雙臂", flow)
+        self.assertIn("重複練習6次", flow)
+
+    def test_cadillac_beginner_chest_expansion_keeps_flow_after_title_only_output(self):
+        flow = self.flow_for("beginner", "胸部擴張")
+
+        self.assertTrue(flow.startswith("準備，吸氣"))
+        self.assertIn("呼氣 保持軀幹穩定", flow)
+        self.assertIn("重複練習6次", flow)
+        self.assertNotEqual("準備，吸氣⋯", flow)
+
+    def test_cadillac_beginner_leg_springs_bend_stretch_keeps_full_sequence(self):
+        flow = self.flow_for("beginner", "腿用彈簧：屈伸練習")
+
+        self.assertTrue(flow.startswith("準備，吸氣"))
+        self.assertIn("呼氣 雙腿併攏", flow)
+        self.assertIn("吸氣 彎曲膝蓋", flow)
+        self.assertIn("重複練習5-10次", flow)
+
+    def test_cadillac_intermediate_knee_raises_skips_principle_fragments(self):
+        flow = self.flow_for("intermediate_advanced", "膝部上提")
+
+        self.assertTrue(flow.startswith("準備，吸氣"))
+        self.assertIn("呼氣 保持軀幹和雙臂穩定", flow)
+        self.assertIn("重複練習5-10次", flow)
+        self.assertNotIn("耐力：", flow)
+
+    def test_cadillac_intermediate_scissors_keeps_positioned_leg_instructions(self):
+        flow = self.flow_for("intermediate_advanced", "剪刀式")
+
+        self.assertIn("位於上方的腿朝前剪交", flow)
+        self.assertIn("位於下方的腿朝後剪交", flow)
+        self.assertIn("腿朝前伸展", flow)
+
+    def test_clean_summary_removes_generation_artifacts(self):
+        summaries = [
+            build_data.clean_summary(
+                "胸部擴張：主要歸入核心與腰骨盆穩定；依 OCR 原理/目標肌肉段落整理。"
+            ),
+            build_data.clean_summary(
+                "協調性：主要歸入核心與腰骨盆穩定；依頁面標題、動作說明與動作圖整理。"
+            ),
+        ]
+
+        self.assertEqual("胸部擴張：主要歸入核心與腰骨盆穩定。", summaries[0])
+        self.assertEqual("協調性：主要歸入核心與腰骨盆穩定。", summaries[1])
+        self.assertTrue(all("整理" not in summary for summary in summaries))
+
+    def test_reformer_summary_does_not_include_generation_artifact(self):
+        exercises = build_data.build_exercises(
+            next(source for source in build_data.SOURCES if source["key"] == "reformer_intermediate")
+        )
+
+        self.assertTrue(exercises)
+        self.assertTrue(all("依 OCR 原理/目標肌肉段落整理" not in exercise["summary"] for exercise in exercises))
+        self.assertTrue(all("依頁面標題、動作說明與動作圖整理" not in exercise["summary"] for exercise in exercises))
+
 
 if __name__ == "__main__":
     unittest.main()

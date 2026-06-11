@@ -199,6 +199,16 @@ def clean_text(text: str, limit: int = 1100) -> str:
     return text
 
 
+def clean_summary(text: str) -> str:
+    text = re.sub(r"[ \t]+", " ", text)
+    text = re.sub(r"[；;]?\s*依\s*OCR\s*原理/目標肌肉段落整理。?", "", text)
+    text = re.sub(r"[；;]?\s*依頁面標題、動作說明與動作圖整理。?", "", text)
+    text = text.strip(" ：:；;，,\\n")
+    if text and not text.endswith(("。", "！", "？", ".", "…", "⋯")):
+        text += "。"
+    return text
+
+
 def normalized_heading(line: str) -> str:
     return line.strip().strip(" ：:；;，,。…⋯")
 
@@ -287,7 +297,7 @@ def is_non_flow_line(line: str) -> bool:
     )
 
 
-def is_reformer_non_flow_line(line: str) -> bool:
+def is_multicolumn_non_flow_line(line: str) -> bool:
     stripped = normalized_heading(line)
     return is_non_flow_line(line) or any(
         token in stripped
@@ -424,6 +434,13 @@ def is_flow_noise_fragment(line: str) -> bool:
     stripped = normalized_heading(line)
     if not stripped:
         return False
+    if any(
+        token in stripped
+        for token in [
+            "開始時2根",
+        ]
+    ):
+        return True
     if re.match(r"^(準備|開始|接下來|結束動作|過渡|吸氣|呼氣|繼續吸氣|繼續呼氣|重複練習|董復練習|葷復練習|垂復練習|每側重複練習)", stripped):
         return False
     return any(
@@ -463,6 +480,19 @@ def is_flow_noise_fragment(line: str) -> bool:
             "收縮靠近",
             "以使脊椎",
             "平衡：",
+            "幫助，且手扶",
+            "教練不能",
+            "應使用防滑墊",
+            "練習者可能會",
+            "動作調整",
+            "動怍調",
+            "動作調墊",
+            "merrithew",
+            "merrieW",
+            "PUBLISHING",
+            "PUBUSHING",
+            "PUBUISHING",
+            "初級勸作",
         ]
     )
 
@@ -513,8 +543,8 @@ def extract_start_position(text: str) -> str:
 
 
 def extract_flow(text: str, title: str, source_key: str = "") -> str:
-    if source_key.startswith("reformer"):
-        return extract_reformer_flow(text, title)
+    if source_key:
+        return extract_multicolumn_flow(text, title)
 
     lines = text.splitlines()
     start_index = None
@@ -551,7 +581,7 @@ def extract_flow(text: str, title: str, source_key: str = "") -> str:
     return clean_text("\n".join(collected), limit=1300)
 
 
-def extract_reformer_flow(text: str, title: str) -> str:
+def extract_multicolumn_flow(text: str, title: str) -> str:
     lines = text.splitlines()
     start_index = None
     for index, line in enumerate(lines):
@@ -565,9 +595,12 @@ def extract_reformer_flow(text: str, title: str) -> str:
     for next_line in lines[start_index + 1:]:
         if is_section_noise(next_line, title):
             continue
-        if is_setup_line(next_line) or is_flow_noise_fragment(next_line):
+        setup_line = is_setup_line(next_line)
+        if setup_line and not (flow_started and collected and not ends_sentence(collected[-1])):
             continue
-        if is_reformer_non_flow_line(next_line) or is_note_line(next_line):
+        if is_flow_noise_fragment(next_line):
+            continue
+        if is_multicolumn_non_flow_line(next_line) or is_note_line(next_line):
             continue
         cue = is_flow_cue(next_line)
         repeat = is_repeat_line(next_line)
@@ -616,7 +649,7 @@ def build_exercises(source: dict) -> list[dict]:
         group_text = parse_field(block["body"], "肌群分類")
         difficulty = parse_field(block["body"], "難度")
         equipment = parse_field(block["body"], "器械/章節")
-        summary = parse_field(block["body"], "摘要")
+        summary = clean_summary(parse_field(block["body"], "摘要"))
         images = parse_images(block["body"])
         full_ocr = exercise_ocr_text(ocr, start, end)
         setup = extract_setup(full_ocr)
