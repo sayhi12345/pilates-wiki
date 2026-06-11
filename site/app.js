@@ -1,6 +1,8 @@
 const data = window.PILATES_DATA || { muscleGroups: [], exercises: [], tagCounts: {} };
 
 const state = {
+  mode: "index",
+  plannerTab: "edit",
   muscle: "all",
   tag: "",
   query: "",
@@ -8,20 +10,35 @@ const state = {
   selectedId: "",
   detailOpen: false,
   lightbox: null,
+  plan: null,
+  draggedItemId: "",
+  plannerStatus: "",
 };
 
 let lastLightboxTrigger = null;
 let lightboxTouchStart = null;
+let saveTimer = null;
+let pointerDrag = null;
+
+const PLAN_STORAGE_KEY = "pilatesWiki.activeClassPlan.v1";
+const PLAN_SCHEMA_VERSION = 1;
+const SHARE_HASH_PREFIX = "#plan=";
+const SHARE_HASH_LIMIT = 1800;
 
 const els = {
   exerciseCount: document.getElementById("exerciseCount"),
   activeFilter: document.getElementById("activeFilter"),
+  plannerCount: document.getElementById("plannerCount"),
+  indexModeButton: document.getElementById("indexModeButton"),
+  plannerModeButton: document.getElementById("plannerModeButton"),
   muscleFilters: document.getElementById("muscleFilters"),
   tagFilters: document.getElementById("tagFilters"),
   mobileTagFilters: document.getElementById("mobileTagFilters"),
   activeTags: document.getElementById("activeTags"),
   exerciseList: document.getElementById("exerciseList"),
   exerciseDetail: document.getElementById("exerciseDetail"),
+  plannerView: document.getElementById("plannerView"),
+  planImportInput: document.getElementById("planImportInput"),
   searchInput: document.getElementById("searchInput"),
   sourceFilter: document.getElementById("sourceFilter"),
   imageLightbox: document.getElementById("imageLightbox"),
@@ -33,6 +50,119 @@ const els = {
 };
 
 const byId = new Map(data.exercises.map((exercise) => [exercise.id, exercise]));
+
+state.plan = loadInitialPlan();
+
+function uid(prefix) {
+  if (window.crypto?.randomUUID) return `${prefix}-${window.crypto.randomUUID()}`;
+  return `${prefix}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+}
+
+function createDefaultPlan() {
+  return {
+    id: uid("class"),
+    title: "60 分鐘器械流動課",
+    durationTarget: 60,
+    items: [],
+    updatedAt: new Date().toISOString(),
+    schemaVersion: PLAN_SCHEMA_VERSION,
+  };
+}
+
+function normalizePlan(raw) {
+  const base = raw && typeof raw === "object" ? raw : {};
+  const warnings = [];
+  const items = Array.isArray(base.items) ? base.items.map((item) => {
+    const exerciseId = String(item.exerciseId || "");
+    const exercise = byId.get(exerciseId);
+    if (exerciseId && !exercise) {
+      warnings.push("部分動作在目前動作庫中找不到。");
+    }
+    return {
+      id: String(item.id || uid("item")),
+      exerciseId,
+      exerciseTitleSnapshot: String(item.exerciseTitleSnapshot || exercise?.title || "動作庫中找不到"),
+      minutes: sanitizeMinutes(item.minutes),
+      note: String(item.note || ""),
+      cues: String(item.cues || ""),
+      apparatusSetup: String(item.apparatusSetup || ""),
+      alternatives: String(item.alternatives || ""),
+    };
+  }) : [];
+  return {
+    plan: {
+      id: String(base.id || uid("class")),
+      title: String(base.title || "60 分鐘器械流動課"),
+      durationTarget: sanitizeMinutes(base.durationTarget, 60),
+      items,
+      updatedAt: String(base.updatedAt || new Date().toISOString()),
+      schemaVersion: PLAN_SCHEMA_VERSION,
+    },
+    warnings: [...new Set(warnings)],
+  };
+}
+
+function loadInitialPlan() {
+  const shared = readSharedPlan();
+  if (shared) return shared;
+  try {
+    const saved = localStorage.getItem(PLAN_STORAGE_KEY);
+    if (saved) return normalizePlan(JSON.parse(saved)).plan;
+  } catch (error) {
+    state.plannerStatus = "讀取本機課表失敗，已建立新課表。";
+  }
+  return createDefaultPlan();
+}
+
+function readSharedPlan() {
+  if (!location.hash.startsWith(SHARE_HASH_PREFIX)) return null;
+  try {
+    const hasLocalPlan = Boolean(localStorage.getItem(PLAN_STORAGE_KEY));
+    if (hasLocalPlan && !window.confirm("偵測到分享課表，要用它取代目前本機課表嗎？")) {
+      state.plannerStatus = "已保留本機課表。";
+      return null;
+    }
+    const encoded = location.hash.slice(SHARE_HASH_PREFIX.length);
+    const json = decodeURIComponent(escape(atob(encoded)));
+    const { plan, warnings } = normalizePlan(JSON.parse(json));
+    state.plannerStatus = warnings.length
+      ? `已從分享連結載入，${warnings.join(" ")}`
+      : "已從分享連結載入課表。";
+    return plan;
+  } catch (error) {
+    state.plannerStatus = "分享連結無法讀取，已保留本機課表。";
+    return null;
+  }
+}
+
+function sanitizeMinutes(value, fallback = "") {
+  if (value === "" || value === null || value === undefined) return fallback;
+  const number = Number(value);
+  return Number.isFinite(number) && number >= 0 ? number : fallback;
+}
+
+function planTotalMinutes() {
+  return state.plan.items.reduce((total, item) => total + (Number(item.minutes) || 0), 0);
+}
+
+function setPlannerStatus(message) {
+  state.plannerStatus = message;
+}
+
+function schedulePlanSave(message = "已自動儲存。") {
+  state.plan.updatedAt = new Date().toISOString();
+  window.clearTimeout(saveTimer);
+  saveTimer = window.setTimeout(() => {
+    try {
+      localStorage.setItem(PLAN_STORAGE_KEY, JSON.stringify(state.plan));
+      setPlannerStatus(message);
+      render();
+    } catch (error) {
+      setPlannerStatus("本機儲存失敗，請先匯出 JSON 備份。");
+      render();
+    }
+  }, 160);
+}
 
 function muscleCount(key) {
   if (key === "all") return data.exercises.length;
@@ -149,24 +279,37 @@ function renderList(exercises) {
   }
 
   exercises.forEach((exercise) => {
-    const row = button("", `exercise-row ${state.selectedId === exercise.id ? "is-active" : ""}`, () => {
+    const row = document.createElement("article");
+    row.className = `exercise-row ${state.selectedId === exercise.id ? "is-active" : ""}`;
+    const tags = exercise.tags.slice(0, 4).map((tag) => `<span class="mini-tag">${escapeHtml(tag)}</span>`).join("");
+    row.innerHTML = `
+      <button class="row-select" type="button" aria-pressed="${state.selectedId === exercise.id}" title="${escapeAttr(exercise.title)}">
+        <img class="thumb" src="${escapeAttr(exercise.images[0] || "")}" alt="${escapeAttr(exercise.title)}">
+        <span class="row-main">
+          <span class="row-title">
+            <span>${escapeHtml(exercise.title)}</span>
+            <span class="page-label">${escapeHtml(exercise.pageLabel)}</span>
+          </span>
+          <span class="row-subtitle">${escapeHtml(exercise.english || exercise.equipment)}</span>
+          <span class="row-tags">${tags}</span>
+        </span>
+      </button>
+      <button class="row-add" type="button" aria-label="加入 ${escapeAttr(exercise.title)} 到課表">加入</button>
+    `;
+    row.querySelector(".row-select").addEventListener("click", () => {
       state.selectedId = exercise.id;
       state.detailOpen = true;
       closeLightbox();
       render();
-    }, { pressed: state.selectedId === exercise.id, title: exercise.title });
-    const tags = exercise.tags.slice(0, 4).map((tag) => `<span class="mini-tag">${escapeHtml(tag)}</span>`).join("");
-    row.innerHTML = `
-      <img class="thumb" src="${escapeAttr(exercise.images[0] || "")}" alt="${escapeAttr(exercise.title)}">
-      <span class="row-main">
-        <span class="row-title">
-          <span>${escapeHtml(exercise.title)}</span>
-          <span class="page-label">${escapeHtml(exercise.pageLabel)}</span>
-        </span>
-        <span class="row-subtitle">${escapeHtml(exercise.english || exercise.equipment)}</span>
-        <span class="row-tags">${tags}</span>
-      </span>
-    `;
+    });
+    row.querySelector(".row-add").addEventListener("click", () => {
+      addExerciseToPlan(exercise.id);
+      state.mode = "planner";
+      state.plannerTab = "edit";
+      state.detailOpen = false;
+      closeLightbox();
+      render();
+    });
     els.exerciseList.appendChild(row);
   });
 }
@@ -205,6 +348,7 @@ function renderDetail() {
       ${exercise.english ? `<p class="english-title">${escapeHtml(exercise.english)}</p>` : ""}
       <p class="summary">${escapeHtml(exercise.summary || "")}</p>
       <div class="detail-tags">${tags}</div>
+      <button class="detail-add" type="button">加入課表</button>
     </div>
 
     <div class="detail-grid">
@@ -249,6 +393,326 @@ function renderDetail() {
     closeLightbox();
     render();
   });
+
+  els.exerciseDetail.querySelector(".detail-add")?.addEventListener("click", () => {
+    addExerciseToPlan(exercise.id);
+    state.mode = "planner";
+    state.plannerTab = "edit";
+    state.detailOpen = false;
+    closeLightbox();
+    render();
+  });
+}
+
+function addExerciseToPlan(exerciseId) {
+  const exercise = byId.get(exerciseId);
+  if (!exercise) return;
+  state.plan.items.push({
+    id: uid("item"),
+    exerciseId,
+    exerciseTitleSnapshot: exercise.title,
+    minutes: "",
+    note: "",
+    cues: "",
+    apparatusSetup: exercise.setup || "",
+    alternatives: "",
+  });
+  setPlannerStatus(`已加入「${exercise.title}」。`);
+  schedulePlanSave(`已加入「${exercise.title}」。`);
+}
+
+function renderPlanner() {
+  const plan = state.plan;
+  const total = planTotalMinutes();
+  const target = Number(plan.durationTarget) || 0;
+  const delta = target ? total - target : 0;
+  const deltaText = target
+    ? delta === 0 ? "剛好符合目標" : `${Math.abs(delta)} 分鐘${delta > 0 ? "超過" : "未滿"}`
+    : "未設定目標";
+  const tabs = `
+    <div class="planner-tabs" role="tablist" aria-label="排課表分頁">
+      <button class="planner-tab ${state.plannerTab === "edit" ? "is-active" : ""}" type="button" data-planner-action="tab" data-tab="edit">課表</button>
+      <button class="planner-tab ${state.plannerTab === "preview" ? "is-active" : ""}" type="button" data-planner-action="tab" data-tab="preview">預覽</button>
+    </div>
+  `;
+  els.plannerView.innerHTML = `
+    <div class="planner-head">
+      <div>
+        <p class="eyebrow">Class Planner</p>
+        <h2>排課表</h2>
+        <p class="planner-subtitle">本機自動儲存，可列印、匯出 JSON，短課表可產生分享連結。</p>
+      </div>
+      <div class="planner-actions">
+        <button type="button" class="planner-action" data-planner-action="print">列印</button>
+        <button type="button" class="planner-action" data-planner-action="export">匯出 JSON</button>
+        <button type="button" class="planner-action" data-planner-action="import">匯入 JSON</button>
+        <button type="button" class="planner-action is-primary" data-planner-action="share">分享連結</button>
+      </div>
+    </div>
+
+    ${tabs}
+
+    <div class="planner-summary">
+      <label>
+        <span>課表名稱</span>
+        <input value="${escapeAttr(plan.title)}" data-plan-field="title">
+      </label>
+      <label>
+        <span>目標分鐘</span>
+        <input type="number" min="0" step="1" value="${escapeAttr(plan.durationTarget)}" data-plan-field="durationTarget">
+      </label>
+      <div class="duration-card">
+        <span>目前總長</span>
+        <strong>${total} 分鐘</strong>
+        <em>${escapeHtml(deltaText)}</em>
+      </div>
+    </div>
+
+    ${state.plannerStatus ? `<div class="planner-status">${escapeHtml(state.plannerStatus)}</div>` : ""}
+
+    ${state.plannerTab === "preview" ? renderPlanPreview() : renderPlanEditor()}
+  `;
+}
+
+function renderPlanEditor() {
+  return `
+    <div class="planner-editor" aria-label="課表動作排序">
+      <div class="planner-list">
+        ${state.plan.items.length
+          ? state.plan.items.map((item, index) => renderPlanItem(item, index)).join("")
+          : `<div class="empty-state">課表還沒有任何動作，請從動作索引加入。</div>`}
+      </div>
+    </div>
+  `;
+}
+
+function renderPlanItem(item, index) {
+  const exercise = byId.get(item.exerciseId);
+  const title = exercise?.title || item.exerciseTitleSnapshot || "動作庫中找不到";
+  const subtitle = exercise ? `${exercise.english || exercise.equipment} · ${exercise.pageLabel}` : "動作庫中找不到";
+  const image = exercise?.images?.[0] || "";
+  const missing = exercise ? "" : `<span class="planner-warning">動作庫中找不到</span>`;
+  return `
+    <article class="planner-item ${state.draggedItemId === item.id ? "is-dragging" : ""}" data-item-id="${escapeAttr(item.id)}" draggable="true">
+      <div class="planner-drag-row">
+        <span class="drag-handle" aria-hidden="true">⋮⋮</span>
+        <span class="planner-order">${index + 1}</span>
+      </div>
+      <div class="planner-item-main">
+        ${image ? `<img class="planner-thumb" src="${escapeAttr(image)}" alt="${escapeAttr(title)}">` : `<div class="planner-thumb planner-thumb-empty"></div>`}
+        <div class="planner-item-copy">
+          <strong>${escapeHtml(title)}</strong>
+          <span>${escapeHtml(subtitle)}</span>
+          ${missing}
+        </div>
+      </div>
+      <div class="planner-item-fields">
+        <label>
+          <span>分鐘</span>
+          <input type="number" min="0" step="1" value="${escapeAttr(item.minutes)}" data-item-field="minutes">
+        </label>
+        <label class="planner-note-field">
+          <span>備註</span>
+          <input value="${escapeAttr(item.note)}" data-item-field="note" placeholder="教學重點、節奏或限制">
+        </label>
+      </div>
+      <details class="advanced-fields">
+        <summary>進階欄位</summary>
+        <label>
+          <span>教學提示</span>
+          <textarea data-item-field="cues">${escapeHtml(item.cues)}</textarea>
+        </label>
+        <label>
+          <span>器材設定</span>
+          <textarea data-item-field="apparatusSetup">${escapeHtml(item.apparatusSetup)}</textarea>
+        </label>
+        <label>
+          <span>替代動作</span>
+          <textarea data-item-field="alternatives">${escapeHtml(item.alternatives)}</textarea>
+        </label>
+      </details>
+      <div class="planner-item-actions">
+        <button type="button" data-planner-action="remove" data-item-id="${escapeAttr(item.id)}">移除</button>
+      </div>
+    </article>
+  `;
+}
+
+function renderPlanPreview() {
+  return `
+    <div class="plan-preview">
+      <div class="print-title">
+        <h2>${escapeHtml(state.plan.title)}</h2>
+        <p>目標 ${Number(state.plan.durationTarget) || 0} 分鐘 · 目前 ${planTotalMinutes()} 分鐘</p>
+      </div>
+      ${state.plan.items.length ? `
+        <section class="print-section">
+          <h3>課表順序 · ${state.plan.items.length} 個動作</h3>
+          ${state.plan.items.map((item, index) => renderPreviewItem(item, index)).join("")}
+        </section>
+      ` : `<div class="empty-state">課表還沒有任何動作</div>`}
+    </div>
+  `;
+}
+
+function renderPreviewItem(item, index) {
+  const exercise = byId.get(item.exerciseId);
+  const title = exercise?.title || item.exerciseTitleSnapshot || "動作庫中找不到";
+  const image = exercise?.images?.[0] || "";
+  return `
+    <article class="preview-item">
+      ${image ? `<img src="${escapeAttr(image)}" alt="${escapeAttr(title)}">` : ""}
+      <div>
+        <strong>${index + 1}. ${escapeHtml(title)} ${item.minutes ? `· ${escapeHtml(item.minutes)} 分鐘` : ""}</strong>
+        ${item.note ? `<p>${escapeHtml(item.note)}</p>` : ""}
+        ${item.apparatusSetup ? `<p><b>器材設定：</b>${escapeHtml(item.apparatusSetup)}</p>` : ""}
+        ${item.cues ? `<p><b>教學提示：</b>${escapeHtml(item.cues)}</p>` : ""}
+        ${item.alternatives ? `<p><b>替代動作：</b>${escapeHtml(item.alternatives)}</p>` : ""}
+      </div>
+    </article>
+  `;
+}
+
+function updatePlanField(field, value) {
+  if (field === "durationTarget") {
+    state.plan.durationTarget = sanitizeMinutes(value, "");
+  } else {
+    state.plan[field] = value;
+  }
+  schedulePlanSave();
+  render();
+}
+
+function updatePlanItem(itemId, field, value) {
+  const item = state.plan.items.find((candidate) => candidate.id === itemId);
+  if (!item) return;
+  item[field] = field === "minutes" ? sanitizeMinutes(value, "") : value;
+  schedulePlanSave();
+  render();
+}
+
+function reorderPlanItem(draggedId, targetId) {
+  if (!draggedId || !targetId || draggedId === targetId) return;
+  const fromIndex = state.plan.items.findIndex((item) => item.id === draggedId);
+  const toIndex = state.plan.items.findIndex((item) => item.id === targetId);
+  if (fromIndex < 0 || toIndex < 0) return;
+  const [item] = state.plan.items.splice(fromIndex, 1);
+  state.plan.items.splice(toIndex, 0, item);
+  state.draggedItemId = "";
+  schedulePlanSave();
+  render();
+}
+
+function clearPlannerDropTargets() {
+  els.plannerView.querySelectorAll(".is-drop-target").forEach((item) => {
+    item.classList.remove("is-drop-target");
+  });
+}
+
+function endPointerDrag(targetId = "") {
+  const draggedId = pointerDrag?.itemId || "";
+  pointerDrag = null;
+  state.draggedItemId = "";
+  clearPlannerDropTargets();
+  if (targetId) {
+    reorderPlanItem(draggedId, targetId);
+    return;
+  }
+  render();
+}
+
+function removePlanItem(itemId) {
+  state.plan.items = state.plan.items.filter((item) => item.id !== itemId);
+  schedulePlanSave("已移除動作。");
+  render();
+}
+
+function exportPlan() {
+  const blob = new Blob([JSON.stringify(state.plan, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  const filename = `${state.plan.title || "pilates-class-plan"}.json`.replace(/[\\/:*?"<>|]+/g, "-");
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+  setPlannerStatus("已匯出 JSON。");
+  render();
+}
+
+function importPlanFile(file) {
+  if (!file) return;
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    try {
+      const parsed = JSON.parse(String(reader.result || ""));
+      if (!parsed || typeof parsed !== "object" || !Array.isArray(parsed.items)) {
+        throw new Error("invalid plan shape");
+      }
+      const { plan, warnings } = normalizePlan(parsed);
+      state.plan = plan;
+      setPlannerStatus(warnings.length ? `已匯入，${warnings.join(" ")}` : "已匯入課表。");
+      schedulePlanSave(state.plannerStatus);
+      render();
+    } catch (error) {
+      setPlannerStatus("檔案格式不正確。");
+      render();
+    } finally {
+      els.planImportInput.value = "";
+    }
+  });
+  reader.readAsText(file);
+}
+
+function sharePlan() {
+  const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(state.plan))));
+  const hash = `${SHARE_HASH_PREFIX}${encoded}`;
+  if (hash.length > SHARE_HASH_LIMIT) {
+    setPlannerStatus("課表太長，請改用 JSON 匯出。");
+    render();
+    return;
+  }
+  const url = `${location.origin}${location.pathname}${hash}`;
+  navigator.clipboard?.writeText(url).then(() => {
+    setPlannerStatus("分享連結已複製。");
+    location.hash = hash;
+    render();
+  }).catch(() => {
+    setPlannerStatus("分享連結已產生，請從網址列複製。");
+    location.hash = hash;
+    render();
+  });
+}
+
+function handlePlannerAction(action, target) {
+  if (action === "tab") {
+    state.plannerTab = target.dataset.tab || "edit";
+    render();
+    return;
+  }
+  if (action === "remove") {
+    removePlanItem(target.dataset.itemId);
+    return;
+  }
+  if (action === "print") {
+    state.plannerTab = "preview";
+    render();
+    window.setTimeout(() => window.print(), 80);
+    return;
+  }
+  if (action === "export") {
+    exportPlan();
+    return;
+  }
+  if (action === "import") {
+    els.planImportInput.click();
+    return;
+  }
+  if (action === "share") {
+    sharePlan();
+  }
 }
 
 function openLightbox(exercise, index, trigger) {
@@ -319,16 +783,23 @@ function renderStats(exercises) {
     ? "全部肌群"
     : data.muscleGroups.find((group) => group.key === state.muscle)?.label || "全部肌群";
   els.activeFilter.textContent = state.tag ? `${muscleLabel} · ${state.tag}` : muscleLabel;
+  els.plannerCount.textContent = `課表 ${planTotalMinutes()} 分`;
+  els.indexModeButton.classList.toggle("is-active", state.mode === "index");
+  els.plannerModeButton.classList.toggle("is-active", state.mode === "planner");
+  els.indexModeButton.setAttribute("aria-pressed", String(state.mode === "index"));
+  els.plannerModeButton.setAttribute("aria-pressed", String(state.mode === "planner"));
 }
 
 function render() {
   const exercises = filteredExercises();
-  document.body.classList.toggle("detail-open", state.detailOpen);
+  document.body.classList.toggle("planner-open", state.mode === "planner");
+  document.body.classList.toggle("detail-open", state.mode === "index" && state.detailOpen);
   renderMuscles();
   renderTags();
   renderActiveTags();
   renderList(exercises);
   renderDetail();
+  renderPlanner();
   renderLightbox();
   renderStats(exercises);
 }
@@ -358,6 +829,120 @@ els.sourceFilter.addEventListener("change", (event) => {
   state.detailOpen = false;
   closeLightbox();
   render();
+});
+
+els.indexModeButton.addEventListener("click", () => {
+  state.mode = "index";
+  state.detailOpen = false;
+  closeLightbox();
+  render();
+});
+
+els.plannerModeButton.addEventListener("click", () => {
+  state.mode = "planner";
+  state.plannerTab = "edit";
+  state.detailOpen = false;
+  closeLightbox();
+  render();
+});
+
+els.plannerView.addEventListener("click", (event) => {
+  const actionTarget = event.target.closest("[data-planner-action]");
+  if (!actionTarget) return;
+  handlePlannerAction(actionTarget.dataset.plannerAction, actionTarget);
+});
+
+els.plannerView.addEventListener("dragstart", (event) => {
+  const item = event.target.closest(".planner-item");
+  if (!item) return;
+  state.draggedItemId = item.dataset.itemId || "";
+  event.dataTransfer.effectAllowed = "move";
+  event.dataTransfer.setData("text/plain", state.draggedItemId);
+  item.classList.add("is-dragging");
+});
+
+els.plannerView.addEventListener("dragover", (event) => {
+  const item = event.target.closest(".planner-item");
+  if (!item || !state.draggedItemId || item.dataset.itemId === state.draggedItemId) return;
+  event.preventDefault();
+  event.dataTransfer.dropEffect = "move";
+  item.classList.add("is-drop-target");
+});
+
+els.plannerView.addEventListener("dragleave", (event) => {
+  event.target.closest(".planner-item")?.classList.remove("is-drop-target");
+});
+
+els.plannerView.addEventListener("drop", (event) => {
+  const item = event.target.closest(".planner-item");
+  if (!item) return;
+  event.preventDefault();
+  reorderPlanItem(state.draggedItemId || event.dataTransfer.getData("text/plain"), item.dataset.itemId);
+});
+
+els.plannerView.addEventListener("dragend", () => {
+  state.draggedItemId = "";
+  els.plannerView.querySelectorAll(".is-dragging, .is-drop-target").forEach((item) => {
+    item.classList.remove("is-dragging", "is-drop-target");
+  });
+});
+
+els.plannerView.addEventListener("pointerdown", (event) => {
+  const handle = event.target.closest(".drag-handle");
+  if (!handle) return;
+  const item = handle.closest(".planner-item");
+  if (!item) return;
+  pointerDrag = {
+    itemId: item.dataset.itemId || "",
+    pointerId: event.pointerId,
+    targetId: "",
+  };
+  state.draggedItemId = pointerDrag.itemId;
+  item.classList.add("is-dragging");
+  handle.setPointerCapture?.(event.pointerId);
+});
+
+els.plannerView.addEventListener("pointermove", (event) => {
+  if (!pointerDrag) return;
+  event.preventDefault();
+  const element = document.elementFromPoint(event.clientX, event.clientY);
+  const item = element?.closest?.(".planner-item");
+  clearPlannerDropTargets();
+  if (!item || item.dataset.itemId === pointerDrag.itemId) {
+    pointerDrag.targetId = "";
+    return;
+  }
+  pointerDrag.targetId = item.dataset.itemId || "";
+  item.classList.add("is-drop-target");
+});
+
+els.plannerView.addEventListener("pointerup", (event) => {
+  if (!pointerDrag) return;
+  const targetId = pointerDrag.targetId;
+  event.target.releasePointerCapture?.(event.pointerId);
+  endPointerDrag(targetId);
+});
+
+els.plannerView.addEventListener("pointercancel", () => {
+  if (!pointerDrag) return;
+  endPointerDrag();
+});
+
+els.plannerView.addEventListener("change", (event) => {
+  const target = event.target;
+  if (target.matches("[data-plan-field]")) {
+    updatePlanField(target.dataset.planField, target.value);
+    return;
+  }
+  if (target.matches("[data-item-field]")) {
+    const item = target.closest("[data-item-id]");
+    if (!item) return;
+    updatePlanItem(item.dataset.itemId, target.dataset.itemField, target.value);
+  }
+});
+
+els.planImportInput.addEventListener("change", (event) => {
+  importPlanFile(event.target.files?.[0]);
 });
 
 document.addEventListener("keydown", (event) => {

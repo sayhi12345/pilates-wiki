@@ -2,7 +2,7 @@
 
 ## Goal
 
-Add a teacher-facing class planner to the Pilates wiki. A teacher can browse the existing exercise library, add exercises to one class plan, organize them into lesson sections, estimate timing, write teaching notes, and export or print the result.
+Add a teacher-facing class planner to the Pilates wiki. A teacher can browse the existing exercise library, add exercises to one ordered class plan, estimate timing, write teaching notes, reorder the sequence by dragging, and export or print the result.
 
 The feature must keep the current GitHub Pages deployment model. It will run as static HTML, CSS, and JavaScript without accounts, a backend, or a database.
 
@@ -26,8 +26,9 @@ Included:
 
 - A planner mode alongside the existing exercise index.
 - Add exercises from the existing exercise list and exercise detail.
-- Organize a class by sections.
-- Rename sections.
+- Add exercises to the end of a single ordered class sequence.
+- Show the sequence as 1, 2, 3 ... N.
+- Reorder the sequence by drag-and-drop.
 - Add minutes per exercise.
 - Add simple notes per exercise.
 - Expand advanced fields per exercise:
@@ -53,9 +54,7 @@ Excluded from this version:
 - Notifications.
 - Backend storage.
 - Multiple saved class plans.
-- Drag-and-drop ordering.
-
-The first version uses up/down controls for ordering. This is more reliable on mobile and easier to verify than drag-and-drop.
+The first version does not divide a class into warmup, main training, integration, or stretching sections. The teacher controls sequencing directly through the ordered list.
 
 ## Core User Flow
 
@@ -67,8 +66,6 @@ The first version uses up/down controls for ordering. This is more reliable on m
 6. The teacher edits:
    - class title
    - target duration
-   - section names
-   - exercise section
    - exercise order
    - minutes
    - note
@@ -98,7 +95,7 @@ Mobile layout:
   - `課表`
   - `預覽`
 - `找動作` keeps the existing mobile exercise browsing behavior.
-- `課表` focuses on editing sections, exercise order, minutes, and notes.
+- `課表` focuses on editing exercise order, minutes, notes, and advanced fields.
 - `預覽` focuses on print, export, import, and share actions.
 
 This avoids the previous mobile failure mode where selecting an item requires scrolling to the bottom to see the result.
@@ -112,18 +109,11 @@ The planner stores one active class plan:
   id: "class-...",
   title: "60 分鐘器械流動課",
   durationTarget: 60,
-  sections: [
-    { id: "warmup", title: "暖身" },
-    { id: "main", title: "主訓練" },
-    { id: "integration", title: "整合" },
-    { id: "stretch", title: "伸展" }
-  ],
   items: [
     {
       id: "item-...",
       exerciseId: "beginner-roll-down",
       exerciseTitleSnapshot: "後卷",
-      sectionId: "warmup",
       minutes: 5,
       note: "",
       cues: "",
@@ -142,8 +132,8 @@ Rules:
 - `exerciseTitleSnapshot` preserves a readable title if an imported plan references an exercise that no longer exists in the library.
 - `minutes` is optional but, when present, must be a non-negative number.
 - `durationTarget` is optional but, when present, must be a non-negative number.
-- `sections` must contain at least one section.
-- Every item belongs to a section. If an imported item references a missing section, place it in the first section and show a warning.
+- `items` order is the class order. The first item is shown as 1, the second as 2, and so on.
+- Legacy imported plans may contain `sections` or `sectionId`; this version ignores those fields and preserves the imported item order.
 
 ## Data Flow
 
@@ -193,7 +183,7 @@ Adds `動作索引` and `排課表` navigation. It should be visible on desktop 
 
 ### Add To Class Controls
 
-Exercise rows and exercise detail get an `加入課表` action. The action appends the exercise to the current selected planner section. If no section is selected, use `主訓練`.
+Exercise rows and exercise detail get an `加入課表` action. The action appends the exercise to the end of the current class plan.
 
 The existing exercise filters and tag behavior remain unchanged.
 
@@ -204,14 +194,11 @@ Shows:
 - class title input
 - target duration input
 - computed total duration
-- section list
-- exercise items grouped by section
+- ordered exercise list
 - item controls:
-  - section selector
   - minutes input
   - note input
-  - move up
-  - move down
+  - drag handle for sorting
   - remove
   - expand advanced fields
 
@@ -224,8 +211,7 @@ Shows a clean lesson-plan view:
 - class title
 - target duration
 - total planned duration
-- sections
-- exercises in order
+- exercises in order, numbered 1 through N
 - minutes
 - note
 - apparatus setup notes
@@ -253,7 +239,7 @@ Import must not silently overwrite local data when the file is invalid.
 - Imported JSON cannot be parsed: show `檔案格式不正確`.
 - Imported JSON has missing required fields: show `課表資料缺少必要欄位`.
 - Imported plan references unknown exercises: keep the imported item with `exerciseTitleSnapshot` and label it as `動作庫中找不到`.
-- Imported plan references unknown sections: move those items to the first section and show a warning.
+- Imported legacy plans with unknown sections: ignore section data and preserve item order.
 - Share hash cannot be decoded: do not overwrite local data; show a warning.
 - Share hash is too long to generate safely: disable share link generation and recommend JSON export.
 
@@ -264,7 +250,7 @@ Import must not silently overwrite local data when the file is invalid.
 - The bottom mobile tab bar uses button semantics and active state.
 - Print view remains readable without color.
 - Share/import/export error messages are visible text, not only color.
-- Up/down ordering controls must be keyboard accessible.
+- Drag handles have visible text affordance. Keyboard reordering is deferred for this version.
 
 ## Testing
 
@@ -274,8 +260,7 @@ Manual smoke tests:
 - Add an exercise from the detail pane to the planner.
 - Switch to planner mode and see the item.
 - Change minutes and confirm total updates.
-- Rename a section.
-- Move an item up and down.
+- Drag an item to reorder the class sequence.
 - Remove an item.
 - Expand and edit advanced fields.
 - Reload the page and confirm the plan persists.
@@ -313,4 +298,4 @@ To avoid overloading `site/app.js`, implementation may add a focused `site/plann
 
 ## Open Decisions
 
-No open product decisions remain for this version. Multi-plan management, account sync, drag-and-drop ordering, and student scheduling are explicitly deferred.
+No open product decisions remain for this version. Multi-plan management, account sync, class sections, and student scheduling are explicitly deferred.

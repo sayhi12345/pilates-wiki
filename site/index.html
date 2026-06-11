@@ -6,7 +6,7 @@
     <title>普拉提器械動作索引</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
@@ -15,9 +15,16 @@
         <p class="eyebrow">STOTT PILATES Equipment Wiki</p>
         <h1>普拉提器械動作索引</h1>
       </div>
-      <div class="header-stats" aria-label="資料統計">
-        <span id="exerciseCount">0 動作</span>
-        <span id="activeFilter">全部肌群</span>
+      <div class="header-actions">
+        <nav class="mode-switch" aria-label="主要功能">
+          <button id="indexModeButton" class="mode-button is-active" type="button">動作索引</button>
+          <button id="plannerModeButton" class="mode-button" type="button">排課表</button>
+        </nav>
+        <div class="header-stats" aria-label="資料統計">
+          <span id="exerciseCount">0 動作</span>
+          <span id="activeFilter">全部肌群</span>
+          <span id="plannerCount">課表 0 分</span>
+        </div>
       </div>
     </header>
 
@@ -53,7 +60,13 @@
       <section class="detail-panel" aria-label="動作詳情">
         <article id="exerciseDetail" class="detail"></article>
       </section>
+
+      <section class="planner-panel" aria-label="排課表">
+        <article id="plannerView" class="planner"></article>
+      </section>
     </main>
+
+    <input id="planImportInput" type="file" accept="application/json,.json" hidden>
 
     <div id="imageLightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="圖片預覽" hidden>
       <button id="lightboxClose" class="lightbox-close" type="button" aria-label="關閉圖片預覽">×</button>
