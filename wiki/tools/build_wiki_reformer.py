@@ -69,6 +69,7 @@ class Source:
     exercise_file: str
     source_file: str
     muscle_prefix: str
+    family: str = "reformer"
 
 
 SOURCES = [
@@ -103,6 +104,23 @@ SOURCES = [
         exercise_file="reformer-intermediate-exercises.md",
         source_file="reformer_intermediate_source.md",
         muscle_prefix="reformer-intermediate",
+    ),
+    Source(
+        slug="chair",
+        label="平衡椅",
+        title="全套平衡椅",
+        pdf="平衡椅最终版.pdf",
+        total_pages=178,
+        start_page=6,
+        end_page=173,
+        exercise_start=24,
+        exercise_end=171,
+        ocr=WIKI / "raw" / "chair_ocr_p006-p173.jsonl",
+        actions=WIKI / "raw" / "chair_action_regions.json",
+        exercise_file="chair-exercises.md",
+        source_file="chair_source.md",
+        muscle_prefix="chair",
+        family="chair",
     ),
 ]
 
@@ -228,7 +246,32 @@ def is_english_line(line: str) -> bool:
     return len(normalized) >= 3 and normalized == re.sub(r"\s+", " ", line.upper()).strip(" ：:;；'\"")
 
 
+CHAIR_SECTION_PREFIXES = (
+    "下肢动作",
+    "下肢動作",
+    "下肢动作加上肢承重",
+    "下肢動作加上肢承重",
+    "手臂练习",
+    "手臂練習",
+    "手臀练习",
+    "軀幹屈曲",
+    "躯干屈曲",
+    "軀幹伸展",
+    "躯干伸展",
+    "軀幹屈曲和伸展",
+    "躯干屈曲和伸展",
+    "軀幹側屈",
+    "躯干侧屈",
+    "軀幹旋轉",
+    "躯干旋转",
+)
+
+CHAIR_DIFFICULTY_MARKERS = ("基础", "基礎", "中级", "中級", "高级", "高級")
+
+
 def parse_heading(page: int, text: str, source: Source) -> dict | None:
+    if source.family == "chair":
+        return parse_chair_heading(page, text, source)
     if page < source.exercise_start or page > source.exercise_end:
         return None
     lines = [clean_line(line) for line in text.splitlines() if clean_line(line)]
@@ -277,6 +320,45 @@ def parse_heading(page: int, text: str, source: Source) -> dict | None:
         "english": english,
         "continuation": continuation,
     }
+
+
+def parse_chair_heading(page: int, text: str, source: Source) -> dict | None:
+    if page < source.exercise_start or page > source.exercise_end:
+        return None
+    lines = [clean_line(line) for line in text.splitlines() if clean_line(line)]
+    if not lines:
+        return None
+    top = lines[:10]
+    try:
+        section_index = next(
+            index
+            for index, line in enumerate(top[:4])
+            if any(line.startswith(prefix) for prefix in CHAIR_SECTION_PREFIXES)
+        )
+    except StopIteration:
+        return None
+    if any("续" in line or "續" in line for line in top[section_index + 1 : section_index + 5]):
+        return None
+
+    for index in range(section_index + 1, min(len(top), section_index + 5)):
+        line = top[index]
+        if any(marker in line for marker in CHAIR_DIFFICULTY_MARKERS) and len(line) <= 8:
+            break
+        if is_english_line(line):
+            continue
+        title, english = split_title_english(line)
+        if not english and index + 1 < len(top) and is_english_line(top[index + 1]):
+            english = normalize_english(top[index + 1])
+        title = re.sub(r"^\d+[.．、]\s*", "", title).strip()
+        if is_bad_title(title) or len(title) > 34:
+            continue
+        return {
+            "page": page,
+            "title": title,
+            "english": english,
+            "continuation": False,
+        }
+    return None
 
 
 def detected_exercises(source: Source, ocr: dict[int, str]) -> list[dict]:
@@ -414,7 +496,7 @@ def build_source(source: Source) -> list[dict]:
         exercise["groups"] = groups
         exercise["excerpt"] = excerpt
         exercise["summary"] = summary_for(exercise, groups, excerpt)
-        exercise["equipment"] = infer_equipment(text)
+        exercise["equipment"] = "平衡椅" if source.family == "chair" else infer_equipment(text)
         exercise["images"] = exercise_images(exercise, actions)
 
     write_source_note(source, ocr, actions, exercises)
@@ -428,6 +510,7 @@ def write_source_note(source: Source, ocr: dict[int, str], actions: dict[int, li
     out.mkdir(exist_ok=True)
     total_regions = sum(len(v) for v in actions.values())
     skipped_last_start = source.end_page + 1
+    ocr_note = "這份 PDF 是掃描件" if source.family == "chair" else "這份 PDF 是橫向掃描件"
     lines = [
         f"# {source.title} source note",
         "",
@@ -447,7 +530,7 @@ def write_source_note(source: Source, ocr: dict[int, str], actions: dict[int, li
         "",
         "## OCR 注意",
         "",
-        "這份 PDF 是橫向掃描件，原始文字層不可直接使用。Wiki 內容以 macOS Vision OCR 為基礎，再轉為繁體中文；少數中文詞、英文標題或頁面批註可能仍需人工複核。",
+        f"{ocr_note}，原始文字層不可直接使用。Wiki 內容以 macOS Vision OCR 為基礎，再轉為繁體中文；少數中文詞、英文標題或頁面批註可能仍需人工複核。",
         "",
     ]
     (out / source.source_file).write_text("\n".join(lines), encoding="utf-8")
@@ -560,26 +643,60 @@ def update_index(all_counts: dict[str, int]) -> None:
     )
     if "普拉提塑身機初級：已跳過" not in text:
         text = text.rstrip() + "\n" + note + "\n"
+    if "chair_source" not in text:
+        text = text.replace(
+            "- `a_普拉提塑身机中级.pdf`：原始 PDF。",
+            "- `a_普拉提塑身机中级.pdf`：原始 PDF。\n"
+            "- [[sources/chair_source|全套平衡椅 source note]]：處理範圍、OCR、截圖 manifest、全頁影像連結。\n"
+            "- `平衡椅最终版.pdf`：原始 PDF。",
+        )
+    if "chair-exercises" not in text:
+        text = text.replace(
+            "- [[exercises/reformer-intermediate-exercises|普拉提塑身機中級動作索引]]：依頁碼列出塑身機中級動作，附肌群分類與動作圖。",
+            "- [[exercises/reformer-intermediate-exercises|普拉提塑身機中級動作索引]]：依頁碼列出塑身機中級動作，附肌群分類與動作圖。\n"
+            "- [[exercises/chair-exercises|全套平衡椅動作索引]]：依頁碼列出平衡椅動作，附肌群分類與動作圖。",
+        )
+    if "全套平衡椅：已跳過" not in text and "chair" in all_counts:
+        text = (
+            text.rstrip()
+            + f"\n- 全套平衡椅：已跳過 PDF 第 1-5 頁與第 174-178 頁；整理 {all_counts['chair']} 個動作條目。\n"
+        )
     path.write_text(text, encoding="utf-8")
 
 
 def update_log(all_counts: dict[str, int]) -> None:
     path = WIKI / "log.md"
     text = path.read_text(encoding="utf-8")
-    if "ingest | 普拉提塑身機初級 / 中級" in text:
-        return
-    lines = [
-        "",
-        f"## [{date.today().isoformat()}] ingest | 普拉提塑身機初級 / 中級",
-        "",
-        "- 依使用者要求沿用既有處理方式，兩份 PDF 均跳過首 5 頁與末 5 頁。",
-        "- 初級處理 PDF 第 6-111 頁；中級處理 PDF 第 6-163 頁。",
-        "- 使用 `pdftoppm` 渲染橫向掃描頁，使用 macOS Vision OCR 產生中文 OCR JSONL，再轉為繁體中文整理。",
-        "- 自動裁切動作圖並寫入 `wiki/assets/reformer_beginner_actions/` 與 `wiki/assets/reformer_intermediate_actions/`。",
-        f"- 建立塑身機 source note、動作索引與肌肉/肌群分類頁；初級 {all_counts['reformer_beginner']} 個條目，中級 {all_counts['reformer_intermediate']} 個條目。",
-        "",
-    ]
-    path.write_text(text.rstrip() + "\n" + "\n".join(lines), encoding="utf-8")
+    additions = []
+    if "ingest | 普拉提塑身機初級 / 中級" not in text:
+        additions.extend(
+            [
+                "",
+                f"## [{date.today().isoformat()}] ingest | 普拉提塑身機初級 / 中級",
+                "",
+                "- 依使用者要求沿用既有處理方式，兩份 PDF 均跳過首 5 頁與末 5 頁。",
+                "- 初級處理 PDF 第 6-111 頁；中級處理 PDF 第 6-163 頁。",
+                "- 使用 `pdftoppm` 渲染橫向掃描頁，使用 macOS Vision OCR 產生中文 OCR JSONL，再轉為繁體中文整理。",
+                "- 自動裁切動作圖並寫入 `wiki/assets/reformer_beginner_actions/` 與 `wiki/assets/reformer_intermediate_actions/`。",
+                f"- 建立塑身機 source note、動作索引與肌肉/肌群分類頁；初級 {all_counts['reformer_beginner']} 個條目，中級 {all_counts['reformer_intermediate']} 個條目。",
+                "",
+            ]
+        )
+    if "ingest | 全套平衡椅" not in text and "chair" in all_counts:
+        additions.extend(
+            [
+                "",
+                f"## [{date.today().isoformat()}] ingest | 全套平衡椅",
+                "",
+                "- 依使用者要求沿用既有處理方式，跳過首 5 頁與末 5 頁，處理 PDF 第 6-173 頁。",
+                "- 使用 PyMuPDF 渲染掃描頁，使用 macOS Vision OCR 產生中文 OCR JSONL，再轉為繁體中文整理。",
+                "- 自動裁切動作圖並寫入 `wiki/assets/chair_actions/`。",
+                f"- 建立平衡椅 source note、動作索引與肌肉/肌群分類頁；整理 {all_counts['chair']} 個條目。",
+                "",
+            ]
+        )
+    if additions:
+        path.write_text(text.rstrip() + "\n" + "\n".join(additions), encoding="utf-8")
 
 
 def main() -> None:

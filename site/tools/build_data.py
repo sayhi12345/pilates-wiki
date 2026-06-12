@@ -35,6 +35,12 @@ SOURCES = [
         "exercise_md": ROOT / "wiki" / "exercises" / "reformer-intermediate-exercises.md",
         "ocr": ROOT / "wiki" / "raw" / "reformer_intermediate_ocr_p006-p163.jsonl",
     },
+    {
+        "key": "chair",
+        "label": "平衡椅",
+        "exercise_md": ROOT / "wiki" / "exercises" / "chair-exercises.md",
+        "ocr": ROOT / "wiki" / "raw" / "chair_ocr_p006-p173.jsonl",
+    },
 ]
 
 MUSCLE_LABELS = {
@@ -79,6 +85,9 @@ EQUIPMENT_TAGS = [
     "腳帶",
     "健身板",
     "普拉提塑身機",
+    "平衡椅",
+    "踏板",
+    "把手",
 ]
 
 ACTION_TAG_RULES = [
@@ -248,8 +257,9 @@ def clean_text(text: str, limit: int = 1100) -> str:
 
 
 def clean_flow_text(text: str, limit: int = 1300) -> str:
-    text = re.sub(r"吸氣準備[.。…⋯：:•]*", "準備，吸氣⋯", text)
-    text = re.sub(r"準備[，,](?:級|趿|雙|明|顧)氣", "準備，吸氣", text)
+    text = re.sub(r"吸氣\s*準備[.。…⋯：:•]*", "準備，吸氣⋯", text)
+    text = re.sub(r"準備[，,](?:級|趿|雙|明|顧|受|要)氣", "準備，吸氣", text)
+    text = re.sub(r"準備[，,]氣", "準備，吸氣", text)
     text = re.sub(r"準備，吸氣\s*\d+(?:-\d+)?[：:][^\n]*", "準備，吸氣⋯", text)
     text = re.sub(r"準備，吸氣[：:•]", "準備，吸氣⋯", text)
     text = re.sub(r"[•・·]\s*(準備，吸氣)", r"\1", text)

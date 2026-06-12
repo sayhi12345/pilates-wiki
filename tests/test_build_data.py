@@ -183,6 +183,17 @@ class ExtractFlowTest(unittest.TestCase):
         self.assertTrue(all("依 OCR 原理/目標肌肉段落整理" not in exercise["summary"] for exercise in exercises))
         self.assertTrue(all("依頁面標題、動作說明與動作圖整理" not in exercise["summary"] for exercise in exercises))
 
+    def test_chair_source_builds_exercises(self):
+        exercises = build_data.build_exercises(
+            next(source for source in build_data.SOURCES if source["key"] == "chair")
+        )
+
+        self.assertGreaterEqual(len(exercises), 50)
+        footwork = next(exercise for exercise in exercises if exercise["english"] == "FOOTWORK")
+        self.assertEqual("平衡椅", footwork["sourceLabel"])
+        self.assertEqual("平衡椅", footwork["equipment"])
+        self.assertEqual("p.24-29", footwork["pageLabel"])
+
     def test_clean_flow_puts_prep_breath_on_its_own_line(self):
         flow = build_data.clean_flow_text(
             "上斜方肌：準備，吸氣。呼氣，保持肩胛骨穩定。\n"
@@ -207,13 +218,17 @@ class ExtractFlowTest(unittest.TestCase):
             "準備，趿氣⋯ 呼氣 保持肩胛骨穩定。\n"
             "準備，明氣1-24：藤找頭\n呼氣 保持姿勢。\n"
             "準備，顧氣：\n呼氣 雙臂前伸。\n"
+            "準備，受氣•\n呼氣 旋轉軀幹。\n"
+            "準備，要氣⋯\n呼氣 保持踏板穩定。\n"
+            "準備，氣⋯\n呼氣 控制踏板。\n"
+            "吸氣 準備。\n呼氣 保持身體穩定。\n"
             "吸氣準備。\n呼氣 保持雙腿伸直。\n"
             "• 準備，吸氣⋯\n呼氣 保持骨盆穩定。"
         )
 
-        self.assertEqual(6, flow.splitlines().count("準備，吸氣⋯"))
+        self.assertEqual(10, flow.splitlines().count("準備，吸氣⋯"))
         for line in flow.splitlines():
-            self.assertNotRegex(line, r"準備，[級趿明顧]氣|吸氣準備")
+            self.assertNotRegex(line, r"準備，[級趿明顧受要]?氣|吸氣\s*準備")
             if "準備，吸氣" in line:
                 self.assertRegex(line, r"^準備，吸氣[.。…⋯：:•]*$")
 
@@ -289,7 +304,7 @@ for (const exercise of data.exercises) {
     if (/準備，吸氣/.test(sentence) && !/^準備，吸氣[.。…⋯：:•]*$/.test(sentence)) {
       bad.push([exercise.id, exercise.title, sentence]);
     }
-    if (/準備[，,][級趿明顧雙]氣|吸氣準備/.test(sentence)) {
+    if (/準備[，,][級趿明顧雙受要]?氣|吸氣\s*準備/.test(sentence)) {
       bad.push([exercise.id, exercise.title, sentence]);
     }
   }
