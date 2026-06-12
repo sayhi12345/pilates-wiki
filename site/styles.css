@@ -548,13 +548,19 @@ body.planner-open .planner-panel {
   line-height: 1.4;
 }
 
-.info-block p {
+.prose-text {
   margin: 0;
   color: var(--body);
   font-size: 14px;
   line-height: 1.7;
-  white-space: pre-line;
-  overflow-wrap: anywhere;
+}
+
+.prose-sentence {
+  display: block;
+}
+
+.prose-sentence + .prose-sentence {
+  margin-top: 6px;
 }
 
 .image-grid {

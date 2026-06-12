@@ -357,15 +357,15 @@ function renderDetail() {
     <div class="detail-grid">
       <section class="info-block">
         <h3>器材設置</h3>
-        <p>${escapeHtml(exercise.setup)}</p>
+        ${renderProse(exercise.setup)}
       </section>
       <section class="info-block">
         <h3>起始姿勢</h3>
-        <p>${escapeHtml(exercise.startPosition)}</p>
+        ${renderProse(exercise.startPosition)}
       </section>
       <section class="info-block">
         <h3>動作流程</h3>
-        <p>${escapeHtml(exercise.flow)}</p>
+        ${renderProse(exercise.flow)}
       </section>
     </div>
 
@@ -607,15 +607,15 @@ function renderPreviewExerciseDetail(item, exercise) {
       <div class="preview-detail-grid">
         <section>
           <h4>器材設置</h4>
-          <p>${escapeHtml(item.apparatusSetup || exercise.setup || "")}</p>
+          ${renderProse(item.apparatusSetup || exercise.setup || "")}
         </section>
         <section>
           <h4>起始姿勢</h4>
-          <p>${escapeHtml(exercise.startPosition || "")}</p>
+          ${renderProse(exercise.startPosition || "")}
         </section>
         <section>
           <h4>動作流程</h4>
-          <p>${escapeHtml(exercise.flow || "")}</p>
+          ${renderProse(exercise.flow || "")}
         </section>
       </div>
       ${images ? `<div class="preview-detail-images">${images}</div>` : ""}
@@ -894,6 +894,21 @@ function escapeHtml(value) {
 
 function escapeAttr(value) {
   return escapeHtml(value);
+}
+
+function proseSentences(value) {
+  const text = String(value || "").replace(/\s+/g, " ").trim();
+  if (!text) return [];
+  return text.match(/[^。！？!?；;]+[。！？!?；;]?/g)?.map((part) => part.trim()).filter(Boolean) || [text];
+}
+
+function renderProse(value) {
+  const sentences = proseSentences(value);
+  return `
+    <div class="prose-text">
+      ${sentences.map((sentence) => `<span class="prose-sentence">${escapeHtml(sentence)}</span>`).join("")}
+    </div>
+  `;
 }
 
 els.searchInput.addEventListener("input", (event) => {
