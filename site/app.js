@@ -897,9 +897,14 @@ function escapeAttr(value) {
 }
 
 function proseSentences(value) {
-  const text = String(value || "").replace(/\s+/g, " ").trim();
+  const text = String(value || "")
+    .replace(/\s+/g, " ")
+    .replace(/\s*(?:[•・·]\s*)?(準備，吸氣[.。…⋯：:•]*)\s*/g, "\n$1\n")
+    .trim();
   if (!text) return [];
-  return text.match(/[^。！？!?；;]+[。！？!?；;]?/g)?.map((part) => part.trim()).filter(Boolean) || [text];
+  return text.split(/\n+/).flatMap((segment) => (
+    segment.match(/[^。！？!?；;…⋯]+[。！？!?；;…⋯]?/g)?.map((part) => part.trim()).filter(Boolean) || []
+  ));
 }
 
 function proseSentenceClass(sentence) {

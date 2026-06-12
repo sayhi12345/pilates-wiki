@@ -248,6 +248,11 @@ def clean_text(text: str, limit: int = 1100) -> str:
 
 
 def clean_flow_text(text: str, limit: int = 1300) -> str:
+    text = re.sub(r"吸氣準備[.。…⋯：:•]*", "準備，吸氣⋯", text)
+    text = re.sub(r"準備[，,](?:級|趿|雙|明|顧)氣", "準備，吸氣", text)
+    text = re.sub(r"準備，吸氣\s*\d+(?:-\d+)?[：:][^\n]*", "準備，吸氣⋯", text)
+    text = re.sub(r"準備，吸氣[：:•]", "準備，吸氣⋯", text)
+    text = re.sub(r"[•・·]\s*(準備，吸氣)", r"\1", text)
     text = clean_text(text, limit=limit)
     prep_cue = r"(準備，吸氣[.。…⋯：:•]*)"
     text = re.sub(rf"([^\n])\s*{prep_cue}", r"\1\n\2", text)

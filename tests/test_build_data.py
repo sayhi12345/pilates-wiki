@@ -1,5 +1,7 @@
 import sys
 import unittest
+import json
+import subprocess
 from pathlib import Path
 
 
@@ -199,14 +201,110 @@ class ExtractFlowTest(unittest.TestCase):
             flow.splitlines(),
         )
 
+    def test_clean_flow_normalizes_prep_breath_ocr_variants(self):
+        flow = build_data.clean_flow_text(
+            "準備，級氣⋯\n呼氣 保持肩胛骨穩定。\n"
+            "準備，趿氣⋯ 呼氣 保持肩胛骨穩定。\n"
+            "準備，明氣1-24：藤找頭\n呼氣 保持姿勢。\n"
+            "準備，顧氣：\n呼氣 雙臂前伸。\n"
+            "吸氣準備。\n呼氣 保持雙腿伸直。\n"
+            "• 準備，吸氣⋯\n呼氣 保持骨盆穩定。"
+        )
+
+        self.assertEqual(6, flow.splitlines().count("準備，吸氣⋯"))
+        for line in flow.splitlines():
+            self.assertNotRegex(line, r"準備，[級趿明顧]氣|吸氣準備")
+            if "準備，吸氣" in line:
+                self.assertRegex(line, r"^準備，吸氣[.。…⋯：:•]*$")
+
     def test_generated_flows_put_prep_breath_on_its_own_line(self):
         payload = build_data.build_payload()
 
         for exercise in payload["exercises"]:
             for line in exercise["flow"].splitlines():
-                if "準備，吸氣" not in line:
+                if not ("準備" in line and ("氣" in line or "汽" in line)):
                     continue
                 self.assertRegex(line, r"^準備，吸氣[.。…⋯：:•]*$")
+
+    def test_frontend_prose_splits_prep_breath_ellipsis(self):
+        script = r"""
+const fs = require("fs");
+const code = fs.readFileSync("site/app.js", "utf8");
+const start = code.indexOf("function proseSentences");
+const end = code.indexOf("function proseSentenceClass");
+if (start < 0 || end < 0) throw new Error("proseSentences not found");
+eval(code.slice(start, end));
+const sentences = proseSentences("準備，吸氣⋯\n呼氣 保持肩胛骨穩定。");
+process.stdout.write(JSON.stringify(sentences));
+"""
+        result = subprocess.run(
+            ["node", "-e", script],
+            cwd=ROOT,
+            text=True,
+            stdout=subprocess.PIPE,
+            check=True,
+        )
+
+        self.assertEqual(
+            ["準備，吸氣⋯", "呼氣 保持肩胛骨穩定。"],
+            json.loads(result.stdout),
+        )
+
+    def test_frontend_prose_treats_prep_breath_as_hard_boundary(self):
+        script = r"""
+const fs = require("fs");
+const code = fs.readFileSync("site/app.js", "utf8");
+const start = code.indexOf("function proseSentences");
+const end = code.indexOf("function proseSentenceClass");
+if (start < 0 || end < 0) throw new Error("proseSentences not found");
+eval(code.slice(start, end));
+const sentences = proseSentences("上斜方肌：\n準備，吸氣。\n呼氣 保持穩定。\n呼氣 將雙 準備，吸氣⋯\n呼氣 繼續。");
+process.stdout.write(JSON.stringify(sentences));
+"""
+        result = subprocess.run(
+            ["node", "-e", script],
+            cwd=ROOT,
+            text=True,
+            stdout=subprocess.PIPE,
+            check=True,
+        )
+
+        sentences = json.loads(result.stdout)
+        prep_sentences = [sentence for sentence in sentences if "準備，吸氣" in sentence]
+        self.assertEqual(["準備，吸氣。", "準備，吸氣⋯"], prep_sentences)
+
+    def test_frontend_rendered_generated_flows_put_prep_breath_on_its_own_line(self):
+        script = r"""
+const fs = require("fs");
+const app = fs.readFileSync("site/app.js", "utf8");
+const start = app.indexOf("function proseSentences");
+const end = app.indexOf("function proseSentenceClass");
+if (start < 0 || end < 0) throw new Error("proseSentences not found");
+eval(app.slice(start, end));
+const raw = fs.readFileSync("site/data.js", "utf8").replace(/^window\.PILATES_DATA = /, "").replace(/;\n$/, "");
+const data = JSON.parse(raw);
+const bad = [];
+for (const exercise of data.exercises) {
+  for (const sentence of proseSentences(exercise.flow || "")) {
+    if (/準備，吸氣/.test(sentence) && !/^準備，吸氣[.。…⋯：:•]*$/.test(sentence)) {
+      bad.push([exercise.id, exercise.title, sentence]);
+    }
+    if (/準備[，,][級趿明顧雙]氣|吸氣準備/.test(sentence)) {
+      bad.push([exercise.id, exercise.title, sentence]);
+    }
+  }
+}
+process.stdout.write(JSON.stringify(bad));
+"""
+        result = subprocess.run(
+            ["node", "-e", script],
+            cwd=ROOT,
+            text=True,
+            stdout=subprocess.PIPE,
+            check=True,
+        )
+
+        self.assertEqual([], json.loads(result.stdout))
 
     def test_wiki_manual_fields_override_interleaved_ocr(self):
         exercises = build_data.build_exercises(
