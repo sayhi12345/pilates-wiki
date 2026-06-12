@@ -345,11 +345,13 @@ function renderDetail() {
         <span class="meta-chip">${escapeHtml(exercise.equipment)}</span>
         <span class="meta-chip">${escapeHtml(exercise.pageLabel)}</span>
       </div>
-      <h2>${escapeHtml(exercise.title)}</h2>
+      <div class="detail-title-row">
+        <h2>${escapeHtml(exercise.title)}</h2>
+        <button class="detail-add" type="button" aria-label="加入 ${escapeAttr(exercise.title)} 到課表" title="加入課表">+</button>
+      </div>
       ${exercise.english ? `<p class="english-title">${escapeHtml(exercise.english)}</p>` : ""}
       <p class="summary">${escapeHtml(exercise.summary || "")}</p>
       <div class="detail-tags">${tags}</div>
-      <button class="detail-add" type="button">加入課表</button>
     </div>
 
     <div class="detail-grid">
