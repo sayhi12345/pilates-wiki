@@ -904,20 +904,29 @@ function proseSentences(value) {
 
 function proseSentenceClass(sentence) {
   const classes = ["prose-sentence"];
-  if (/(?:準備，)?(?:繼續)?[吸呼]氣/.test(sentence)) {
-    classes.push("is-breath-cue");
-  }
   if (/(?:每(?:側|個方向)|整套動作)?重複練習[^。！？!?；;]*?次|整套動作練習[^。！？!?；;]*?組/.test(sentence)) {
     classes.push("is-repetition-cue");
   }
   return classes.join(" ");
 }
 
+function renderHighlightedSentence(sentence) {
+  const breathCuePattern = /\S*(?:吸氣|呼氣)\S*/g;
+  let html = "";
+  let lastIndex = 0;
+  for (const match of sentence.matchAll(breathCuePattern)) {
+    html += escapeHtml(sentence.slice(lastIndex, match.index));
+    html += `<mark class="breath-cue">${escapeHtml(match[0])}</mark>`;
+    lastIndex = match.index + match[0].length;
+  }
+  return html + escapeHtml(sentence.slice(lastIndex));
+}
+
 function renderProse(value) {
   const sentences = proseSentences(value);
   return `
     <div class="prose-text">
-      ${sentences.map((sentence) => `<span class="${proseSentenceClass(sentence)}">${escapeHtml(sentence)}</span>`).join("")}
+      ${sentences.map((sentence) => `<span class="${proseSentenceClass(sentence)}">${renderHighlightedSentence(sentence)}</span>`).join("")}
     </div>
   `;
 }

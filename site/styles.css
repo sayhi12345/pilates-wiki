@@ -560,19 +560,21 @@ body.planner-open .planner-panel {
   display: block;
 }
 
-.prose-sentence.is-breath-cue,
 .prose-sentence.is-repetition-cue {
-  border-left: 3px solid var(--primary);
+  border-left: 3px solid var(--accent);
   border-radius: 6px;
   padding: 5px 8px 5px 10px;
-  background: color-mix(in srgb, var(--primary) 8%, transparent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
   color: var(--ink);
   font-weight: 650;
 }
 
-.prose-sentence.is-repetition-cue {
-  border-left-color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 12%, transparent);
+.breath-cue {
+  border-radius: 5px;
+  padding: 1px 5px 2px;
+  background: color-mix(in srgb, var(--primary) 12%, transparent);
+  color: var(--ink);
+  font-weight: 700;
 }
 
 .prose-sentence + .prose-sentence {
