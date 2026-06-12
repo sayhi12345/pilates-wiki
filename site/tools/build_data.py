@@ -492,6 +492,203 @@ def is_section_noise(line: str, title: str) -> bool:
     return False
 
 
+PRINCIPLE_LABELS = (
+    "目標肌肉",
+    "日標肌肉",
+    "穩定性",
+    "稳定性",
+    "靈活性",
+    "灵活性",
+    "移動性",
+    "移动性",
+    "順序",
+    "顺序",
+    "耐力",
+    "平衡",
+    "協調性",
+    "协调性",
+    "本體感受",
+)
+
+SUPPORT_SECTION_HEADINGS = {
+    "principles": ("原理",),
+    "keyPoints": ("要點", "要点"),
+    "modifications": ("動作調整", "動怍調整", "動作調墊", "动作调整"),
+}
+ALL_SUPPORT_HEADINGS = tuple(
+    heading for headings in SUPPORT_SECTION_HEADINGS.values() for heading in headings
+)
+
+
+def is_support_heading(line: str, headings: tuple[str, ...] = ALL_SUPPORT_HEADINGS) -> bool:
+    stripped = normalized_heading(line)
+    return any(stripped.startswith(heading) for heading in headings)
+
+
+def is_principle_label(line: str) -> bool:
+    return normalized_heading(line).startswith(PRINCIPLE_LABELS)
+
+
+def is_numbered_detail(line: str) -> bool:
+    return bool(re.match(r"^\d+\s*[.．、，,]", normalized_heading(line)))
+
+
+def numbered_detail_index(line: str) -> int | None:
+    match = re.match(r"^(\d+)\s*[.．、，,]", normalized_heading(line))
+    return int(match.group(1)) if match else None
+
+
+def is_short_numbered_caption(line: str, last_number: int | None) -> bool:
+    number = numbered_detail_index(line)
+    if number is None or last_number is None or number <= last_number + 1:
+        return False
+    content = re.sub(r"^\d+\s*[.．、，,]\s*", "", normalized_heading(line))
+    return len(content) <= 14 and not re.search(r"[。；;：:，,]", content)
+
+
+def is_bullet_detail(line: str) -> bool:
+    return normalized_heading(line).startswith(("•", "・", "·", "，", "、"))
+
+
+def looks_like_principle_fragment(line: str) -> bool:
+    stripped = normalized_heading(line)
+    return any(token in stripped for token in ["腹橫肌", "收縮", "肌群", "防止旋轉", "穩定肌"])
+
+
+def is_support_noise(line: str, title: str) -> bool:
+    stripped = normalized_heading(line)
+    if is_section_noise(line, title):
+        return True
+    if stripped in {"起始姿勢", "練習", "要點", "原理", "動作調整"}:
+        return True
+    return False
+
+
+def is_support_start_fragment(line: str) -> bool:
+    stripped = normalized_heading(line)
+    if is_principle_label(stripped):
+        return False
+    starts_like_position = stripped.startswith(
+        ("在", "將", "一隻", "另一隻", "放在", "雙手", "雙腳", "雙腿", "身體", "坐直", "側向", "仰臥", "俯臥")
+    )
+    return starts_like_position and any(
+        token in stripped
+        for token in ["坐直", "勾住", "握住", "放在", "套入", "腳帶", "中立位", "起始姿勢", "肩胛骨保持穩定"]
+    )
+
+
+def first_support_heading_index(lines: list[str], headings: tuple[str, ...]) -> int | None:
+    for index, line in enumerate(lines):
+        if is_support_heading(line, headings):
+            return index
+    return None
+
+
+def clean_support_text(lines: list[str], limit: int = 1800) -> str:
+    return clean_text("\n".join(lines), limit=limit)
+
+
+def extract_principles(text: str, title: str) -> str:
+    lines = text.splitlines()
+    start_index = first_support_heading_index(lines, SUPPORT_SECTION_HEADINGS["principles"])
+    if start_index is None:
+        return ""
+    collected = []
+    collecting_principle = False
+    skipping_flow = False
+    for line in lines[start_index + 1:]:
+        stripped = normalized_heading(line)
+        if not stripped:
+            continue
+        if is_support_heading(line, SUPPORT_SECTION_HEADINGS["modifications"] + SUPPORT_SECTION_HEADINGS["keyPoints"]):
+            collecting_principle = False
+            skipping_flow = False
+            continue
+        if is_numbered_detail(line) or is_bullet_detail(line) or is_note_line(line):
+            collecting_principle = False
+            continue
+        if is_footer_or_caption(line, title):
+            continue
+        if is_principle_label(line):
+            collected.append(line.strip())
+            collecting_principle = True
+            skipping_flow = False
+            continue
+        if is_standard_flow_cue(line) or stripped.startswith(("接下來", "結束動作")):
+            if stripped.startswith(("吸氣", "呼氣")):
+                skipping_flow = True
+            continue
+        if skipping_flow:
+            continue
+        if is_repeat_line(line) or is_setup_line(line) or is_support_start_fragment(line):
+            continue
+        if collecting_principle and not is_support_noise(line, title):
+            collected.append(line.strip())
+    return clean_support_text(collected)
+
+
+def extract_key_points(text: str, title: str) -> str:
+    lines = text.splitlines()
+    start_index = first_support_heading_index(lines, SUPPORT_SECTION_HEADINGS["keyPoints"])
+    if start_index is None:
+        return ""
+    collected = []
+    for line in lines[start_index + 1:]:
+        stripped = normalized_heading(line)
+        if not stripped:
+            continue
+        if is_support_heading(line, SUPPORT_SECTION_HEADINGS["modifications"] + SUPPORT_SECTION_HEADINGS["principles"]):
+            if collected:
+                break
+            continue
+        if is_footer_or_caption(line, title):
+            break
+        if is_numbered_detail(line) or is_principle_label(line) or is_flow_cue(line):
+            continue
+        if is_bullet_detail(line) or collected:
+            if not is_support_noise(line, title):
+                collected.append(line.strip())
+    return clean_support_text(collected)
+
+
+def extract_modifications(text: str, title: str) -> str:
+    lines = text.splitlines()
+    start_index = first_support_heading_index(lines, SUPPORT_SECTION_HEADINGS["modifications"])
+    if start_index is None:
+        return ""
+    collected = []
+    collecting_item = False
+    last_number = None
+    for line in lines[start_index + 1:]:
+        stripped = normalized_heading(line)
+        if not stripped:
+            continue
+        if is_support_heading(line, SUPPORT_SECTION_HEADINGS["keyPoints"] + SUPPORT_SECTION_HEADINGS["principles"]):
+            if collected:
+                break
+            collecting_item = False
+            continue
+        if is_support_heading(line, SUPPORT_SECTION_HEADINGS["modifications"]):
+            collecting_item = False
+            continue
+        if is_numbered_detail(line):
+            if is_short_numbered_caption(line, last_number):
+                collecting_item = False
+                continue
+            collected.append(line.strip())
+            collecting_item = True
+            last_number = numbered_detail_index(line)
+            continue
+        if is_footer_or_caption(line, title):
+            break
+        if is_principle_label(line) or looks_like_principle_fragment(line) or is_bullet_detail(line) or is_flow_cue(line):
+            collecting_item = False
+            continue
+        if collecting_item and not is_support_noise(line, title):
+            collected.append(line.strip())
+    return clean_support_text(collected)
+
+
 def is_flow_noise_fragment(line: str) -> bool:
     stripped = normalized_heading(line)
     if not stripped:
@@ -722,6 +919,9 @@ def build_exercises(source: dict) -> list[dict]:
         flow = clean_flow_text(
             parse_multiline_field(block["body"], "動作流程") or extract_flow(full_ocr, title, source["key"])
         )
+        principles = parse_multiline_field(block["body"], "原理") or extract_principles(full_ocr, title)
+        key_points = parse_multiline_field(block["body"], "要點") or extract_key_points(full_ocr, title)
+        modifications = parse_multiline_field(block["body"], "動作調整") or extract_modifications(full_ocr, title)
         muscle_keys = group_keys(group_text)
         exercise = {
             "id": slugify(english or title, source["key"]),
@@ -740,6 +940,9 @@ def build_exercises(source: dict) -> list[dict]:
             "setup": setup,
             "startPosition": start_position,
             "flow": flow,
+            "principles": principles,
+            "keyPoints": key_points,
+            "modifications": modifications,
             "images": images,
         }
         exercise["tags"] = tags_for(exercise, full_ocr)

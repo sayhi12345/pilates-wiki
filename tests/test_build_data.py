@@ -339,6 +339,71 @@ process.stdout.write(JSON.stringify(bad));
         self.assertNotIn("調過位置", exercise["startPosition"])
         self.assertNotIn("彎曲…", exercise["flow"])
 
+    def test_reformer_beginner_hundred_includes_support_sections(self):
+        exercises = build_data.build_exercises(
+            next(source for source in build_data.SOURCES if source["key"] == "reformer_beginner")
+        )
+        exercise = next(exercise for exercise in exercises if exercise["title"] == "百次拍擊")
+
+        self.assertIn("目標肌肉", exercise["principles"])
+        self.assertIn("長收縮腹直肌", exercise["principles"])
+        self.assertIn("耐力", exercise["principles"])
+        self.assertIn("全程保持腰椎下沉", exercise["keyPoints"])
+        self.assertIn("短促呼吸", exercise["modifications"])
+        self.assertNotIn("默數五個數", exercise["principles"])
+        self.assertNotIn("重複練習10組", exercise["principles"])
+
+    def test_support_sections_skip_start_position_fragments(self):
+        for source_key in ["reformer_beginner", "reformer_intermediate"]:
+            with self.subTest(source_key=source_key):
+                exercises = build_data.build_exercises(
+                    next(source for source in build_data.SOURCES if source["key"] == source_key)
+                )
+                exercise = next(exercise for exercise in exercises if exercise["title"] == "樹姿 盒子橫放")
+
+                self.assertIn("目標肌肉", exercise["principles"])
+                self.assertNotIn("在塑身機盒子上坐直", exercise["principles"])
+                self.assertNotIn("一隻腳勾住腳帶", exercise["principles"])
+                self.assertNotIn("手握住踝關節", exercise["principles"])
+                self.assertNotIn("盒面，或腹肌", exercise["principles"])
+                self.assertNotIn("肌輔助腹橫肌運動", exercise["modifications"])
+                self.assertNotIn("4. 向後捲動", exercise["modifications"])
+
+    def test_frontend_support_sections_render_closed_by_default(self):
+        script = r"""
+const fs = require("fs");
+const code = fs.readFileSync("site/app.js", "utf8");
+const start = code.indexOf("function renderSupportSection");
+const end = code.indexOf("function renderDetail");
+if (start < 0 || end < 0) throw new Error("renderSupportSection not found");
+function escapeHtml(value) {
+  return String(value || "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+function escapeAttr(value) { return escapeHtml(value); }
+function proseSentences(value) { return String(value || "").trim() ? [String(value).trim()] : []; }
+function proseSentenceClass() { return "prose-sentence"; }
+function renderHighlightedSentence(sentence) { return escapeHtml(sentence); }
+function renderProse(value) { return `<div>${escapeHtml(value)}</div>`; }
+eval(code.slice(start, end));
+process.stdout.write(renderSupportSection("原理", "目標肌肉：核心。"));
+"""
+        result = subprocess.run(
+            ["node", "-e", script],
+            cwd=ROOT,
+            text=True,
+            stdout=subprocess.PIPE,
+            check=True,
+        )
+
+        self.assertIn("<details", result.stdout)
+        self.assertIn("原理", result.stdout)
+        self.assertNotIn("<details open", result.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -315,6 +315,16 @@ function renderList(exercises) {
   });
 }
 
+function renderSupportSection(title, value) {
+  if (!proseSentences(value).length) return "";
+  return `
+    <details class="info-block support-section">
+      <summary>${escapeHtml(title)}</summary>
+      ${renderProse(value)}
+    </details>
+  `;
+}
+
 function renderDetail() {
   const exercise = byId.get(state.selectedId);
   if (!exercise) {
@@ -335,6 +345,11 @@ function renderDetail() {
       <figcaption>${escapeHtml(exercise.pageLabel)} · 圖 ${index + 1}</figcaption>
     </figure>
   `).join("");
+  const supportSections = [
+    renderSupportSection("原理", exercise.principles),
+    renderSupportSection("要點", exercise.keyPoints),
+    renderSupportSection("動作調整", exercise.modifications),
+  ].join("");
 
   els.exerciseDetail.innerHTML = `
     <div class="detail-head">
@@ -367,6 +382,7 @@ function renderDetail() {
         <h3>動作流程</h3>
         ${renderProse(exercise.flow)}
       </section>
+      ${supportSections}
     </div>
 
     <div class="image-grid">${images}</div>

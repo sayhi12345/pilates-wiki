@@ -549,6 +549,20 @@ body.planner-open .planner-panel {
   line-height: 1.4;
 }
 
+.support-section summary {
+  margin: 0;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 12px;
+  font-family: var(--mono-font);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.support-section[open] summary {
+  margin-bottom: 9px;
+}
+
 .prose-text {
   margin: 0;
   color: var(--body);
