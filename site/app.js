@@ -902,11 +902,22 @@ function proseSentences(value) {
   return text.match(/[^。！？!?；;]+[。！？!?；;]?/g)?.map((part) => part.trim()).filter(Boolean) || [text];
 }
 
+function proseSentenceClass(sentence) {
+  const classes = ["prose-sentence"];
+  if (/(?:準備，)?(?:繼續)?[吸呼]氣/.test(sentence)) {
+    classes.push("is-breath-cue");
+  }
+  if (/(?:每(?:側|個方向)|整套動作)?重複練習[^。！？!?；;]*?次|整套動作練習[^。！？!?；;]*?組/.test(sentence)) {
+    classes.push("is-repetition-cue");
+  }
+  return classes.join(" ");
+}
+
 function renderProse(value) {
   const sentences = proseSentences(value);
   return `
     <div class="prose-text">
-      ${sentences.map((sentence) => `<span class="prose-sentence">${escapeHtml(sentence)}</span>`).join("")}
+      ${sentences.map((sentence) => `<span class="${proseSentenceClass(sentence)}">${escapeHtml(sentence)}</span>`).join("")}
     </div>
   `;
 }

@@ -476,7 +476,7 @@ body.planner-open .planner-panel {
 .detail-title-row {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   min-width: 0;
 }
 
@@ -514,11 +514,12 @@ body.planner-open .planner-panel {
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  width: 38px;
-  height: 38px;
-  min-height: 38px;
+  width: 34px;
+  height: 34px;
+  min-height: 34px;
   padding: 0;
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: 600;
   line-height: 1;
   box-shadow: var(--shadow);
 }
@@ -557,6 +558,21 @@ body.planner-open .planner-panel {
 
 .prose-sentence {
   display: block;
+}
+
+.prose-sentence.is-breath-cue,
+.prose-sentence.is-repetition-cue {
+  border-left: 3px solid var(--primary);
+  border-radius: 6px;
+  padding: 5px 8px 5px 10px;
+  background: color-mix(in srgb, var(--primary) 8%, transparent);
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.prose-sentence.is-repetition-cue {
+  border-left-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
 }
 
 .prose-sentence + .prose-sentence {
@@ -1466,6 +1482,17 @@ body.lightbox-open {
   h1,
   .detail h2 {
     font-size: 24px;
+  }
+
+  .detail-title-row {
+    gap: 8px;
+  }
+
+  .detail-add {
+    width: 32px;
+    height: 32px;
+    min-height: 32px;
+    font-size: 17px;
   }
 
   .search-row {
