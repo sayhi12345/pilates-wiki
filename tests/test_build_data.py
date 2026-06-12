@@ -181,6 +181,33 @@ class ExtractFlowTest(unittest.TestCase):
         self.assertTrue(all("依 OCR 原理/目標肌肉段落整理" not in exercise["summary"] for exercise in exercises))
         self.assertTrue(all("依頁面標題、動作說明與動作圖整理" not in exercise["summary"] for exercise in exercises))
 
+    def test_clean_flow_puts_prep_breath_on_its_own_line(self):
+        flow = build_data.clean_flow_text(
+            "上斜方肌：準備，吸氣。呼氣，保持肩胛骨穩定。\n"
+            "中斜方肌：準備，吸氣⋯ 呼氣 保持肩胛骨穩定。"
+        )
+
+        self.assertEqual(
+            [
+                "上斜方肌：",
+                "準備，吸氣。",
+                "呼氣，保持肩胛骨穩定。",
+                "中斜方肌：",
+                "準備，吸氣⋯",
+                "呼氣 保持肩胛骨穩定",
+            ],
+            flow.splitlines(),
+        )
+
+    def test_generated_flows_put_prep_breath_on_its_own_line(self):
+        payload = build_data.build_payload()
+
+        for exercise in payload["exercises"]:
+            for line in exercise["flow"].splitlines():
+                if "準備，吸氣" not in line:
+                    continue
+                self.assertRegex(line, r"^準備，吸氣[.。…⋯：:•]*$")
+
     def test_wiki_manual_fields_override_interleaved_ocr(self):
         exercises = build_data.build_exercises(
             next(source for source in build_data.SOURCES if source["key"] == "beginner")

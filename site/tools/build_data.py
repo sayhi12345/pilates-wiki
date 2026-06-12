@@ -247,6 +247,15 @@ def clean_text(text: str, limit: int = 1100) -> str:
     return text
 
 
+def clean_flow_text(text: str, limit: int = 1300) -> str:
+    text = clean_text(text, limit=limit)
+    prep_cue = r"(準備，吸氣[.。…⋯：:•]*)"
+    text = re.sub(rf"([^\n])\s*{prep_cue}", r"\1\n\2", text)
+    text = re.sub(rf"{prep_cue}\s*([^\n])", r"\1\n\2", text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
+
 def clean_summary(text: str) -> str:
     text = re.sub(r"[ \t]+", " ", text)
     text = re.sub(r"[；;]?\s*依\s*OCR\s*原理/目標肌肉段落整理。?", "", text)
@@ -628,7 +637,7 @@ def extract_flow(text: str, title: str, source_key: str = "") -> str:
             break
         if len("\n".join(collected)) >= 1300:
             break
-    return clean_text("\n".join(collected), limit=1300)
+    return clean_flow_text("\n".join(collected), limit=1300)
 
 
 def extract_multicolumn_flow(text: str, title: str) -> str:
@@ -663,7 +672,7 @@ def extract_multicolumn_flow(text: str, title: str) -> str:
         collected.append(next_line.strip())
         if len("\n".join(collected)) >= 1300:
             break
-    return clean_text("\n".join(collected), limit=1300)
+    return clean_flow_text("\n".join(collected), limit=1300)
 
 
 def exercise_ocr_text(ocr: dict[int, str], start: int, end: int) -> str:
@@ -705,7 +714,9 @@ def build_exercises(source: dict) -> list[dict]:
         full_ocr = exercise_ocr_text(ocr, start, end)
         setup = parse_multiline_field(block["body"], "器材設置") or extract_setup(full_ocr)
         start_position = parse_multiline_field(block["body"], "起始姿勢") or extract_start_position(full_ocr)
-        flow = parse_multiline_field(block["body"], "動作流程") or extract_flow(full_ocr, title, source["key"])
+        flow = clean_flow_text(
+            parse_multiline_field(block["body"], "動作流程") or extract_flow(full_ocr, title, source["key"])
+        )
         muscle_keys = group_keys(group_text)
         exercise = {
             "id": slugify(english or title, source["key"]),
