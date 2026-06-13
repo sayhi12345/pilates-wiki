@@ -40,14 +40,14 @@
   - ![](../assets/chair_actions/p032_action_01.jpg)
   - ![](../assets/chair_actions/p032_action_02.jpg)
 
-## 胭繩肌下壓練習-平躺 (HAMSTRING PRESS HIPS DOWN)
+## 膕繩肌下壓練習-平躺 (HAMSTRING PRESS HIPS DOWN)
 
 - 頁碼：p.33-35
 - 難度：平衡椅
 - 器械/章節：平衡椅
 - 肌群分類：[[../muscles/chair-core-and-lumbopelvic-stability|核心與腰骨盆穩定]], [[../muscles/chair-spinal-articulation|脊椎活動]], [[../muscles/chair-scapular-stabilizers|肩胛與上背穩定]], [[../muscles/chair-hips-and-legs|髖與腿]], [[../muscles/chair-mobility-and-stretching|柔韌與伸展]]
-- 摘要：胭繩肌下壓練習-平躺：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、髖與腿。
-- OCR 原文摘錄：注意事項：將墊子豎放在椅子前面，一端頂住金屬底座，使起始 目標肌肉：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 姿勢更舒適。 肌輔助腹橫肌運動；下壓踏板時，向心收縮臀大肌和胭繩肌，並 在路板復位時，離心收縮上述肌肉：肩胛骨穩定肌群
+- 摘要：膕繩肌下壓練習-平躺：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、髖與腿。
+- OCR 原文摘錄：注意事項：將墊子豎放在椅子前面，一端頂住金屬底座，使起始 目標肌肉：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 姿勢更舒適。 肌輔助腹橫肌運動；下壓踏板時，向心收縮臀大肌和膕繩肌，並 在路板復位時，離心收縮上述肌肉：肩胛骨穩定肌群
 - 動作圖：
   - ![](../assets/chair_actions/p033_action_01.jpg)
   - ![](../assets/chair_actions/p033_action_02.jpg)
@@ -124,7 +124,7 @@
 - 器械/章節：平衡椅
 - 肌群分類：[[../muscles/chair-core-and-lumbopelvic-stability|核心與腰骨盆穩定]], [[../muscles/chair-spinal-articulation|脊椎活動]], [[../muscles/chair-scapular-stabilizers|肩胛與上背穩定]], [[../muscles/chair-arms-delts-pecs|手臂與胸肩]], [[../muscles/chair-hips-and-legs|髖與腿]], [[../muscles/chair-mobility-and-stretching|柔韌與伸展]]
 - 摘要：站立腿下壓練習：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、手臂與胸肩。
-- OCR 原文摘錄：目標肌肉：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 肌輔助腹橫肌運動；等長收縮腹斜肌和豎脊肌，以使軀幹保持中 立位；利用腹斜肌和多裂肌阻止身體旋轉；踏板上提時，離心收 縮股四頭肌和髖部伸展肌群，下壓踏板時，向心收縮上述肌肉； 肩胛骨穩定肌群 ［1］等長收縮臀大肌和胭繩肌，髖外展肌群和內收肌群，以使支撐 腿穩定支擰骨盆 ［2］等長收縮臀大肌，胭繩肌和髖外旋肌群，以使支撐腿穩定支 撐骨盆
+- OCR 原文摘錄：目標肌肉：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 肌輔助腹橫肌運動；等長收縮腹斜肌和豎脊肌，以使軀幹保持中 立位；利用腹斜肌和多裂肌阻止身體旋轉；踏板上提時，離心收 縮股四頭肌和髖部伸展肌群，下壓踏板時，向心收縮上述肌肉； 肩胛骨穩定肌群 ［1］等長收縮臀大肌和膕繩肌，髖外展肌群和內收肌群，以使支撐 腿穩定支擰骨盆 ［2］等長收縮臀大肌，膕繩肌和髖外旋肌群，以使支撐腿穩定支 撐骨盆
 - 動作圖：
   - ![](../assets/chair_actions/p044_action_01.jpg)
   - ![](../assets/chair_actions/p044_action_02.jpg)
@@ -145,14 +145,14 @@
   - ![](../assets/chair_actions/p046_action_02.jpg)
   - ![](../assets/chair_actions/p047_action_01.jpg)
 
-## 胭繩肌練習-髖部上提 (HAMSTRING PRESS HIPS UP)
+## 膕繩肌練習-髖部上提 (HAMSTRING PRESS HIPS UP)
 
 - 頁碼：p.48-51
 - 難度：平衡椅
 - 器械/章節：平衡椅
 - 肌群分類：[[../muscles/chair-core-and-lumbopelvic-stability|核心與腰骨盆穩定]], [[../muscles/chair-spinal-articulation|脊椎活動]], [[../muscles/chair-scapular-stabilizers|肩胛與上背穩定]], [[../muscles/chair-hips-and-legs|髖與腿]], [[../muscles/chair-mobility-and-stretching|柔韌與伸展]]
-- 摘要：胭繩肌練習-髖部上提：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、髖與腿。
-- OCR 原文摘錄：目標肌肉：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 肌輔助腹橫肌運動；向心收縮腹直肌和腹斜肌，以使脊椎彎曲， 並在脊椎回到中立位時，離心收縮上述肌肉；向心收縮臀大肌和 胭繩肌，以使骨盆上提，並保持上提著；下壓踏板時，向心收縮 胭繩肌，並在踏板復位時，離心收縮上述肌肉；肩胛骨穩定肌群
+- 摘要：膕繩肌練習-髖部上提：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、髖與腿。
+- OCR 原文摘錄：目標肌肉：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 肌輔助腹橫肌運動；向心收縮腹直肌和腹斜肌，以使脊椎彎曲， 並在脊椎回到中立位時，離心收縮上述肌肉；向心收縮臀大肌和 膕繩肌，以使骨盆上提，並保持上提著；下壓踏板時，向心收縮 膕繩肌，並在踏板復位時，離心收縮上述肌肉；肩胛骨穩定肌群
 - 動作圖：
   - ![](../assets/chair_actions/p048_action_01.jpg)
   - ![](../assets/chair_actions/p048_action_02.jpg)
@@ -279,7 +279,7 @@
 - 器械/章節：平衡椅
 - 肌群分類：[[../muscles/chair-core-and-lumbopelvic-stability|核心與腰骨盆穩定]], [[../muscles/chair-spinal-articulation|脊椎活動]], [[../muscles/chair-scapular-stabilizers|肩胛與上背穩定]], [[../muscles/chair-arms-delts-pecs|手臂與胸肩]], [[../muscles/chair-hips-and-legs|髖與腿]], [[../muscles/chair-mobility-and-stretching|柔韌與伸展]]
 - 摘要：蛙跳姿- 前向：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、手臂與胸肩。
-- OCR 原文摘錄：日標肌肉：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 肌輔助腹橫肌運動；等長收縮腹斜肌和豎脊肌，以使軀幹保持中 立位：利用外旋肌群保持髖部外旋：下壓踏板時，向心收縮髖部 伸展肌群，髖內收肌群和股四頭肌，踏板上提時，離心收縮上述 肌肉；向心收縮髖屈肌群和胭繩肌，以使髖和膝部彎曲；肩胛骨 穩定肌群，尤其是前鋸肌
+- OCR 原文摘錄：日標肌肉：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 肌輔助腹橫肌運動；等長收縮腹斜肌和豎脊肌，以使軀幹保持中 立位：利用外旋肌群保持髖部外旋：下壓踏板時，向心收縮髖部 伸展肌群，髖內收肌群和股四頭肌，踏板上提時，離心收縮上述 肌肉；向心收縮髖屈肌群和膕繩肌，以使髖和膝部彎曲；肩胛骨 穩定肌群，尤其是前鋸肌
 - 動作圖：
   - ![](../assets/chair_actions/p070_action_01.jpg)
   - ![](../assets/chair_actions/p070_action_02.jpg)
@@ -294,7 +294,7 @@
 - 器械/章節：平衡椅
 - 肌群分類：[[../muscles/chair-core-and-lumbopelvic-stability|核心與腰骨盆穩定]], [[../muscles/chair-spinal-articulation|脊椎活動]], [[../muscles/chair-scapular-stabilizers|肩胛與上背穩定]], [[../muscles/chair-lat-teres-pulling-chain|背闊肌與拉力鏈]], [[../muscles/chair-arms-delts-pecs|手臂與胸肩]], [[../muscles/chair-hips-and-legs|髖與腿]], [[../muscles/chair-mobility-and-stretching|柔韌與伸展]]
 - 摘要：蛙跳姿-後向：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、背闊肌與拉力鏈。
-- OCR 原文摘錄：目標肌肉：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 肌輔助腹橫肌運動；等長收縮腹斜肌和豎脊肌，以使軀幹保持穩 定；利用外旋肌群保持髖部外旋；下壓踏板時，向心收縮髖部伸 展肌群，髖內收肌群和股四頭肌，踏板上提時，離心收縮上述肌肉； 向心收縮腕屈肌群和胭繩肌，以使髖和膝部彎曲：肩胛骨穩定肌 群，尤其是下斜方肌
+- OCR 原文摘錄：目標肌肉：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 肌輔助腹橫肌運動；等長收縮腹斜肌和豎脊肌，以使軀幹保持穩 定；利用外旋肌群保持髖部外旋；下壓踏板時，向心收縮髖部伸 展肌群，髖內收肌群和股四頭肌，踏板上提時，離心收縮上述肌肉； 向心收縮腕屈肌群和膕繩肌，以使髖和膝部彎曲：肩胛骨穩定肌 群，尤其是下斜方肌
 - 動作圖：
   - ![](../assets/chair_actions/p072_action_01.jpg)
   - ![](../assets/chair_actions/p072_action_02.jpg)
@@ -371,7 +371,7 @@
 - 器械/章節：平衡椅
 - 肌群分類：[[../muscles/chair-core-and-lumbopelvic-stability|核心與腰骨盆穩定]], [[../muscles/chair-spinal-articulation|脊椎活動]], [[../muscles/chair-scapular-stabilizers|肩胛與上背穩定]], [[../muscles/chair-lat-teres-pulling-chain|背闊肌與拉力鏈]], [[../muscles/chair-arms-delts-pecs|手臂與胸肩]], [[../muscles/chair-hips-and-legs|髖與腿]], [[../muscles/chair-mobility-and-stretching|柔韌與伸展]]
 - 摘要：站立肩胛骨孤立練習：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、背闊肌與拉力鏈。
-- OCR 原文摘錄：目標肌肉：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 肌輔助腹橫肌運動；等長收縮臀大肌，胭繩肌和髖內收肌群，以 使大腿骨穩定支撐骨盆：等長收縮腹斜肌和豎脊肌，以使軀幹保 持中立位；離心收縮背闊肌，以使肩胛帶上提，並在肩胛帶下沉時， 向心收縮上述肌肉；肩胛骨穩定肌群，尤其下斜方肌
+- OCR 原文摘錄：目標肌肉：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 肌輔助腹橫肌運動；等長收縮臀大肌，膕繩肌和髖內收肌群，以 使大腿骨穩定支撐骨盆：等長收縮腹斜肌和豎脊肌，以使軀幹保 持中立位；離心收縮背闊肌，以使肩胛帶上提，並在肩胛帶下沉時， 向心收縮上述肌肉；肩胛骨穩定肌群，尤其下斜方肌
 - 動作圖：
   - ![](../assets/chair_actions/p086_action_01.jpg)
   - ![](../assets/chair_actions/p086_action_02.jpg)
@@ -453,7 +453,7 @@
 - 器械/章節：平衡椅
 - 肌群分類：[[../muscles/chair-core-and-lumbopelvic-stability|核心與腰骨盆穩定]], [[../muscles/chair-spinal-articulation|脊椎活動]], [[../muscles/chair-scapular-stabilizers|肩胛與上背穩定]], [[../muscles/chair-arms-delts-pecs|手臂與胸肩]], [[../muscles/chair-hips-and-legs|髖與腿]], [[../muscles/chair-mobility-and-stretching|柔韌與伸展]]
 - 摘要：貓背前站姿：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、手臂與胸肩。
-- OCR 原文摘錄：以腹橫肌擠壓腹部，穩定腰骨盆部位：以深層骨盆底 ，手臂保持在肩部正下方，髖部保持在雙腳正上方 肌輔助腹模肌運動；向心收縮腹直肌和腹斜肌，以使脊椎向下卷 動，並在踏板上提時，等長收縮上述肌肉；向心收縮髖部伸展肌群， 以使骨盆後部向大腿骨後部靠攏；肩胛骨穩定肌群 ［1］開始拉伸脊椎，使其到達中立位時，離心收縮腹直肌，腹斜肌 和胭繩肌 13］雙肘彎曲時，離心收縮肱三頭肌和胸大肌，肘部伸展時，向心 收縮上述肌肉
+- OCR 原文摘錄：以腹橫肌擠壓腹部，穩定腰骨盆部位：以深層骨盆底 ，手臂保持在肩部正下方，髖部保持在雙腳正上方 肌輔助腹模肌運動；向心收縮腹直肌和腹斜肌，以使脊椎向下卷 動，並在踏板上提時，等長收縮上述肌肉；向心收縮髖部伸展肌群， 以使骨盆後部向大腿骨後部靠攏；肩胛骨穩定肌群 ［1］開始拉伸脊椎，使其到達中立位時，離心收縮腹直肌，腹斜肌 和膕繩肌 13］雙肘彎曲時，離心收縮肱三頭肌和胸大肌，肘部伸展時，向心 收縮上述肌肉
 - 動作圖：
   - ![](../assets/chair_actions/p098_action_01.jpg)
   - ![](../assets/chair_actions/p099_action_01.jpg)
@@ -540,7 +540,7 @@
 - 器械/章節：平衡椅
 - 肌群分類：[[../muscles/chair-core-and-lumbopelvic-stability|核心與腰骨盆穩定]], [[../muscles/chair-spinal-articulation|脊椎活動]], [[../muscles/chair-scapular-stabilizers|肩胛與上背穩定]], [[../muscles/chair-arms-delts-pecs|手臂與胸肩]], [[../muscles/chair-hips-and-legs|髖與腿]], [[../muscles/chair-mobility-and-stretching|柔韌與伸展]]
 - 摘要：貓背側站姿：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、手臂與胸肩。
-- OCR 原文摘錄：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 •踏板下壓時，脊椎保持彎曲；下壓踏板時避免拉伸脊椎或讓身 肌輔助腹橫肌運動；向心收縮腹直肌和腹斜肌，以使脊椎向下卷 體重心移動 動，並在踏板上提時，等長收縮上述肌肉；向心收縮髖部伸展肌群， •脊椎上卷時，要先讓骨盆豎直，再讓脊椎由屈曲逐節回到 以使骨盆後部向大腿骨後部靠攏；利用腹斜肌和多裂肌阻止身體 中立位 旋轉；肩胛骨穩定肌群 •髖部和肩部保持水平正對前方；脊椎上下捲動時，避免旋轉 ［1］開始拉伸脊椎，使其到達中立位時，離心收縮腹直肌，腹斜肌 和胭繩肌
+- OCR 原文摘錄：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 •踏板下壓時，脊椎保持彎曲；下壓踏板時避免拉伸脊椎或讓身 肌輔助腹橫肌運動；向心收縮腹直肌和腹斜肌，以使脊椎向下卷 體重心移動 動，並在踏板上提時，等長收縮上述肌肉；向心收縮髖部伸展肌群， •脊椎上卷時，要先讓骨盆豎直，再讓脊椎由屈曲逐節回到 以使骨盆後部向大腿骨後部靠攏；利用腹斜肌和多裂肌阻止身體 中立位 旋轉；肩胛骨穩定肌群 •髖部和肩部保持水平正對前方；脊椎上下捲動時，避免旋轉 ［1］開始拉伸脊椎，使其到達中立位時，離心收縮腹直肌，腹斜肌 和膕繩肌
 - 動作圖：
   - ![](../assets/chair_actions/p118_action_01.jpg)
   - ![](../assets/chair_actions/p118_action_02.jpg)
@@ -568,7 +568,7 @@
 - 器械/章節：平衡椅
 - 肌群分類：[[../muscles/chair-core-and-lumbopelvic-stability|核心與腰骨盆穩定]], [[../muscles/chair-spinal-articulation|脊椎活動]], [[../muscles/chair-scapular-stabilizers|肩胛與上背穩定]], [[../muscles/chair-hips-and-legs|髖與腿]], [[../muscles/chair-mobility-and-stretching|柔韌與伸展]]
 - 摘要：貓背後站姿：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、髖與腿。
-- OCR 原文摘錄：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 前旋轉，脊椎上卷時，注意使骨盆向後旋轉 肌輔助腹橫肌運動；向心收縮腹直肌和腹斜肌，以使脊椎向下卷 ，踏板下壓時，脊椎保持彎曲；下壓踏板時避免拉伸脊椎或讓身 動，並在踏板上提時，等長收縮上述肌肉；向心收縮髖部伸展肌群， 體重心移動 以使骨盆後部向大腿骨後部靠攏：肩胛骨穩定肌群 ，脊椎上卷時，要先讓骨盆豎直，再讓脊椎由屈曲逐節回到 ［1J開始拉伸脊椎，使其到達中立位時，離心收縮腹直肌，腹斜肌 中立位 和胭繩肌 •避免身體重心前傾或後傾
+- OCR 原文摘錄：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 前旋轉，脊椎上卷時，注意使骨盆向後旋轉 肌輔助腹橫肌運動；向心收縮腹直肌和腹斜肌，以使脊椎向下卷 ，踏板下壓時，脊椎保持彎曲；下壓踏板時避免拉伸脊椎或讓身 動，並在踏板上提時，等長收縮上述肌肉；向心收縮髖部伸展肌群， 體重心移動 以使骨盆後部向大腿骨後部靠攏：肩胛骨穩定肌群 ，脊椎上卷時，要先讓骨盆豎直，再讓脊椎由屈曲逐節回到 ［1J開始拉伸脊椎，使其到達中立位時，離心收縮腹直肌，腹斜肌 中立位 和膕繩肌 •避免身體重心前傾或後傾
 - 動作圖：
   - ![](../assets/chair_actions/p124_action_01.jpg)
   - ![](../assets/chair_actions/p124_action_02.jpg)
@@ -717,7 +717,7 @@
 - 器械/章節：平衡椅
 - 肌群分類：[[../muscles/chair-core-and-lumbopelvic-stability|核心與腰骨盆穩定]], [[../muscles/chair-spinal-articulation|脊椎活動]], [[../muscles/chair-scapular-stabilizers|肩胛與上背穩定]], [[../muscles/chair-lat-teres-pulling-chain|背闊肌與拉力鏈]], [[../muscles/chair-arms-delts-pecs|手臂與胸肩]], [[../muscles/chair-hips-and-legs|髖與腿]], [[../muscles/chair-mobility-and-stretching|柔韌與伸展]]
 - 摘要：天鵝潛水準備動作：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、背闊肌與拉力鏈。
-- OCR 原文摘錄：注意事項：整套練習必須在受過訓練的專業人員的監督和指導下 目標肌肉：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 進行，確保練習者全程控制踏板並避免踏板突然鬆開。教練不能 肌輔助腹橫肌運動；脊椎伸展時，向心收縮豎脊肌，復位時離心 把身體靠向踏板。 收縮上述肌肉；利用腹斜肌，防止腰椎過度伸展；向心收縮臀大 肌和胭繩肌，以使骨盆後部向大腿骨後部靠攏；向上時，向心收
+- OCR 原文摘錄：注意事項：整套練習必須在受過訓練的專業人員的監督和指導下 目標肌肉：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 進行，確保練習者全程控制踏板並避免踏板突然鬆開。教練不能 肌輔助腹橫肌運動；脊椎伸展時，向心收縮豎脊肌，復位時離心 把身體靠向踏板。 收縮上述肌肉；利用腹斜肌，防止腰椎過度伸展；向心收縮臀大 肌和膕繩肌，以使骨盆後部向大腿骨後部靠攏；向上時，向心收
 - 動作圖：
   - ![](../assets/chair_actions/p147_action_01.jpg)
   - ![](../assets/chair_actions/p147_action_02.jpg)
@@ -749,7 +749,7 @@
 - 器械/章節：平衡椅
 - 肌群分類：[[../muscles/chair-core-and-lumbopelvic-stability|核心與腰骨盆穩定]], [[../muscles/chair-spinal-articulation|脊椎活動]], [[../muscles/chair-scapular-stabilizers|肩胛與上背穩定]], [[../muscles/chair-lat-teres-pulling-chain|背闊肌與拉力鏈]], [[../muscles/chair-arms-delts-pecs|手臂與胸肩]], [[../muscles/chair-hips-and-legs|髖與腿]], [[../muscles/chair-mobility-and-stretching|柔韌與伸展]]
 - 摘要：展翅雄鷹：主要歸入核心與腰骨盆穩定、脊椎活動、肩胛與上背穩定、背闊肌與拉力鏈。
-- OCR 原文摘錄：目標肌肉：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 肌輔助腹橫肌運動；向心收縮臀大肌和胭繩肌，以使骨盆後部向 大腿骨後部靠攏，等長收縮上述肌肉，以使大腿骨穩定支撐骨盆； 向心收縮腹直肌和腹斜肌，以使脊椎捲曲；向心收縮豎脊肌，使 脊椎開始伸展，然後繼續伸展上脊椎，讓身體上提；利用腹斜肌， 防止腰椎過度伸展；向心收縮肱三頭肌，以使雙肘伸展和軀幹上 提，並在雙肘彎曲和軀幹下落時，離心收縮上述肌肉；利用背闊肌， 防止肩部上提；肩胛骨穩定肌群
+- OCR 原文摘錄：目標肌肉：以腹橫肌擠壓腹部，穩定腰骨盆部位；以深層骨盆底 肌輔助腹橫肌運動；向心收縮臀大肌和膕繩肌，以使骨盆後部向 大腿骨後部靠攏，等長收縮上述肌肉，以使大腿骨穩定支撐骨盆； 向心收縮腹直肌和腹斜肌，以使脊椎捲曲；向心收縮豎脊肌，使 脊椎開始伸展，然後繼續伸展上脊椎，讓身體上提；利用腹斜肌， 防止腰椎過度伸展；向心收縮肱三頭肌，以使雙肘伸展和軀幹上 提，並在雙肘彎曲和軀幹下落時，離心收縮上述肌肉；利用背闊肌， 防止肩部上提；肩胛骨穩定肌群
 - 動作圖：
   - ![](../assets/chair_actions/p152_action_01.jpg)
   - ![](../assets/chair_actions/p152_action_02.jpg)
@@ -842,7 +842,7 @@
   - ![](../assets/chair_actions/p167_action_03.jpg)
   - ![](../assets/chair_actions/p167_action_04.jpg)
 
-## 側體扭轉 (SIDE BODY TWST)
+## 側體扭轉 (SIDE BODY TWIST)
 
 - 頁碼：p.168-171
 - 難度：平衡椅

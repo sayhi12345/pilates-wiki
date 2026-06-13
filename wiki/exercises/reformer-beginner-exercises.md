@@ -76,7 +76,7 @@
   - ![](../assets/reformer_beginner_actions/p043_action_01.jpg)
   - ![](../assets/reformer_beginner_actions/p043_action_02.jpg)
 
-## 抬腿與放腿 (LFT & LOWER)
+## 抬腿與放腿 (LIFT & LOWER)
 
 - 頁碼：p.44-45
 - 難度：塑身機初級
